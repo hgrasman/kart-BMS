@@ -5,14 +5,14 @@
  * Created on December 20, 2022, 2:26 AM
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <samc21Config.h>
 
 /*
  * 
  */
 int main(int argc, char** argv) {
 
-    return (EXIT_SUCCESS);
+    
+    return 1;
 }
 

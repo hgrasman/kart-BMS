@@ -5,14 +5,16 @@
  * Created on December 20, 2022, 2:27 AM
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <pic16config.h>
 
 /*
  * 
  */
 int main(int argc, char** argv) {
 
-    return (EXIT_SUCCESS);
+    return 1;
 }
 
+void __interrupt () i2c_wakeup (void){
+    
+}
