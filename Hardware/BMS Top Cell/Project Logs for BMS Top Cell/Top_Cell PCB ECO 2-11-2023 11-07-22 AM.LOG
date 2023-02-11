@@ -1,0 +1,112 @@
+Added Pin To Net: NetName=SCL_IN Pin=C103-1
+Added Pin To Net: NetName=SCL_IN Pin=JIN-5
+Added Net: Name=SCL_IN
+Added Pin To Net: NetName=SCL_OUT Pin=C103-2
+Added Pin To Net: NetName=SCL_OUT Pin=JOUT-3
+Added Pin To Net: NetName=SCL_OUT Pin=R103-2
+Added Pin To Net: NetName=SCL_OUT Pin=R107-1
+Added Net: Name=SCL_OUT
+Added Pin To Net: NetName=SCL Pin=R107-2
+Added Net: Name=SCL
+Added Pin To Net: NetName=SDA_IN Pin=C102-1
+Added Pin To Net: NetName=SDA_IN Pin=JIN-4
+Added Net: Name=SDA_IN
+Added Pin To Net: NetName=SDA_OUT Pin=C102-2
+Added Pin To Net: NetName=SDA_OUT Pin=JOUT-4
+Added Pin To Net: NetName=SDA_OUT Pin=R102-1
+Added Pin To Net: NetName=SDA_OUT Pin=R106-2
+Added Net: Name=SDA_OUT
+Added Pin To Net: NetName=SDA Pin=R106-1
+Added Net: Name=SDA
+Added Pin To Net: NetName=ST_CH_IN Pin=C100-1
+Added Pin To Net: NetName=ST_CH_IN Pin=JIN-2
+Added Net: Name=ST_CH_IN
+Added Pin To Net: NetName=ST_CH_OUT Pin=C100-2
+Added Pin To Net: NetName=ST_CH_OUT Pin=JOUT-6
+Added Pin To Net: NetName=ST_CH_OUT Pin=R100-1
+Added Pin To Net: NetName=ST_CH_OUT Pin=R104-2
+Added Net: Name=ST_CH_OUT
+Added Pin To Net: NetName=ST_CH Pin=R104-1
+Added Net: Name=ST_CH
+Added Pin To Net: NetName=ST_DIS_IN Pin=C101-1
+Added Pin To Net: NetName=ST_DIS_IN Pin=JIN-3
+Added Net: Name=ST_DIS_IN
+Added Pin To Net: NetName=ST_DIS_OUT Pin=C101-2
+Added Pin To Net: NetName=ST_DIS_OUT Pin=JOUT-5
+Added Pin To Net: NetName=ST_DIS_OUT Pin=R101-2
+Added Pin To Net: NetName=ST_DIS_OUT Pin=R105-1
+Added Net: Name=ST_DIS_OUT
+Added Pin To Net: NetName=ST_DIS Pin=R105-2
+Added Net: Name=ST_DIS
+Added Pin To Net: NetName=VNEG Pin=J1-1
+Added Pin To Net: NetName=VNEG Pin=J2-1
+Added Pin To Net: NetName=VNEG Pin=J3-1
+Added Pin To Net: NetName=VNEG Pin=J4-1
+Added Pin To Net: NetName=VNEG Pin=J5-1
+Added Pin To Net: NetName=VNEG Pin=J6-1
+Added Pin To Net: NetName=VNEG Pin=J7-1
+Added Pin To Net: NetName=VNEG Pin=J8-1
+Added Pin To Net: NetName=VNEG Pin=J9-1
+Added Pin To Net: NetName=VNEG Pin=J10-1
+Added Pin To Net: NetName=VNEG Pin=J11-1
+Added Pin To Net: NetName=VNEG Pin=J12-1
+Added Pin To Net: NetName=VNEG Pin=J13-1
+Added Pin To Net: NetName=VNEG Pin=J14-1
+Added Pin To Net: NetName=VNEG Pin=J15-1
+Added Pin To Net: NetName=VNEG Pin=J16-1
+Added Pin To Net: NetName=VNEG Pin=J17-1
+Added Pin To Net: NetName=VNEG Pin=J18-1
+Added Pin To Net: NetName=VNEG Pin=J19-1
+Added Pin To Net: NetName=VNEG Pin=J20-1
+Added Pin To Net: NetName=VNEG Pin=J21-1
+Added Pin To Net: NetName=VNEG Pin=J22-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JFUSE-1
+Added Pin To Net: NetName=VNEG Pin=JIN-1
+Added Net: Name=VNEG
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Pin To Net: NetName=VO Pin=J48V-1
+Added Net: Name=VO
+Added Pin To Net: NetName=VPOS Pin=JOUT-7
+Added Pin To Net: NetName=VPOS Pin=R100-2
+Added Pin To Net: NetName=VPOS Pin=R101-1
+Added Pin To Net: NetName=VPOS Pin=R102-2
+Added Pin To Net: NetName=VPOS Pin=R103-1
+Added Net: Name=VPOS
+Added Class: Name=Pg1 Top Sheet and Micro

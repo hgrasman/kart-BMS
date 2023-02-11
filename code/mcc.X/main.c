@@ -68,17 +68,22 @@ void main(void)
     //INTERRUPT_PeripheralInterruptDisable();
     
     //constant variable declaration for safety
-    struct safety{
-        static const int LOW_VOLTAGE = 3.2;
-        static const int HIGH_VOLTAGE = 4.0;
-        static const int HIGH_TEMP = 60;
+    struct safeValues{
+        int LOW_VOLTAGE;
+        int HIGH_VOLTAGE;
+        int HIGH_TEMP;
     };
 
+    static const struct safeValues safety = {
+        .LOW_VOLTAGE = 3.2, 
+        .HIGH_VOLTAGE = 4.0,
+        .HIGH_TEMP = 60
+    };
     
     struct variablesTracked {
-        unsigned int status;
-        float VSNS;
-        float TSNS[5];
+        uint8_t status;
+        uint16_t VSNS;
+        uint16_t TSNS[5];
     };
     
     while (1)
