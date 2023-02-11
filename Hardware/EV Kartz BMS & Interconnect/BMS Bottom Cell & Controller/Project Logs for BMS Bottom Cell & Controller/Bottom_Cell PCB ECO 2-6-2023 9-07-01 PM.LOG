@@ -1,0 +1,26 @@
+Change Component Designator: OldDesignator=C_ISO NewDesignator=C_ISO100
+Change Component Designator: OldDesignator=CAN NewDesignator=CAN100
+Change Component Designator: OldDesignator=J12V NewDesignator=J400
+Change Component Designator: OldDesignator=J207 NewDesignator=J203
+Change Component Designator: OldDesignator=J213 NewDesignator=J205
+Change Component Designator: OldDesignator=J219 NewDesignator=J207
+Change Component Designator: OldDesignator=J223 NewDesignator=J209
+Change Component Designator: OldDesignator=J226 NewDesignator=J211
+Change Component Designator: OldDesignator=J229 NewDesignator=J213
+Change Component Designator: OldDesignator=J232 NewDesignator=J215
+Change Component Designator: OldDesignator=J235 NewDesignator=J217
+Change Component Designator: OldDesignator=J238 NewDesignator=J219
+Change Component Designator: OldDesignator=J241 NewDesignator=J221
+Change Component Designator: OldDesignator=J_LEM NewDesignator=J_LEM300
+Change Component Designator: OldDesignator=J_Relay NewDesignator=J_Relay400
+Change Component Designator: OldDesignator=JOUT NewDesignator=JOUT400
+Change Component Designator: OldDesignator=JPOS NewDesignator=JPOS200
+Change Component Designator: OldDesignator=JPROG NewDesignator=JPROG100
+Change Component Designator: OldDesignator=R115 NewDesignator=R104
+Change Component Designator: OldDesignator=R_ISO NewDesignator=R_ISO100
+Change Component Designator: OldDesignator=U_danger NewDesignator=U_danger400
+Change Component Designator: OldDesignator=U_warn NewDesignator=U_warn400
+Change Net Name : Old Net Name=NetJPROG_2 New Net Name=NetJPROG100_2
+Change Net Name : Old Net Name=NetJPROG_3 New Net Name=NetJPROG100_3
+Change Net Name : Old Net Name=NetU_danger_2 New Net Name=NetU_danger400_2
+Change Net Name : Old Net Name=NetU_warn_2 New Net Name=NetU_warn400_2

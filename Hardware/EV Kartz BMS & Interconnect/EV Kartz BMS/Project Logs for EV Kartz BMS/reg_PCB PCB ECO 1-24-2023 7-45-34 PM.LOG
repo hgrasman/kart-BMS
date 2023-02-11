@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=Warn_IN Pin=JOUT100-5
+Added Pin To Net: NetName=Warn_OUT Pin=JOUT100-5

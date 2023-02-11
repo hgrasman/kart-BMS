@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=SDA_IN Pin=jIN-2
+Removed Pin From Net: NetName=SCL_IN Pin=jIN-3
+Removed Pin From Net: NetName=ST_CH_IN Pin=jIN-4
+Removed Pin From Net: NetName=ST_DIS_IN Pin=jIN-5
+Removed Pin From Net: NetName=ST_DIS_IN Pin=jOUT-3
+Removed Pin From Net: NetName=ST_CH_OUT Pin=jOUT-4
+Removed Pin From Net: NetName=SCL_OUT Pin=jOUT-5
+Removed Pin From Net: NetName=SDA_OUT Pin=jOUT-6
+Removed Pin From Net: NetName=VPOS Pin=jOUT-7
+Added Pin To Net: NetName=ST_CH_IN Pin=jIN-2
+Added Pin To Net: NetName=ST_DIS_IN Pin=jIN-3
+Added Pin To Net: NetName=SDA_IN Pin=jIN-4
+Added Pin To Net: NetName=SCL_IN Pin=jIN-5
+Added Pin To Net: NetName=SCL_IN Pin=jOUT-3
+Added Pin To Net: NetName=SDA_IN Pin=jOUT-4
+Added Pin To Net: NetName=ST_DIS_IN Pin=jOUT-5
+Added Pin To Net: NetName=ST_CH_IN Pin=jOUT-6

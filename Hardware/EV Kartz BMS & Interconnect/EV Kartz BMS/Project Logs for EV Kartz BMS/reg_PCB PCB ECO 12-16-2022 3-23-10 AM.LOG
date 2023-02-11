@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=VPOS Pin=J222_N-1
+Removed Pin From Net: NetName=VPOS Pin=J222_P-1
+Removed Member From Class: ClassName=N Member=J222_N
+Removed Member From Class: ClassName=P Member=J222_P

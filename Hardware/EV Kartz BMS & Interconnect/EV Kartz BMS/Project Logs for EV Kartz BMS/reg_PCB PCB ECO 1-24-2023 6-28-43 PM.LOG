@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=ST_DIS_OUT Pin=JOUT100-5
+Change Net Name : Old Net Name=ST_CH New Net Name=Danger
+Change Net Name : Old Net Name=ST_CH_IN New Net Name=Dan_IN
+Change Net Name : Old Net Name=ST_CH_OUT New Net Name=Dan_OUT
+Change Net Name : Old Net Name=ST_DIS New Net Name=Warn
+Change Net Name : Old Net Name=ST_DIS_OUT New Net Name=Warn_OUT
+Added Pin To Net: NetName=Warn_IN Pin=C102-1
+Added Pin To Net: NetName=Warn_IN Pin=JIN100-3
+Added Pin To Net: NetName=Warn_IN Pin=JOUT100-5
+Added Net: Name=Warn_IN
+Added Member To Class: ClassName=Pg1 Microcontroller Member=Component R123 35221R0JT
+Added Member To Class: ClassName=Pg1 Microcontroller Member=Component R124 ERJ-6ENF10R0V

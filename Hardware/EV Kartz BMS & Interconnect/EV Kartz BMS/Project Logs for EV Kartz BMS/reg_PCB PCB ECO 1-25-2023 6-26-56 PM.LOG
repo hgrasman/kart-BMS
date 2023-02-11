@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=TSNS1 Pin=U100-12
+Change Component Designator: OldDesignator=F? NewDesignator=F1
+Added Pin To Net: NetName=TSNS1 Pin=U100-17

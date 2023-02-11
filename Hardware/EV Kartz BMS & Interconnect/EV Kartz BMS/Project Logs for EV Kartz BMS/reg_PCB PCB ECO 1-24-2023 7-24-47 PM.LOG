@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=VPOS Pin=JOUT100-7
+Added Component: Designator=F?(CAPC1608N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Category"; Value = "F"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "5A, 32V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "F1608CT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temp"; Value = "150C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "12mOhm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VPOS Pin=F?-2
+Added Pin To Net: NetName=VPOS_F Pin=F?-1
+Added Pin To Net: NetName=VPOS_F Pin=JOUT100-7
+Added Net: Name=VPOS_F
+Added Member To Class: ClassName=Pg1 Microcontroller Member=Component F? 0440005.WR

@@ -1,0 +1,118 @@
+Change Component Designator: OldDesignator=J200 NewDesignator=J200_N
+Change Component Designator: OldDesignator=J201 NewDesignator=J201_N
+Change Component Designator: OldDesignator=J202 NewDesignator=J202_N
+Change Component Designator: OldDesignator=J203 NewDesignator=J203_N
+Change Component Designator: OldDesignator=J204 NewDesignator=J204_N
+Change Component Designator: OldDesignator=J205 NewDesignator=J205_N
+Change Component Designator: OldDesignator=J206 NewDesignator=J206_N
+Change Component Designator: OldDesignator=J207 NewDesignator=J207_N
+Change Component Designator: OldDesignator=J208 NewDesignator=J208_N
+Change Component Designator: OldDesignator=J209 NewDesignator=J209_N
+Change Component Designator: OldDesignator=J210 NewDesignator=J210_N
+Change Component Designator: OldDesignator=J211 NewDesignator=J211_N
+Change Component Designator: OldDesignator=J212 NewDesignator=J212_N
+Change Component Designator: OldDesignator=J213 NewDesignator=J213_N
+Change Component Designator: OldDesignator=J214 NewDesignator=J214_N
+Change Component Designator: OldDesignator=J215 NewDesignator=J215_N
+Change Component Designator: OldDesignator=J216 NewDesignator=J216_N
+Change Component Designator: OldDesignator=J217 NewDesignator=J217_N
+Change Component Designator: OldDesignator=J218 NewDesignator=J218_N
+Change Component Designator: OldDesignator=J219 NewDesignator=J219_N
+Change Component Designator: OldDesignator=J220 NewDesignator=J220_N
+Change Component Designator: OldDesignator=J221 NewDesignator=J221_N
+Change Component Designator: OldDesignator=J222 NewDesignator=J222_N
+Added Component: Designator=J200_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J201_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J202_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J203_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J204_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J205_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J206_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J207_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J208_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J209_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J210_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J211_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J212_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J213_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J214_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J215_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J216_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J217_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J218_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J219_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J220_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J221_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=J222_P(6mm Pad)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "54-2036-3-57-15-00-00-03-0CT-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VPOS Pin=J200_P-1
+Added Pin To Net: NetName=VPOS Pin=J201_P-1
+Added Pin To Net: NetName=VPOS Pin=J202_P-1
+Added Pin To Net: NetName=VPOS Pin=J203_P-1
+Added Pin To Net: NetName=VPOS Pin=J204_P-1
+Added Pin To Net: NetName=VPOS Pin=J205_P-1
+Added Pin To Net: NetName=VPOS Pin=J206_P-1
+Added Pin To Net: NetName=VPOS Pin=J207_P-1
+Added Pin To Net: NetName=VPOS Pin=J208_P-1
+Added Pin To Net: NetName=VPOS Pin=J209_P-1
+Added Pin To Net: NetName=VPOS Pin=J210_P-1
+Added Pin To Net: NetName=VPOS Pin=J211_P-1
+Added Pin To Net: NetName=VPOS Pin=J212_P-1
+Added Pin To Net: NetName=VPOS Pin=J213_P-1
+Added Pin To Net: NetName=VPOS Pin=J214_P-1
+Added Pin To Net: NetName=VPOS Pin=J215_P-1
+Added Pin To Net: NetName=VPOS Pin=J216_P-1
+Added Pin To Net: NetName=VPOS Pin=J217_P-1
+Added Pin To Net: NetName=VPOS Pin=J218_P-1
+Added Pin To Net: NetName=VPOS Pin=J219_P-1
+Added Pin To Net: NetName=VPOS Pin=J220_P-1
+Added Pin To Net: NetName=VPOS Pin=J221_P-1
+Added Pin To Net: NetName=VPOS Pin=J222_P-1
+Change Class Name : Old Net Name=Contacts New Net Name=N
+Added Class: Name=P
+Added Class: Name=Pg2 Battery Contacts

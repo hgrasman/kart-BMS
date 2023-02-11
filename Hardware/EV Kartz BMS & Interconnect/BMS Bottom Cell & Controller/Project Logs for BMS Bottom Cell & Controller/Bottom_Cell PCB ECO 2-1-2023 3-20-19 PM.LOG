@@ -1,0 +1,170 @@
+Added Component: Designator=D100(DIO2012N-G)
+Add component (AddParameter): Name = "Category"; Value = "D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "2.1V, 10mA, 6mcd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "160-1179-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "GRN"; VariantName = "[No Variations]"
+Added Component: Designator=J_KART?(0022041041)
+Add component (AddParameter): Name = "Category"; Value = "J"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "WM18787-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temp"; Value = "80C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "4 Pos"; VariantName = "[No Variations]"
+Added Component: Designator=J_LEM?(0022041041)
+Add component (AddParameter): Name = "Category"; Value = "J"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "WM18787-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temp"; Value = "80C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "4 Pos"; VariantName = "[No Variations]"
+Added Component: Designator=JHV(0022041041)
+Add component (AddParameter): Name = "Category"; Value = "J"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "WM18787-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temp"; Value = "80C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "4 Pos"; VariantName = "[No Variations]"
+Added Component: Designator=JOUT(JST-PH-S7)
+Add component (AddParameter): Name = "Category"; Value = "J"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "455-1754-1-ND"; VariantName = "[No Variations]"
+Added Component: Designator=JPROG(HDR1X5 SMT)
+Add component (AddParameter): Name = "Category"; Value = "J"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "A144616-ND"; VariantName = "[No Variations]"
+Added Component: Designator=R100(RESC2012N)
+Add component (AddParameter): Name = "Category"; Value = "R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P100KCCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Added Component: Designator=R101(RESC2012N)
+Add component (AddParameter): Name = "Category"; Value = "R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P100KCCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Added Component: Designator=R102(RESC2012N)
+Add component (AddParameter): Name = "Category"; Value = "R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P100KCCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Added Component: Designator=R103(RESC2012N)
+Add component (AddParameter): Name = "Category"; Value = "R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P100KCCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100k"; VariantName = "[No Variations]"
+Added Component: Designator=R104(RESC2012N)
+Add component (AddParameter): Name = "Category"; Value = "R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P10.0CCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Added Component: Designator=R105(RESC2012N)
+Add component (AddParameter): Name = "Category"; Value = "R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P10.0CCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Added Component: Designator=R106(RESC2012N)
+Add component (AddParameter): Name = "Category"; Value = "R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P10.0CCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Added Component: Designator=R107(RESC2012N)
+Add component (AddParameter): Name = "Category"; Value = "R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P10.0CCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Added Component: Designator=R115(RESC2012N)
+Add component (AddParameter): Name = "Category"; Value = "R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P10.0KCCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tol"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+12V(LV) Pin=J_KART?-1
+Added Net: Name=+12V(LV)
+Added Pin To Net: NetName=+12V Pin=JHV-2
+Added Net: Name=+12V
+Added Pin To Net: NetName=+15V Pin=J_LEM?-4
+Added Net: Name=+15V
+Added Pin To Net: NetName=+48V Pin=JHV-1
+Added Net: Name=+48V
+Added Pin To Net: NetName=-15V Pin=J_LEM?-3
+Added Net: Name=-15V
+Added Pin To Net: NetName=CANH Pin=J_KART?-2
+Added Net: Name=CANH
+Added Pin To Net: NetName=CANL Pin=J_KART?-3
+Added Net: Name=CANL
+Added Pin To Net: NetName=GND(LV) Pin=J_KART?-4
+Added Net: Name=GND(LV)
+Added Pin To Net: NetName=GND Pin=J_LEM?-1
+Added Pin To Net: NetName=GND Pin=JHV-3
+Added Pin To Net: NetName=GND Pin=JHV-4
+Added Net: Name=GND
+Added Pin To Net: NetName=ICSPCLK Pin=JPROG-3
+Added Net: Name=ICSPCLK
+Added Pin To Net: NetName=ICSPDAT Pin=JPROG-2
+Added Net: Name=ICSPDAT
+Added Pin To Net: NetName=ISNS_OUT Pin=J_LEM?-2
+Added Net: Name=ISNS_OUT
+Added Pin To Net: NetName=LED Pin=D100-1
+Added Net: Name=LED
+Added Pin To Net: NetName=MCLR Pin=JPROG-4
+Added Net: Name=MCLR
+Added Pin To Net: NetName=NetD100_2 Pin=D100-2
+Added Pin To Net: NetName=NetD100_2 Pin=R115-2
+Added Net: Name=NetD100_2
+Added Pin To Net: NetName=SCL_OUT Pin=JOUT-3
+Added Pin To Net: NetName=SCL_OUT Pin=R103-2
+Added Pin To Net: NetName=SCL_OUT Pin=R107-1
+Added Net: Name=SCL_OUT
+Added Pin To Net: NetName=SCL Pin=R107-2
+Added Net: Name=SCL
+Added Pin To Net: NetName=SDA_OUT Pin=JOUT-4
+Added Pin To Net: NetName=SDA_OUT Pin=R102-1
+Added Pin To Net: NetName=SDA_OUT Pin=R106-2
+Added Net: Name=SDA_OUT
+Added Pin To Net: NetName=SDA Pin=R106-1
+Added Net: Name=SDA
+Added Pin To Net: NetName=ST_CH_OUT Pin=JOUT-6
+Added Pin To Net: NetName=ST_CH_OUT Pin=R100-1
+Added Pin To Net: NetName=ST_CH_OUT Pin=R104-2
+Added Net: Name=ST_CH_OUT
+Added Pin To Net: NetName=ST_CH Pin=R104-1
+Added Net: Name=ST_CH
+Added Pin To Net: NetName=ST_DIS_OUT Pin=JOUT-5
+Added Pin To Net: NetName=ST_DIS_OUT Pin=R101-2
+Added Pin To Net: NetName=ST_DIS_OUT Pin=R105-1
+Added Net: Name=ST_DIS_OUT
+Added Pin To Net: NetName=ST_DIS Pin=R105-2
+Added Net: Name=ST_DIS
+Added Pin To Net: NetName=VNEG Pin=JPROG-5
+Added Pin To Net: NetName=VNEG Pin=R115-1
+Added Net: Name=VNEG
+Added Pin To Net: NetName=VPOS Pin=JOUT-7
+Added Pin To Net: NetName=VPOS Pin=JPROG-1
+Added Pin To Net: NetName=VPOS Pin=R100-2
+Added Pin To Net: NetName=VPOS Pin=R101-1
+Added Pin To Net: NetName=VPOS Pin=R102-2
+Added Pin To Net: NetName=VPOS Pin=R103-1
+Added Net: Name=VPOS
+Added Class: Name=Pg1 Top Sheet and Micro
+Added Room: Name=Pg1 Top Sheet and Micro

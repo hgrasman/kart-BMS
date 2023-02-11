@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=Dan_IN Pin=JIN100-2
+Removed Pin From Net: NetName=Warn_IN Pin=JIN100-3
+Removed Pin From Net: NetName=Warn_IN Pin=JOUT100-5
+Removed Pin From Net: NetName=Dan_OUT Pin=JOUT100-6
+Change Component Designator: OldDesignator=F1 NewDesignator=F?
+Added Pin To Net: NetName=Warn_IN Pin=JIN100-2
+Added Pin To Net: NetName=Dan_IN Pin=JIN100-3
+Added Pin To Net: NetName=Dan_OUT Pin=JOUT100-5
+Added Pin To Net: NetName=Warn_IN Pin=JOUT100-6

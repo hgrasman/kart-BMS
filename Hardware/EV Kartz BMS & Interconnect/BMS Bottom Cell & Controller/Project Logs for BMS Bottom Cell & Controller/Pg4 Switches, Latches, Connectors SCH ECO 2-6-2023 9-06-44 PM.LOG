@@ -1,0 +1,5 @@
+Change Component Designator: Old Designator=J12V New Designator=J400
+Change Component Designator: Old Designator=J_Relay New Designator=J_Relay400
+Change Component Designator: Old Designator=JOUT New Designator=JOUT400
+Change Component Designator: Old Designator=U_danger New Designator=U_danger400
+Change Component Designator: Old Designator=U_warn New Designator=U_warn400
