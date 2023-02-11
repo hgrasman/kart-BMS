@@ -42,6 +42,7 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include <stdbool.h>
 
 /*
                          Main application
@@ -55,20 +56,35 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
+    
+    //constant variable declaration for safety
+    struct safety{
+        static const int LOW_VOLTAGE = 3.2;
+        static const int HIGH_VOLTAGE = 4.0;
+        static const int HIGH_TEMP = 60;
+    };
 
+    
+    struct variablesTracked {
+        unsigned int status;
+        float VSNS;
+        float TSNS[5];
+    };
+    
     while (1)
     {
         // Add your application code
+        
     }
 }
 /**

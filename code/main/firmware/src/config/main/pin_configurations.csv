@@ -1,0 +1,27 @@
+"Pin Number","Pin ID","Custom Name","Function","Mode", "Direction","Latch","Pull Up","Pull Down","Drive Strength"
+1,PA00,,EIC_EXTINT0,Digital,High Impedance,n/a,No,No,NORMAL
+2,PA01,,EIC_EXTINT1,Digital,High Impedance,n/a,No,No,NORMAL
+3,PA02,,ADC0_AIN0,Analog,High Impedance,n/a,,,NORMAL
+4,PA03,,ADC0_AIN1/VREFP,Analog,High Impedance,n/a,,,NORMAL
+5,PA04,,ADC0_AIN4,Analog,High Impedance,n/a,,,NORMAL
+6,PA05,,ADC0_AIN5,Analog,High Impedance,n/a,,,NORMAL
+7,PA06,,ADC0_AIN6,Analog,High Impedance,n/a,,,NORMAL
+8,PA07,,ADC0_AIN7,Analog,High Impedance,n/a,,,NORMAL
+11,PA08,,Available,,,,,,NORMAL
+12,PA09,,ADC1_AIN11,Analog,High Impedance,n/a,,,NORMAL
+13,PA10,,Available,,,,,,NORMAL
+14,PA11,,Available,,,,,,NORMAL
+15,PA14,GPIO_PA14,GPIO,Digital,High Impedance,n/a,No,No,NORMAL
+16,PA15,,EIC_EXTINT15,Digital,High Impedance,n/a,No,No,NORMAL
+17,PA16,GPIO_PA16,GPIO,Digital,High Impedance,n/a,No,No,NORMAL
+18,PA17,GPIO_PA17,GPIO,Digital,High Impedance,n/a,No,No,NORMAL
+19,PA18,,Available,,,,,,NORMAL
+20,PA19,GPIO_PA19,GPIO,Digital,High Impedance,n/a,No,No,NORMAL
+21,PA22,,SERCOM3_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+22,PA23,,SERCOM3_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+23,PA24,,CAN0_TX,Digital,High Impedance,n/a,No,No,NORMAL
+24,PA25,,CAN0_RX,Digital,High Impedance,n/a,No,No,NORMAL
+25,PA27,,Available,,,,,,NORMAL
+27,PA28,,Available,,,,,,NORMAL
+31,PA30,,Available,,,,,,NORMAL
+32,PA31,,Available,,,,,,NORMAL

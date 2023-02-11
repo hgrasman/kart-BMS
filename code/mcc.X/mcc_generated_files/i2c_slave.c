@@ -109,7 +109,7 @@ void I2C_Initialize()
 {
     SSP1STAT  = 0x00;
     SSP1CON1 |= 0xE6;
-    SSP1CON2  = 0x41;
+    SSP1CON2  = 0xC1;
     SSP1CON1bits.SSPEN = 0;
 }
 
@@ -313,7 +313,7 @@ static inline bool I2C_SlaveOpen()
     {      
         SSP1STAT  = 0x00;
         SSP1CON1 |= 0xE6;
-        SSP1CON2  = 0x41;
+        SSP1CON2  = 0xC1;
         SSP1CON1bits.SSPEN = 1;
         return true;
     }
@@ -324,7 +324,7 @@ static inline void I2C_SlaveClose()
 {
     SSP1STAT  = 0x00;
     SSP1CON1 |= 0xE6;
-    SSP1CON2  = 0x41;
+    SSP1CON2  = 0xC1;
     SSP1CON1bits.SSPEN = 0;
 }
 
