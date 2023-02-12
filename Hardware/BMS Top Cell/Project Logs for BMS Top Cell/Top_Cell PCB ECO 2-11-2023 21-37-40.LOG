@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=ST_CH_IN Pin=C100-1
+Removed Pin From Net: NetName=ST_DIS_IN Pin=C101-1
+Removed Pin From Net: NetName=SDA_IN Pin=C102-1
+Removed Pin From Net: NetName=SCL_IN Pin=C103-1
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=C100
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=C101
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=C102
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=C103
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=R100
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=R101
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=R102
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=R103
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=R104
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=R105
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=R106
+Removed Member From Class: ClassName=Pg1 Top Sheet and Micro Member=R107
