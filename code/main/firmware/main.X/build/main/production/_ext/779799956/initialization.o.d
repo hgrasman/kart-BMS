@@ -1,7 +1,7 @@
 build/main/production/_ext/779799956/initialization.o: \
- ../src/config/main/initialization.c ../src/config/main/definitions.h \
- ../src/config/main/peripheral/nvmctrl/plib_nvmctrl.h \
- ../src/config/main/device.h ../src/packs/ATSAMC21E18A_DFP/samc21e18a.h \
+ ../src/config/main/initialization.c ../src/config/main/configuration.h \
+ ../src/config/main/user.h ../src/config/main/device.h \
+ ../src/packs/ATSAMC21E18A_DFP/samc21e18a.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
@@ -82,11 +82,14 @@ build/main/production/_ext/779799956/initialization.o: \
  ../src/packs/ATSAMC21E18A_DFP/instance/tsens.h \
  ../src/packs/ATSAMC21E18A_DFP/instance/wdt.h \
  ../src/packs/ATSAMC21E18A_DFP/pio/samc21e18a.h \
- ../src/config/main/device_cache.h ../src/config/main/device.h \
+ ../src/config/main/device_cache.h \
  ../src/config/main/toolchain_specifics.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
- ../src/config/main/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h \
+ ../src/config/main/definitions.h \
+ ../src/config/main/peripheral/sercom/i2c_master/plib_sercom3_i2c_master.h \
  ../src/config/main/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h \
+ ../src/config/main/device.h \
+ ../src/config/main/peripheral/nvmctrl/plib_nvmctrl.h \
  ../src/config/main/peripheral/evsys/plib_evsys.h \
  ../src/config/main/peripheral/port/plib_port.h \
  ../src/config/main/peripheral/clock/plib_clock.h \
@@ -95,6 +98,8 @@ build/main/production/_ext/779799956/initialization.o: \
  ../src/config/main/peripheral/can/plib_can_common.h \
  ../src/config/main/peripheral/eic/plib_eic.h \
  ../src/config/main/peripheral/dsu/plib_dsu.h \
+ ../src/config/main/peripheral/tcc/plib_tcc0.h \
+ ../src/config/main/peripheral/tcc/plib_tcc_common.h \
  ../src/config/main/peripheral/adc/plib_adc0.h \
  ../src/config/main/peripheral/adc/plib_adc_common.h \
  ../src/config/main/peripheral/adc/plib_adc1.h \
@@ -106,11 +111,25 @@ build/main/production/_ext/779799956/initialization.o: \
  ../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
- ../src/third_party/rtos/FreeRTOS/Source/include/list.h
+ ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
+ ../src/config/main/system/int/sys_int.h \
+ ../src/config/main/system/int/sys_int_mapping.h \
+ ../src/config/main/osal/osal.h ../src/config/main/configuration.h \
+ ../src/config/main/osal/osal_definitions.h \
+ ../src/config/main/osal/osal_freertos.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/config/main/system/debug/sys_debug.h \
+ ../src/config/main/system/system.h \
+ ../src/config/main/system/system_common.h \
+ ../src/config/main/system/system_module.h \
+ ../src/config/main/system/system_common.h ../src/app.h
 
-../src/config/main/definitions.h:
+../src/config/main/configuration.h:
 
-../src/config/main/peripheral/nvmctrl/plib_nvmctrl.h:
+../src/config/main/user.h:
 
 ../src/config/main/device.h:
 
@@ -278,15 +297,19 @@ build/main/production/_ext/779799956/initialization.o: \
 
 ../src/config/main/device_cache.h:
 
-../src/config/main/device.h:
-
 ../src/config/main/toolchain_specifics.h:
 
 ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
 
-../src/config/main/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h:
+../src/config/main/definitions.h:
+
+../src/config/main/peripheral/sercom/i2c_master/plib_sercom3_i2c_master.h:
 
 ../src/config/main/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h:
+
+../src/config/main/device.h:
+
+../src/config/main/peripheral/nvmctrl/plib_nvmctrl.h:
 
 ../src/config/main/peripheral/evsys/plib_evsys.h:
 
@@ -303,6 +326,10 @@ build/main/production/_ext/779799956/initialization.o: \
 ../src/config/main/peripheral/eic/plib_eic.h:
 
 ../src/config/main/peripheral/dsu/plib_dsu.h:
+
+../src/config/main/peripheral/tcc/plib_tcc0.h:
+
+../src/config/main/peripheral/tcc/plib_tcc_common.h:
 
 ../src/config/main/peripheral/adc/plib_adc0.h:
 
@@ -327,3 +354,35 @@ build/main/production/_ext/779799956/initialization.o: \
 ../src/third_party/rtos/FreeRTOS/Source/include/task.h:
 
 ../src/third_party/rtos/FreeRTOS/Source/include/list.h:
+
+../src/config/main/system/int/sys_int.h:
+
+../src/config/main/system/int/sys_int_mapping.h:
+
+../src/config/main/osal/osal.h:
+
+../src/config/main/configuration.h:
+
+../src/config/main/osal/osal_definitions.h:
+
+../src/config/main/osal/osal_freertos.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/config/main/system/debug/sys_debug.h:
+
+../src/config/main/system/system.h:
+
+../src/config/main/system/system_common.h:
+
+../src/config/main/system/system_module.h:
+
+../src/config/main/system/system_common.h:
+
+../src/app.h:

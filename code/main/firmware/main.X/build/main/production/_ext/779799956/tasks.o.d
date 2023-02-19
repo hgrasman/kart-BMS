@@ -1,7 +1,6 @@
-build/main/production/_ext/779799956/exceptions.o: \
- ../src/config/main/exceptions.c ../src/config/main/configuration.h \
- ../src/config/main/user.h ../src/config/main/device.h \
- ../src/packs/ATSAMC21E18A_DFP/samc21e18a.h \
+build/main/production/_ext/779799956/tasks.o: ../src/config/main/tasks.c \
+ ../src/config/main/configuration.h ../src/config/main/user.h \
+ ../src/config/main/device.h ../src/packs/ATSAMC21E18A_DFP/samc21e18a.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
@@ -85,7 +84,7 @@ build/main/production/_ext/779799956/exceptions.o: \
  ../src/config/main/device_cache.h \
  ../src/config/main/toolchain_specifics.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
- ../src/config/main/interrupts.h ../src/config/main/definitions.h \
+ ../src/config/main/definitions.h \
  ../src/config/main/peripheral/sercom/i2c_master/plib_sercom3_i2c_master.h \
  ../src/config/main/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h \
  ../src/config/main/device.h \
@@ -300,8 +299,6 @@ build/main/production/_ext/779799956/exceptions.o: \
 ../src/config/main/toolchain_specifics.h:
 
 ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
-
-../src/config/main/interrupts.h:
 
 ../src/config/main/definitions.h:
 

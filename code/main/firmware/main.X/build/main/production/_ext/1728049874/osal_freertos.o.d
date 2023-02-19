@@ -1,9 +1,20 @@
-build/main/production/_ext/1716667835/plib_sercom2_i2c_master.o: \
- ../src/config/main/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.c \
- ../src/config/main/interrupts.h \
- ../src/config/main/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h \
- ../src/config/main/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h \
- ../src/config/main/device.h ../src/packs/ATSAMC21E18A_DFP/samc21e18a.h \
+build/main/production/_ext/1728049874/osal_freertos.o: \
+ ../src/config/main/osal/osal_freertos.c \
+ ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
+ ../src/config/main/FreeRTOSConfig.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/portable.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/config/main/osal/osal_freertos.h ../src/config/main/device.h \
+ ../src/packs/ATSAMC21E18A_DFP/samc21e18a.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
@@ -88,11 +99,33 @@ build/main/production/_ext/1716667835/plib_sercom2_i2c_master.o: \
  ../src/config/main/toolchain_specifics.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h
 
-../src/config/main/interrupts.h:
+../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h:
 
-../src/config/main/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h:
+../src/config/main/FreeRTOSConfig.h:
 
-../src/config/main/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h:
+../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/portable.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h:
+
+../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/list.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/config/main/osal/osal_freertos.h:
 
 ../src/config/main/device.h:
 
