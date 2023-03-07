@@ -6040,9 +6040,9 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 92 "mcc_generated_files/pin_manager.h"
+# 218 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 104 "mcc_generated_files/pin_manager.h"
+# 230 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -6207,6 +6207,98 @@ char *tempnam(const char *, const char *);
 # 1 "mcc_generated_files/interrupt_manager.h" 1
 # 55 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/i2c_slave.h" 1
+# 53 "mcc_generated_files/i2c_slave.h"
+typedef void (*i2cInterruptHandler)(void);
+
+
+
+
+
+
+
+void I2C_Initialize(void);
+
+
+
+
+
+
+void I2C_Open(void);
+
+
+
+
+
+
+
+void I2C_Close(void);
+
+
+
+
+
+
+uint8_t I2C_Read(void);
+
+
+
+
+
+
+void I2C_Write(uint8_t data);
+# 99 "mcc_generated_files/i2c_slave.h"
+_Bool I2C_IsRead(void);
+
+
+
+
+
+
+void I2C_Enable(void);
+
+
+
+
+
+
+void I2C_SendAck(void);
+
+
+
+
+
+
+void I2C_SendNack(void);
+
+
+
+
+
+
+
+void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetWriteIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetWrColIntHandler(i2cInterruptHandler handler);
+
+void (*MSSP_InterruptHandler)(void);
+void (*I2C_SlaveRdInterruptHandler)(void);
+void (*I2C_SlaveWrInterruptHandler)(void);
+void (*I2C_SlaveAddrInterruptHandler)(void);
+void (*I2C_SlaveBusColInterruptHandler)(void);
+void (*I2C_SlaveWrColInterruptHandler)(void);
+# 56 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/fvr.h" 1
+# 93 "mcc_generated_files/fvr.h"
+ void FVR_Initialize(void);
+# 127 "mcc_generated_files/fvr.h"
+_Bool FVR_IsOutputReady(void);
+# 57 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/tmr1.h" 1
 # 100 "mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
@@ -6232,12 +6324,52 @@ void TMR1_ISR(void);
 extern void (*TMR1_InterruptHandler)(void);
 # 421 "mcc_generated_files/tmr1.h"
 void TMR1_DefaultInterruptHandler(void);
-# 56 "mcc_generated_files/mcc.h" 2
-# 71 "mcc_generated_files/mcc.h"
+# 58 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/adc.h" 1
+# 72 "mcc_generated_files/adc.h"
+typedef uint16_t adc_result_t;
+
+
+
+
+typedef struct
+{
+    adc_result_t adcResult1;
+    adc_result_t adcResult2;
+} adc_sync_double_result_t;
+# 95 "mcc_generated_files/adc.h"
+typedef enum
+{
+    channel_AN2 = 0x2,
+    channel_AN3 = 0x3,
+    channel_AN7 = 0x7,
+    channel_AN8 = 0x8,
+    channel_AN9 = 0x9,
+    channel_Temp = 0x1D,
+    channel_DAC = 0x1E,
+    channel_FVR = 0x1F
+} adc_channel_t;
+# 140 "mcc_generated_files/adc.h"
+void ADC_Initialize(void);
+# 170 "mcc_generated_files/adc.h"
+void ADC_SelectChannel(adc_channel_t channel);
+# 197 "mcc_generated_files/adc.h"
+void ADC_StartConversion(void);
+# 229 "mcc_generated_files/adc.h"
+_Bool ADC_IsConversionDone(void);
+# 262 "mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversionResult(void);
+# 292 "mcc_generated_files/adc.h"
+adc_result_t ADC_GetConversion(adc_channel_t channel);
+# 320 "mcc_generated_files/adc.h"
+void ADC_TemperatureAcquisitionDelay(void);
+# 59 "mcc_generated_files/mcc.h" 2
+# 74 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 84 "mcc_generated_files/mcc.h"
+# 87 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 96 "mcc_generated_files/mcc.h"
+# 99 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 
@@ -6246,9 +6378,12 @@ void WDT_Initialize(void);
 void SYSTEM_Initialize(void)
 {
 
+    I2C_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
+    FVR_Initialize();
+    ADC_Initialize();
     TMR1_Initialize();
 }
 

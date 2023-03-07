@@ -66,18 +66,85 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
+    //create structs
+    struct criticalValues{
+        float LOW_VOLTAGE;
+        float HIGH_VOLTAGE;
+        float HIGH_TEMP;
+    };
+    
+    struct toTrack {
+        uint8_t status;
+        uint16_t VSNS[5];
+        uint16_t TSNS1[5];
+        uint16_t TSNS2[5];
+        uint16_t TSNS3[5];
+        uint16_t TSNS4[5];
+        uint16_t TSNS5[5];
+    };
+    
+    //initalize structs to be used in memory
+    struct toTrack memory = {
+        .status = 0x00,
+        .VSNS = 0x0000,
+        .TSNS1 = 0x0000,
+        .TSNS2 = 0x0000,
+        .TSNS3 = 0x0000,
+        .TSNS4 = 0x0000,
+        .TSNS5 = 0x0000
+    };
+    static const struct criticalValues safety = {
+        .LOW_VOLTAGE = 3.2, 
+        .HIGH_VOLTAGE = 4.0,
+        .HIGH_TEMP = 60
+    };
+    //declare other values to be used in necessary operations
+    uint16_t FVR_value = 0x0000;
+    float VBIT = 0.0;
+    enum ADC_Reference{TSNS1 = 0x02, TSNS2 = 0x03, TSNS3 = 0x07, TSNS4 = 0x08,
+    TSNS5 = 0x09, FVR = 0x31} selectedReference;
+    uint16_t working = 0x00;
+    float temp = 0.0;
     while (1)
     {
-        // Add your application code
-        LATC = 0x01;
         TMR1_StartTimer();
         asm("SLEEP");
+        // Add your application code
         TMR1_StopTimer();
         TMR1_Reload();
+        LATC = 0x01;
+        for(int i=4; i>0; i--){
+            memory.TSNS1[i] = memory.TSNS1[i-1];
+            memory.TSNS2[i] = memory.TSNS2[i-1];
+            memory.TSNS3[i] = memory.TSNS3[i-1];
+            memory.TSNS4[i] = memory.TSNS4[i-1];
+            memory.TSNS5[i] = memory.TSNS5[i-1];
+        }
+        selectedReference = FVR;
+        FVR_value = ADC_GetConversion(selectedReference);
+        VBIT = 2.048 / FVR_value;
+        
+        selectedReference = TSNS1;
+        working = ADC_GetConversion(selectedReference);
+        temp = -1 * (working * 100000) / (working - 1024);
+        //memory.TSNS1[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
+        
+        selectedReference = TSNS2;
+        memory.TSNS2[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
+        
+        selectedReference = TSNS3;
+        memory.TSNS3[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
+        
+        selectedReference = TSNS4;
+        memory.TSNS4[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
+        
+        selectedReference = TSNS5;
+        memory.TSNS5[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
+        
         LATC = 0x00;
-        TMR1_StartTimer();
-        asm("SLEEP");
     }
+    
+    
 }
 /**
  End of File

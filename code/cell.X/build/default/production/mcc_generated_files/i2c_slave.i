@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/pin_manager.c"
+# 1 "mcc_generated_files/i2c_slave.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,205 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/pin_manager.c" 2
-# 49 "mcc_generated_files/pin_manager.c"
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 54 "mcc_generated_files/pin_manager.h"
+# 1 "mcc_generated_files/i2c_slave.c" 2
+# 47 "mcc_generated_files/i2c_slave.c"
+# 1 "mcc_generated_files/i2c_slave.h" 1
+# 50 "mcc_generated_files/i2c_slave.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdbool.h" 1 3
+# 50 "mcc_generated_files/i2c_slave.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 2 3
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 127 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 142 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 158 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+
+
+
+
+typedef __int24 int24_t;
+
+
+
+
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 188 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+
+
+
+
+typedef __uint24 uint24_t;
+
+
+
+
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 229 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 144 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 2 3
+# 51 "mcc_generated_files/i2c_slave.h" 2
+
+
+typedef void (*i2cInterruptHandler)(void);
+
+
+
+
+
+
+
+void I2C_Initialize(void);
+
+
+
+
+
+
+void I2C_Open(void);
+
+
+
+
+
+
+
+void I2C_Close(void);
+
+
+
+
+
+
+uint8_t I2C_Read(void);
+
+
+
+
+
+
+void I2C_Write(uint8_t data);
+# 99 "mcc_generated_files/i2c_slave.h"
+_Bool I2C_IsRead(void);
+
+
+
+
+
+
+void I2C_Enable(void);
+
+
+
+
+
+
+void I2C_SendAck(void);
+
+
+
+
+
+
+void I2C_SendNack(void);
+
+
+
+
+
+
+
+void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetWriteIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetWrColIntHandler(i2cInterruptHandler handler);
+
+void (*MSSP_InterruptHandler)(void);
+void (*I2C_SlaveRdInterruptHandler)(void);
+void (*I2C_SlaveWrInterruptHandler)(void);
+void (*I2C_SlaveAddrInterruptHandler)(void);
+void (*I2C_SlaveBusColInterruptHandler)(void);
+void (*I2C_SlaveWrColInterruptHandler)(void);
+# 47 "mcc_generated_files/i2c_slave.c" 2
+
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -23,17 +218,7 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
-
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdlib.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\features.h" 1 3
 # 10 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdlib.h" 3
@@ -42,10 +227,6 @@ extern double __fpnormalize(double);
 typedef long int wchar_t;
 # 122 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
-# 168 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdlib.h" 2 3
 
 
@@ -120,92 +301,7 @@ extern void __builtin_software_breakpoint(void);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 158 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
 
-
-
-
-typedef short int16_t;
-# 173 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 188 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 209 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdint.h" 2 3
-# 5 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\builtins.h" 2 3
 
 
 #pragma intrinsic(__nop)
@@ -6034,61 +6130,378 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 54 "mcc_generated_files/pin_manager.h" 2
-# 218 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 230 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 49 "mcc_generated_files/pin_manager.c" 2
+# 48 "mcc_generated_files/i2c_slave.c" 2
 
 
 
 
 
-
-void PIN_MANAGER_Initialize(void)
+typedef enum
 {
-
-
-
-    LATA = 0x00;
-    LATB = 0x00;
-    LATC = 0x00;
-
-
-
-
-    TRISA = 0x3F;
-    TRISB = 0xF0;
-    TRISC = 0xF8;
+    I2C_IDLE,
+    I2C_ADDR_TX,
+    I2C_ADDR_RX,
+    I2C_DATA_TX,
+    I2C_DATA_RX
+} i2c_slave_state_t;
 
 
 
 
-    ANSELC = 0xCF;
-    ANSELB = 0x20;
-    ANSELA = 0x17;
+volatile uint8_t i2cWrData;
+volatile uint8_t i2cRdData;
+volatile uint8_t i2cSlaveAddr;
+static volatile i2c_slave_state_t i2cSlaveState = I2C_IDLE;
 
 
 
 
-    WPUB = 0x00;
-    WPUA = 0x00;
-    OPTION_REGbits.nWPUEN = 1;
+static void I2C_Isr(void);
+static void I2C_SlaveDefRdInterruptHandler(void);
+static void I2C_SlaveDefWrInterruptHandler(void);
+static void I2C_SlaveDefAddrInterruptHandler(void);
+static void I2C_SlaveDefWrColInterruptHandler(void);
+static void I2C_SlaveDefBusColInterruptHandler(void);
 
+static void I2C_SlaveRdCallBack(void);
+static void I2C_SlaveWrCallBack(void);
+static void I2C_SlaveAddrCallBack(void);
+static void I2C_SlaveWrColCallBack(void);
+static void I2C_SlaveBusColCallBack(void);
 
+static __attribute__((inline)) _Bool I2C_SlaveOpen();
+static __attribute__((inline)) void I2C_SlaveClose();
+static __attribute__((inline)) void I2C_SlaveSetSlaveAddr(uint8_t slaveAddr);
+static __attribute__((inline)) void I2C_SlaveSetSlaveMask(uint8_t maskAddr);
+static __attribute__((inline)) void I2C_SlaveEnableIrq(void);
+static __attribute__((inline)) _Bool I2C_SlaveIsAddr(void);
+static __attribute__((inline)) _Bool I2C_SlaveIsRead(void);
+static __attribute__((inline)) void I2C_SlaveClearBuff(void);
+static __attribute__((inline)) void I2C_SlaveClearIrq(void);
+static __attribute__((inline)) void I2C_SlaveReleaseClock(void);
+static __attribute__((inline)) _Bool I2C_SlaveIsWriteCollision(void);
+static __attribute__((inline)) _Bool I2C_SlaveIsTxBufEmpty(void);
+static __attribute__((inline)) _Bool I2C_SlaveIsData(void);
+static __attribute__((inline)) void I2C_SlaveRestart(void);
+static __attribute__((inline)) _Bool I2C_SlaveIsRxBufFull(void);
+static __attribute__((inline)) void I2C_SlaveSendTxData(uint8_t data);
+static __attribute__((inline)) uint8_t I2C_SlaveGetRxData(void);
+static __attribute__((inline)) uint8_t I2C_SlaveGetAddr(void);
+static __attribute__((inline)) void I2C_SlaveSendAck(void);
+static __attribute__((inline)) void I2C_SlaveSendNack(void);
+static __attribute__((inline)) _Bool I2C_SlaveIsOverFlow(void);
 
-
-
-    APFCON = 0x00;
-
-
-
-
-
-
+void I2C_Initialize()
+{
+    SSP1STAT = 0x00;
+    SSP1CON1 |= 0x06;
+    SSP1CON2 = 0x81;
+    SSP1CON1bits.SSPEN = 0;
 }
 
-void PIN_MANAGER_IOC(void)
+void I2C_Open()
 {
+    I2C_SlaveOpen();
+    I2C_SlaveSetSlaveAddr(10);
+    I2C_SlaveSetSlaveMask(10);
+    I2C_SlaveSetIsrHandler(I2C_Isr);
+    I2C_SlaveSetBusColIntHandler(I2C_SlaveDefBusColInterruptHandler);
+    I2C_SlaveSetWriteIntHandler(I2C_SlaveDefWrInterruptHandler);
+    I2C_SlaveSetReadIntHandler(I2C_SlaveDefRdInterruptHandler);
+    I2C_SlaveSetAddrIntHandler(I2C_SlaveDefAddrInterruptHandler);
+    I2C_SlaveSetWrColIntHandler(I2C_SlaveDefWrColInterruptHandler);
+    I2C_SlaveEnableIrq();
+}
+
+void I2C_Close()
+{
+    I2C_SlaveClose();
+}
+
+uint8_t I2C_Read()
+{
+   return I2C_SlaveGetRxData();
+}
+
+void I2C_Write(uint8_t data)
+{
+    I2C_SlaveSendTxData(data);
+}
+
+_Bool I2C_IsRead()
+{
+    return I2C_SlaveIsRead();
+}
+
+void I2C_Enable()
+{
+    I2C_Initialize();
+}
+
+void I2C_SendAck()
+{
+    I2C_SlaveSendAck();
+}
+
+void I2C_SendNack()
+{
+    I2C_SlaveSendNack();
+}
+
+static void I2C_Isr()
+{
+    I2C_SlaveClearIrq();
+
+    if(I2C_SlaveIsAddr())
+    {
+        if(I2C_SlaveIsRead())
+        {
+            i2cSlaveState = I2C_ADDR_TX;
+        }
+        else
+        {
+            i2cSlaveState = I2C_ADDR_RX;
+        }
+    }
+    else
+    {
+        if(I2C_SlaveIsRead())
+        {
+            i2cSlaveState = I2C_DATA_TX;
+        }
+        else
+        {
+            i2cSlaveState = I2C_DATA_RX;
+        }
+    }
+
+    switch(i2cSlaveState)
+    {
+        case I2C_ADDR_TX:
+            I2C_SlaveAddrCallBack();
+            if(I2C_SlaveIsTxBufEmpty())
+            {
+                I2C_SlaveWrCallBack();
+            }
+            break;
+        case I2C_ADDR_RX:
+            I2C_SlaveAddrCallBack();
+            break;
+        case I2C_DATA_TX:
+            if(I2C_SlaveIsTxBufEmpty())
+            {
+                I2C_SlaveWrCallBack();
+            }
+            break;
+        case I2C_DATA_RX:
+            if(I2C_SlaveIsRxBufFull())
+            {
+                I2C_SlaveRdCallBack();
+            }
+            break;
+        default:
+            break;
+    }
+    I2C_SlaveReleaseClock();
+}
+
+
+void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler)
+{
+    MSSP_InterruptHandler = handler;
+}
+
+
+void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler) {
+    I2C_SlaveRdInterruptHandler = handler;
+}
+
+static void I2C_SlaveRdCallBack() {
+
+    if (I2C_SlaveRdInterruptHandler)
+    {
+        I2C_SlaveRdInterruptHandler();
+    }
+}
+
+static void I2C_SlaveDefRdInterruptHandler() {
+    i2cRdData = I2C_SlaveGetRxData();
+}
+
+
+void I2C_SlaveSetWriteIntHandler(i2cInterruptHandler handler) {
+    I2C_SlaveWrInterruptHandler = handler;
+}
+
+static void I2C_SlaveWrCallBack() {
+
+    if (I2C_SlaveWrInterruptHandler)
+    {
+        I2C_SlaveWrInterruptHandler();
+    }
+}
+
+static void I2C_SlaveDefWrInterruptHandler() {
+    I2C_SlaveSendTxData(i2cWrData);
+}
+
+
+void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler){
+    I2C_SlaveAddrInterruptHandler = handler;
+}
+
+static void I2C_SlaveAddrCallBack() {
+
+    if (I2C_SlaveAddrInterruptHandler) {
+        I2C_SlaveAddrInterruptHandler();
+    }
+}
+
+static void I2C_SlaveDefAddrInterruptHandler() {
+    i2cSlaveAddr = I2C_SlaveGetRxData();
+}
+
+
+void I2C_SlaveSetWrColIntHandler(i2cInterruptHandler handler){
+    I2C_SlaveWrColInterruptHandler = handler;
+}
+
+static void I2C_SlaveWrColCallBack() {
+
+    if ( I2C_SlaveWrColInterruptHandler)
+    {
+         I2C_SlaveWrColInterruptHandler();
+    }
+}
+
+static void I2C_SlaveDefWrColInterruptHandler() {
+}
+
+
+void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler){
+    I2C_SlaveBusColInterruptHandler = handler;
+}
+
+static void I2C_SlaveBusColCallBack() {
+
+    if ( I2C_SlaveBusColInterruptHandler)
+    {
+         I2C_SlaveBusColInterruptHandler();
+    }
+}
+
+static void I2C_SlaveDefBusColInterruptHandler() {
+}
+
+static __attribute__((inline)) _Bool I2C_SlaveOpen()
+{
+    if(!SSP1CON1bits.SSPEN)
+    {
+        SSP1STAT = 0x00;
+        SSP1CON1 |= 0x06;
+        SSP1CON2 = 0x81;
+        SSP1CON1bits.SSPEN = 1;
+        return 1;
+    }
+    return 0;
+}
+
+static __attribute__((inline)) void I2C_SlaveClose()
+{
+    SSP1STAT = 0x00;
+    SSP1CON1 |= 0x06;
+    SSP1CON2 = 0x81;
+    SSP1CON1bits.SSPEN = 0;
+}
+
+static __attribute__((inline)) void I2C_SlaveSetSlaveAddr(uint8_t slaveAddr)
+{
+    SSP1ADD = (uint8_t) (slaveAddr << 1);
+}
+
+static __attribute__((inline)) void I2C_SlaveSetSlaveMask(uint8_t maskAddr)
+{
+    SSP1MSK = (uint8_t) (maskAddr << 1);
+}
+
+static __attribute__((inline)) void I2C_SlaveEnableIrq()
+{
+    PIE1bits.SSP1IE = 1;
+}
+
+static __attribute__((inline)) _Bool I2C_SlaveIsAddr()
+{
+    return !(SSP1STATbits.D_nA);
+}
+
+static __attribute__((inline)) _Bool I2C_SlaveIsRead()
+{
+    return (SSP1STATbits.R_nW);
+}
+
+static __attribute__((inline)) void I2C_SlaveClearIrq()
+{
+    PIR1bits.SSP1IF = 0;
+}
+
+static __attribute__((inline)) void I2C_SlaveReleaseClock()
+{
+    SSP1CON1bits.CKP = 1;
+}
+
+static __attribute__((inline)) _Bool I2C_SlaveIsWriteCollision()
+{
+    return SSP1CON1bits.WCOL;
+}
+
+static __attribute__((inline)) _Bool I2C_SlaveIsData()
+{
+    return SSP1STATbits.D_nA;
+}
+
+static __attribute__((inline)) void I2C_SlaveRestart(void)
+{
+    SSP1CON2bits.RSEN = 1;
+}
+
+static __attribute__((inline)) _Bool I2C_SlaveIsTxBufEmpty()
+{
+    return !SSP1STATbits.BF;
+}
+
+static __attribute__((inline)) _Bool I2C_SlaveIsRxBufFull()
+{
+    return SSP1STATbits.BF;
+}
+
+static __attribute__((inline)) void I2C_SlaveSendTxData(uint8_t data)
+{
+    SSP1BUF = data;
+}
+
+static __attribute__((inline)) uint8_t I2C_SlaveGetRxData()
+{
+    return SSP1BUF;
+}
+
+static __attribute__((inline)) uint8_t I2C_SlaveGetAddr()
+{
+    return SSP1ADD;
+}
+
+static __attribute__((inline)) void I2C_SlaveSendAck()
+{
+    SSP1CON2bits.ACKDT = 0;
+    SSP1CON2bits.ACKEN = 1;
+}
+
+static __attribute__((inline)) void I2C_SlaveSendNack()
+{
+    SSP1CON2bits.ACKDT = 1;
+    SSP1CON2bits.ACKEN = 1;
+}
+
+static __attribute__((inline)) _Bool I2C_SlaveIsOverFlow()
+{
+    return SSP1CON1bits.SSPOV;
 }

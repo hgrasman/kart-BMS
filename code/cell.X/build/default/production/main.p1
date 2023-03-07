@@ -1,7 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
+[v F3852 `(v ~T0 @X0 0 tf ]
+[v F3854 `(v ~T0 @X0 0 tf ]
+[v F3856 `(v ~T0 @X0 0 tf ]
+[v F3858 `(v ~T0 @X0 0 tf ]
+[v F3860 `(v ~T0 @X0 0 tf ]
+[v F3862 `(v ~T0 @X0 0 tf ]
 [p mainexit ]
-"71 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 71: void SYSTEM_Initialize(void);
+"74 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 74: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "358 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 358:     struct {
@@ -18,9 +24,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "375
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 375: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"1951
-[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1951: extern volatile unsigned char LATC __attribute__((address(0x10E)));
-[v _LATC `Vuc ~T0 @X0 0 e@270 ]
+"76 main.c
+[; ;main.c: 76:     struct toTrack {
+[s S454 `uc 1 `us -> 5 `i `us -> 5 `i `us -> 5 `i `us -> 5 `i `us -> 5 `i `us -> 5 `i ]
+[n S454 toTrack status VSNS TSNS1 TSNS2 TSNS3 TSNS4 TSNS5 ]
+"70
+[; ;main.c: 70:     struct criticalValues{
+[s S453 `f 1 `f 1 `f 1 ]
+[n S453 criticalValues LOW_VOLTAGE HIGH_VOLTAGE HIGH_TEMP ]
+"105
+[; ;main.c: 105:     TSNS5 = 0x09, FVR = 0x31} selectedReference;
+[c E3927 2 3 7 8 9 49 .. ]
+[n E3927 ADC_Reference TSNS1 TSNS2 TSNS3 TSNS4 TSNS5 FVR  ]
 "129 ./mcc_generated_files/tmr1.h
 [; ;./mcc_generated_files/tmr1.h: 129: void TMR1_StartTimer(void);
 [v _TMR1_StartTimer `(v ~T0 @X0 0 ef ]
@@ -30,6 +45,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "271
 [; ;./mcc_generated_files/tmr1.h: 271: void TMR1_Reload(void);
 [v _TMR1_Reload `(v ~T0 @X0 0 ef ]
+"1951 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1951: extern volatile unsigned char LATC __attribute__((address(0x10E)));
+[v _LATC `Vuc ~T0 @X0 0 e@270 ]
+"124 main.c
+[; ;main.c: 124:         FVR_value = ADC_GetConversion(selectedReference);
+[c E3887 2 3 7 8 9 29 30 31 .. ]
+[n E3887 . channel_AN2 channel_AN3 channel_AN7 channel_AN8 channel_AN9 channel_Temp channel_DAC channel_FVR  ]
+"292 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 292: adc_result_t ADC_GetConversion(adc_channel_t channel);
+[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E3887 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -585,6 +610,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9813
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 9813: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
+"135 ./mcc_generated_files/i2c_slave.h
+[; ;./mcc_generated_files/i2c_slave.h: 135: void (*MSSP_InterruptHandler)(void);
+[v _MSSP_InterruptHandler `*F3852 ~T0 @X0 1 e ]
+"136
+[; ;./mcc_generated_files/i2c_slave.h: 136: void (*I2C_SlaveRdInterruptHandler)(void);
+[v _I2C_SlaveRdInterruptHandler `*F3854 ~T0 @X0 1 e ]
+"137
+[; ;./mcc_generated_files/i2c_slave.h: 137: void (*I2C_SlaveWrInterruptHandler)(void);
+[v _I2C_SlaveWrInterruptHandler `*F3856 ~T0 @X0 1 e ]
+"138
+[; ;./mcc_generated_files/i2c_slave.h: 138: void (*I2C_SlaveAddrInterruptHandler)(void);
+[v _I2C_SlaveAddrInterruptHandler `*F3858 ~T0 @X0 1 e ]
+"139
+[; ;./mcc_generated_files/i2c_slave.h: 139: void (*I2C_SlaveBusColInterruptHandler)(void);
+[v _I2C_SlaveBusColInterruptHandler `*F3860 ~T0 @X0 1 e ]
+"140
+[; ;./mcc_generated_files/i2c_slave.h: 140: void (*I2C_SlaveWrColInterruptHandler)(void);
+[v _I2C_SlaveWrColInterruptHandler `*F3862 ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "49 main.c
 [; ;main.c: 49: void main(void)
@@ -603,43 +646,171 @@ Version 4.0 HI-TECH Software Intermediate Code
 "61
 [; ;main.c: 61:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"69
-[; ;main.c: 69:     while (1)
-[e :U 453 ]
-"70
-[; ;main.c: 70:     {
+[v F3922 `S454 ~T0 @X0 1 s ]
+[i F3922
+:U ..
+:U ..
+"87
+[; ;main.c: 87:     struct toTrack memory = {
+-> -> 0 `i `uc
+:U ..
+-> -> 0 `i `us
+..
+:U ..
+-> -> 0 `i `us
+..
+:U ..
+-> -> 0 `i `us
+..
+:U ..
+-> -> 0 `i `us
+..
+:U ..
+-> -> 0 `i `us
+..
+:U ..
+-> -> 0 `i `us
+..
+..
+..
+]
+[v _memory `S454 ~T0 @X0 1 a ]
+[e = _memory F3922 ]
+"96
+[; ;main.c: 96:     static const struct criticalValues safety = {
+[v F3924 `CS453 ~T0 @X0 1 s safety ]
+[i F3924
+:U ..
+:U ..
+-> .3.2 `f
+-> .4.0 `f
+-> -> 60 `i `f
+..
+..
+]
+"102
+[; ;main.c: 102:     uint16_t FVR_value = 0x0000;
+[v _FVR_value `us ~T0 @X0 1 a ]
+[e = _FVR_value -> -> 0 `i `us ]
+"103
+[; ;main.c: 103:     float VBIT = 0.0;
+[v _VBIT `f ~T0 @X0 1 a ]
+[e = _VBIT -> .0.0 `f ]
+"105
+[; ;main.c: 105:     TSNS5 = 0x09, FVR = 0x31} selectedReference;
+[v _selectedReference `E3927 ~T0 @X0 1 a ]
+"106
+[; ;main.c: 106:     uint16_t working = 0x00;
+[v _working `us ~T0 @X0 1 a ]
+[e = _working -> -> 0 `i `us ]
+"107
+[; ;main.c: 107:     float temp = 0.0;
+[v _temp `f ~T0 @X0 1 a ]
+[e = _temp -> .0.0 `f ]
+"108
+[; ;main.c: 108:     while (1)
+[e :U 456 ]
+"109
+[; ;main.c: 109:     {
 {
-"72
-[; ;main.c: 72:         LATC = 0x01;
-[e = _LATC -> -> 1 `i `uc ]
-"73
-[; ;main.c: 73:         TMR1_StartTimer();
+"110
+[; ;main.c: 110:         TMR1_StartTimer();
 [e ( _TMR1_StartTimer ..  ]
-"74
-[; ;main.c: 74:         __asm("SLEEP");
+"111
+[; ;main.c: 111:         __asm("SLEEP");
 [; <" SLEEP ;# ">
-"75
-[; ;main.c: 75:         TMR1_StopTimer();
+"113
+[; ;main.c: 113:         TMR1_StopTimer();
 [e ( _TMR1_StopTimer ..  ]
-"76
-[; ;main.c: 76:         TMR1_Reload();
+"114
+[; ;main.c: 114:         TMR1_Reload();
 [e ( _TMR1_Reload ..  ]
-"77
-[; ;main.c: 77:         LATC = 0x00;
-[e = _LATC -> -> 0 `i `uc ]
-"78
-[; ;main.c: 78:         TMR1_StartTimer();
-[e ( _TMR1_StartTimer ..  ]
-"79
-[; ;main.c: 79:         __asm("SLEEP");
-[; <" SLEEP ;# ">
-"80
-[; ;main.c: 80:     }
+"115
+[; ;main.c: 115:         LATC = 0x01;
+[e = _LATC -> -> 1 `i `uc ]
+"116
+[; ;main.c: 116:         for(int i=4; i>0; i--){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 4 `i ]
+[e $ > _i -> 0 `i 458  ]
+[e $U 459  ]
+[e :U 458 ]
+{
+"117
+[; ;main.c: 117:             memory.TSNS1[i] = memory.TSNS1[i-1];
+[e = *U + &U . _memory 2 * -> -> _i `ui `ux -> -> # *U &U . _memory 2 `ui `ux *U + &U . _memory 2 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 2 `ui `ux ]
+"118
+[; ;main.c: 118:             memory.TSNS2[i] = memory.TSNS2[i-1];
+[e = *U + &U . _memory 3 * -> -> _i `ui `ux -> -> # *U &U . _memory 3 `ui `ux *U + &U . _memory 3 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 3 `ui `ux ]
+"119
+[; ;main.c: 119:             memory.TSNS3[i] = memory.TSNS3[i-1];
+[e = *U + &U . _memory 4 * -> -> _i `ui `ux -> -> # *U &U . _memory 4 `ui `ux *U + &U . _memory 4 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 4 `ui `ux ]
+"120
+[; ;main.c: 120:             memory.TSNS4[i] = memory.TSNS4[i-1];
+[e = *U + &U . _memory 5 * -> -> _i `ui `ux -> -> # *U &U . _memory 5 `ui `ux *U + &U . _memory 5 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 5 `ui `ux ]
+"121
+[; ;main.c: 121:             memory.TSNS5[i] = memory.TSNS5[i-1];
+[e = *U + &U . _memory 6 * -> -> _i `ui `ux -> -> # *U &U . _memory 6 `ui `ux *U + &U . _memory 6 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 6 `ui `ux ]
+"122
+[; ;main.c: 122:         }
 }
-[e :U 452 ]
-[e $U 453  ]
-[e :U 454 ]
-"81
-[; ;main.c: 81: }
-[e :UE 451 ]
+[e -- _i -> 1 `i ]
+[e $ > _i -> 0 `i 458  ]
+[e :U 459 ]
+}
+"123
+[; ;main.c: 123:         selectedReference = FVR;
+[e = _selectedReference . `E3927 5 ]
+"124
+[; ;main.c: 124:         FVR_value = ADC_GetConversion(selectedReference);
+[e = _FVR_value ( _ADC_GetConversion (1 -> _selectedReference `E3887 ]
+"125
+[; ;main.c: 125:         VBIT = 2.048 / FVR_value;
+[e = _VBIT -> / .2.048 -> -> _FVR_value `ui `d `f ]
+"127
+[; ;main.c: 127:         selectedReference = TSNS1;
+[e = _selectedReference . `E3927 0 ]
+"128
+[; ;main.c: 128:         working = ADC_GetConversion(selectedReference);
+[e = _working ( _ADC_GetConversion (1 -> _selectedReference `E3887 ]
+"129
+[; ;main.c: 129:         temp = -1 * (working * 100000) / (working - 1024);
+[e = _temp -> / * -> -U -> 1 `i `l * -> _working `l -> 100000 `l -> - -> _working `ui -> -> 1024 `i `ui `l `f ]
+"132
+[; ;main.c: 132:         selectedReference = TSNS2;
+[e = _selectedReference . `E3927 1 ]
+"133
+[; ;main.c: 133:         memory.TSNS2[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
+[e = *U + &U . _memory 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _memory 3 `ui `ux -> * -> -> ( _ADC_GetConversion (1 -> _selectedReference `E3887 `ui `f _VBIT `us ]
+"135
+[; ;main.c: 135:         selectedReference = TSNS3;
+[e = _selectedReference . `E3927 2 ]
+"136
+[; ;main.c: 136:         memory.TSNS3[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
+[e = *U + &U . _memory 4 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _memory 4 `ui `ux -> * -> -> ( _ADC_GetConversion (1 -> _selectedReference `E3887 `ui `f _VBIT `us ]
+"138
+[; ;main.c: 138:         selectedReference = TSNS4;
+[e = _selectedReference . `E3927 3 ]
+"139
+[; ;main.c: 139:         memory.TSNS4[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
+[e = *U + &U . _memory 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _memory 5 `ui `ux -> * -> -> ( _ADC_GetConversion (1 -> _selectedReference `E3887 `ui `f _VBIT `us ]
+"141
+[; ;main.c: 141:         selectedReference = TSNS5;
+[e = _selectedReference . `E3927 4 ]
+"142
+[; ;main.c: 142:         memory.TSNS5[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
+[e = *U + &U . _memory 6 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _memory 6 `ui `ux -> * -> -> ( _ADC_GetConversion (1 -> _selectedReference `E3887 `ui `f _VBIT `us ]
+"144
+[; ;main.c: 144:         LATC = 0x00;
+[e = _LATC -> -> 0 `i `uc ]
+"145
+[; ;main.c: 145:     }
+}
+[e :U 455 ]
+[e $U 456  ]
+[e :U 457 ]
+"148
+[; ;main.c: 148: }
+[e :UE 452 ]
 }
