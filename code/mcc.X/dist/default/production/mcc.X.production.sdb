@@ -11,17 +11,27 @@ I2C_ADDR_RX 2
 I2C_DATA_TX 3
 I2C_DATA_RX 4
 ]
-"88 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/adc.c
+"93 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/adc.c
 [e E3500 . `uc
 channel_AN2 2
 channel_AN3 3
-channel_AN7 7
+channel_AN6 6
 channel_AN8 8
 channel_AN9 9
 channel_AN11 11
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
+]
+"105 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\main.c
+[e E3941 ADC_Reference `uc
+TSNS1 2
+TSNS2 4
+TSNS3 6
+TSNS4 17
+TSNS5 8
+VSNS 9
+FVR 49
 ]
 "10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
@@ -31,6 +41,14 @@ channel_FVR 31
 [v _main main `(v  1 e 1 0 ]
 "67 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"148
+[v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]
+"159
+[v _ADC_SetInterruptHandler ADC_SetInterruptHandler `(v  1 e 1 0 ]
+"163
+[v _ADC_DefaultInterruptHandler ADC_DefaultInterruptHandler `(v  1 e 1 0 ]
+"58 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/fvr.c
+[v _FVR_Initialize FVR_Initialize `(v  1 e 1 0 ]
 "108 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/i2c_slave.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
 "165
@@ -97,12 +115,35 @@ channel_FVR 31
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"60
+"65
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"68
+"73
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "55 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/pwm1.c
+[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/pwm2.c
+[v _PWM2_Initialize PWM2_Initialize `(v  1 e 1 0 ]
+"58 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/pwm4.c
+[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
+"64 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"93
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+"99
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+"120
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+[v i1_TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"142
+[v _TMR1_Reload TMR1_Reload `(v  1 e 1 0 ]
+"157
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"171
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+"175
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
 "135 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X/mcc_generated_files/i2c_slave.h
 [v _MSSP_InterruptHandler MSSP_InterruptHandler `*.37(v  1 e 2 0 ]
 "136
@@ -155,6 +196,44 @@ channel_FVR 31
 "654
 [u S570 . 1 `S562 1 . 1 0 ]
 [v _PIR2bits PIR2bits `VES570  1 e 1 @18 ]
+"749
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"769
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"789
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+[s S974 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+"811
+[s S981 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+[u S987 . 1 `S974 1 . 1 0 `S981 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES987  1 e 1 @24 ]
+"861
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+[s S1004 . 1 `uc 1 T1GSS 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 TMR1GE 1 0 :1:7 
+]
+"881
+[s S1012 . 1 `uc 1 T1GSS0 1 0 :1:0 
+`uc 1 T1GSS1 1 0 :1:1 
+]
+[u S1015 . 1 `S1004 1 . 1 0 `S1012 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES1015  1 e 1 @25 ]
 "1042
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1092
@@ -211,12 +290,12 @@ channel_FVR 31
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "1692
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S655 . 1 `uc 1 ADON 1 0 :1:0 
+[s S685 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
 "1717
-[s S659 . 1 `uc 1 . 1 0 :1:0 
+[s S689 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -224,11 +303,11 @@ channel_FVR 31
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S667 . 1 `uc 1 . 1 0 :1:0 
+[s S697 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S670 . 1 `S655 1 . 1 0 `S659 1 . 1 0 `S667 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES670  1 e 1 @157 ]
+[u S700 . 1 `S685 1 . 1 0 `S689 1 . 1 0 `S697 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES700  1 e 1 @157 ]
 "1772
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "1819
@@ -241,6 +320,23 @@ channel_FVR 31
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "2297
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"2330
+[v _FVRCON FVRCON `VEuc  1 e 1 @279 ]
+[s S881 . 1 `uc 1 ADFVR 1 0 :2:0 
+`uc 1 CDAFVR 1 0 :2:2 
+`uc 1 TSRNG 1 0 :1:4 
+`uc 1 TSEN 1 0 :1:5 
+`uc 1 FVRRDY 1 0 :1:6 
+`uc 1 FVREN 1 0 :1:7 
+]
+"2351
+[s S888 . 1 `uc 1 ADFVR0 1 0 :1:0 
+`uc 1 ADFVR1 1 0 :1:1 
+`uc 1 CDAFVR0 1 0 :1:2 
+`uc 1 CDAFVR1 1 0 :1:3 
+]
+[u S893 . 1 `S881 1 . 1 0 `S888 1 . 1 0 ]
+[v _FVRCONbits FVRCONbits `VES893  1 e 1 @279 ]
 "2499
 [v _APFCON APFCON `VEuc  1 e 1 @285 ]
 "2546
@@ -303,6 +399,26 @@ channel_FVR 31
 "3710
 [u S304 . 1 `S295 1 . 1 0 ]
 [v _SSP1CON2bits SSP1CON2bits `VES304  1 e 1 @534 ]
+"4666
+[v _PWM1DCL PWM1DCL `VEuc  1 e 1 @1553 ]
+"4702
+[v _PWM1DCH PWM1DCH `VEuc  1 e 1 @1554 ]
+"4772
+[v _PWM1CON PWM1CON `VEuc  1 e 1 @1555 ]
+"4848
+[v _PWM2DCL PWM2DCL `VEuc  1 e 1 @1556 ]
+"4884
+[v _PWM2DCH PWM2DCH `VEuc  1 e 1 @1557 ]
+"4954
+[v _PWM2CON PWM2CON `VEuc  1 e 1 @1558 ]
+"5212
+[v _PWM4DCL PWM4DCL `VEuc  1 e 1 @1562 ]
+"5248
+[v _PWM4DCH PWM4DCH `VEuc  1 e 1 @1563 ]
+"5318
+[v _PWM4CON PWM4CON `VEuc  1 e 1 @1564 ]
+"61 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/adc.c
+[v _ADC_InterruptHandler ADC_InterruptHandler `*.37(v  1 e 2 0 ]
 "65 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/i2c_slave.c
 [v _i2cWrData i2cWrData `VEuc  1 e 1 0 ]
 "66
@@ -311,45 +427,123 @@ channel_FVR 31
 [v _i2cSlaveAddr i2cSlaveAddr `VEuc  1 e 1 0 ]
 "68
 [v _i2cSlaveState i2cSlaveState `VEE3543  1 s 1 i2cSlaveState ]
+"57 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
+"58
+[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
 "50 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"94
+"159
+} 0
+"99 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/tmr1.c
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+{
+"103
+} 0
+"93
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+{
+"97
+} 0
+"142
+[v _TMR1_Reload TMR1_Reload `(v  1 e 1 0 ]
+{
+"145
+} 0
+"120
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
+"140
 } 0
 "50 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"58
+"63
 } 0
-"68
+"73
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 {
-"72
+"77
+} 0
+"64 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"91
+} 0
+"171
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"173
+} 0
+"58 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/pwm4.c
+[v _PWM4_Initialize PWM4_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"58 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/pwm2.c
+[v _PWM2_Initialize PWM2_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"58 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/pwm1.c
+[v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
+{
+"70
 } 0
 "55 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "96
 } 0
-"60 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/mcc.c
+"65 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"66
+"71
 } 0
 "108 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/i2c_slave.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
 {
 "114
 } 0
+"58 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/fvr.c
+[v _FVR_Initialize FVR_Initialize `(v  1 e 1 0 ]
+{
+"62
+} 0
 "67 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
-"86
+"91
+} 0
+"159
+[v _ADC_SetInterruptHandler ADC_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v ADC_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"161
 } 0
 "52 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"74
+"82
+} 0
+"157 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+{
+"168
+} 0
+"120
+[v i1_TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v i1TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
+"140
+} 0
+"175
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"179
 } 0
 "165 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/i2c_slave.c
 [v _I2C_Isr I2C_Isr `(v  1 s 1 I2C_Isr ]
@@ -429,4 +623,14 @@ channel_FVR 31
 [v _I2C_SlaveGetRxData I2C_SlaveGetRxData `T(uc  1 s 1 I2C_SlaveGetRxData ]
 {
 "399
+} 0
+"148 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\mcc.X\mcc_generated_files/adc.c
+[v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]
+{
+"157
+} 0
+"163
+[v _ADC_DefaultInterruptHandler ADC_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"166
 } 0

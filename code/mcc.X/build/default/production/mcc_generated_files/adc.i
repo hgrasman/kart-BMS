@@ -6054,7 +6054,7 @@ typedef enum
 {
     channel_AN2 = 0x2,
     channel_AN3 = 0x3,
-    channel_AN7 = 0x7,
+    channel_AN6 = 0x6,
     channel_AN8 = 0x8,
     channel_AN9 = 0x9,
     channel_AN11 = 0xB,
@@ -6076,6 +6076,14 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 321 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
+# 337 "mcc_generated_files/adc.h"
+void ADC_ISR(void);
+# 355 "mcc_generated_files/adc.h"
+ void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
+# 373 "mcc_generated_files/adc.h"
+extern void (*ADC_InterruptHandler)(void);
+# 391 "mcc_generated_files/adc.h"
+void ADC_DefaultInterruptHandler(void);
 # 52 "mcc_generated_files/adc.c" 2
 
 # 1 "mcc_generated_files/device_config.h" 1
@@ -6099,7 +6107,7 @@ void ADC_Initialize(void)
 
 
 
-    ADCON1 = 0x70;
+    ADCON1 = 0xF0;
 
 
     ADCON2 = 0x00;
@@ -6111,8 +6119,13 @@ void ADC_Initialize(void)
     ADRESH = 0x00;
 
 
-    ADCON0 = 0x01;
+    ADCON0 = 0x11;
 
+
+    PIE1bits.ADIE = 1;
+
+
+    ADC_SetInterruptHandler(ADC_DefaultInterruptHandler);
 }
 
 void ADC_SelectChannel(adc_channel_t channel)
@@ -6151,7 +6164,7 @@ adc_result_t ADC_GetConversion(adc_channel_t channel)
     ADCON0bits.ADON = 1;
 
 
-    _delay((unsigned long)((5)*(500000/4000000.0)));
+    _delay((unsigned long)((5)*(16000000/4000000.0)));
 
 
     ADCON0bits.GO_nDONE = 1;
@@ -6167,5 +6180,25 @@ adc_result_t ADC_GetConversion(adc_channel_t channel)
 
 void ADC_TemperatureAcquisitionDelay(void)
 {
-    _delay((unsigned long)((200)*(500000/4000000.0)));
+    _delay((unsigned long)((200)*(16000000/4000000.0)));
+}
+
+void ADC_ISR(void)
+{
+
+    PIR1bits.ADIF = 0;
+
+ if(ADC_InterruptHandler)
+    {
+        ADC_InterruptHandler();
+    }
+}
+
+void ADC_SetInterruptHandler(void (* InterruptHandler)(void)){
+    ADC_InterruptHandler = InterruptHandler;
+}
+
+void ADC_DefaultInterruptHandler(void){
+
+
 }

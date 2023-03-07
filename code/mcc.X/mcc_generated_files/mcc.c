@@ -54,13 +54,18 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
+    FVR_Initialize();
+    PWM1_Initialize();
+    PWM2_Initialize();
     ADC_Initialize();
+    PWM4_Initialize();
+    TMR1_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
 {
-    // SCS FOSC; IRCF 500KHz_MF; 
-    OSCCON = 0x38;
+    // SCS FOSC; IRCF 16MHz_HF; 
+    OSCCON = 0x78;
     // SBOREN disabled; BORFS disabled; 
     BORCON = 0x00;
 }

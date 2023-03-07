@@ -6040,9 +6040,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 249 "./mcc_generated_files/pin_manager.h"
+# 246 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 261 "./mcc_generated_files/pin_manager.h"
+# 258 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -6292,6 +6292,61 @@ void (*I2C_SlaveBusColInterruptHandler)(void);
 void (*I2C_SlaveWrColInterruptHandler)(void);
 # 56 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/tmr1.h" 1
+# 100 "./mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+# 129 "./mcc_generated_files/tmr1.h"
+void TMR1_StartTimer(void);
+# 161 "./mcc_generated_files/tmr1.h"
+void TMR1_StopTimer(void);
+# 196 "./mcc_generated_files/tmr1.h"
+uint16_t TMR1_ReadTimer(void);
+# 235 "./mcc_generated_files/tmr1.h"
+void TMR1_WriteTimer(uint16_t timerVal);
+# 271 "./mcc_generated_files/tmr1.h"
+void TMR1_Reload(void);
+# 310 "./mcc_generated_files/tmr1.h"
+void TMR1_StartSinglePulseAcquisition(void);
+# 349 "./mcc_generated_files/tmr1.h"
+uint8_t TMR1_CheckGateValueStatus(void);
+# 367 "./mcc_generated_files/tmr1.h"
+void TMR1_ISR(void);
+# 385 "./mcc_generated_files/tmr1.h"
+ void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+# 403 "./mcc_generated_files/tmr1.h"
+extern void (*TMR1_InterruptHandler)(void);
+# 421 "./mcc_generated_files/tmr1.h"
+void TMR1_DefaultInterruptHandler(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/pwm4.h" 1
+# 102 "./mcc_generated_files/pwm4.h"
+ void PWM4_Initialize(void);
+# 129 "./mcc_generated_files/pwm4.h"
+ void PWM4_LoadDutyValue(uint16_t dutyValue);
+# 58 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/pwm1.h" 1
+# 102 "./mcc_generated_files/pwm1.h"
+ void PWM1_Initialize(void);
+# 129 "./mcc_generated_files/pwm1.h"
+ void PWM1_LoadDutyValue(uint16_t dutyValue);
+# 59 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/pwm2.h" 1
+# 102 "./mcc_generated_files/pwm2.h"
+ void PWM2_Initialize(void);
+# 129 "./mcc_generated_files/pwm2.h"
+ void PWM2_LoadDutyValue(uint16_t dutyValue);
+# 60 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/fvr.h" 1
+# 93 "./mcc_generated_files/fvr.h"
+ void FVR_Initialize(void);
+# 127 "./mcc_generated_files/fvr.h"
+_Bool FVR_IsOutputReady(void);
+# 61 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/adc.h" 1
 # 72 "./mcc_generated_files/adc.h"
 typedef uint16_t adc_result_t;
@@ -6309,7 +6364,7 @@ typedef enum
 {
     channel_AN2 = 0x2,
     channel_AN3 = 0x3,
-    channel_AN7 = 0x7,
+    channel_AN6 = 0x6,
     channel_AN8 = 0x8,
     channel_AN9 = 0x9,
     channel_AN11 = 0xB,
@@ -6331,12 +6386,20 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 321 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-# 72 "./mcc_generated_files/mcc.h"
+# 337 "./mcc_generated_files/adc.h"
+void ADC_ISR(void);
+# 355 "./mcc_generated_files/adc.h"
+ void ADC_SetInterruptHandler(void (* InterruptHandler)(void));
+# 373 "./mcc_generated_files/adc.h"
+extern void (*ADC_InterruptHandler)(void);
+# 391 "./mcc_generated_files/adc.h"
+void ADC_DefaultInterruptHandler(void);
+# 62 "./mcc_generated_files/mcc.h" 2
+# 77 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "./mcc_generated_files/mcc.h"
+# 90 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 97 "./mcc_generated_files/mcc.h"
+# 102 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 44 "main.c" 2
 
@@ -6358,28 +6421,51 @@ void main(void)
 
 
     (INTCONbits.PEIE = 1);
-# 71 "main.c"
+# 72 "main.c"
     struct safeValues{
         int LOW_VOLTAGE;
         int HIGH_VOLTAGE;
         int HIGH_TEMP;
     };
 
+    struct variablesTracked {
+        uint8_t status;
+        uint16_t VSNS[5];
+        uint16_t TSNS1[5];
+        uint16_t TSNS2[5];
+        uint16_t TSNS3[5];
+        uint16_t TSNS4[5];
+        uint16_t TSNS5[5];
+    };
+
+
     static const struct safeValues safety = {
         .LOW_VOLTAGE = 3.2,
         .HIGH_VOLTAGE = 4.0,
         .HIGH_TEMP = 60
     };
-
-    struct variablesTracked {
-        uint8_t status;
-        uint16_t VSNS;
-        uint16_t TSNS[5];
-    };
-
-    while (1)
-    {
-
+# 105 "main.c"
+    enum ADC_Reference{TSNS1 = 0x02, TSNS2 = 0x04, TSNS3 = 0x06, TSNS4 = 0x11, TSNS5 = 0x08, VSNS = 0x09, FVR = 0x31} selectedReference;
+    uint8_t position = 0;
+    unsigned char FVR_value = 0x00;
+    float VBIT = 0.0;
+    LATC = 0x00;
+    TMR1_StartTimer();
+    while (1){
+# 144 "main.c"
+        TMR1_StopTimer();
+        TMR1_Reload();
+        LATC = 0x01;
+        TMR1_StartTimer();
+        __asm("SLEEP");
+        TMR1_StopTimer();
+        TMR1_Reload();
+        LATC = 0x00;
+        TMR1_StartTimer();
+        __asm("SLEEP");
 
     }
+
+
+
 }

@@ -8,18 +8,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 "61 mcc_generated_files/i2c_slave.h
 [; ;mcc_generated_files/i2c_slave.h: 61: void I2C_Initialize(void);
 [v _I2C_Initialize `(v ~T0 @X0 0 ef ]
-"249 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 249: void PIN_MANAGER_Initialize (void);
+"246 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 246: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"85 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 85: void OSCILLATOR_Initialize(void);
+"90 mcc_generated_files/mcc.h
+[; ;mcc_generated_files/mcc.h: 90: void OSCILLATOR_Initialize(void);
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"97
-[; ;mcc_generated_files/mcc.h: 97: void WDT_Initialize(void);
+"102
+[; ;mcc_generated_files/mcc.h: 102: void WDT_Initialize(void);
 [v _WDT_Initialize `(v ~T0 @X0 0 ef ]
+"93 mcc_generated_files/fvr.h
+[; ;mcc_generated_files/fvr.h: 93:  void FVR_Initialize(void);
+[v _FVR_Initialize `(v ~T0 @X0 0 ef ]
+"102 mcc_generated_files/pwm1.h
+[; ;mcc_generated_files/pwm1.h: 102:  void PWM1_Initialize(void);
+[v _PWM1_Initialize `(v ~T0 @X0 0 ef ]
+"102 mcc_generated_files/pwm2.h
+[; ;mcc_generated_files/pwm2.h: 102:  void PWM2_Initialize(void);
+[v _PWM2_Initialize `(v ~T0 @X0 0 ef ]
 "141 mcc_generated_files/adc.h
 [; ;mcc_generated_files/adc.h: 141: void ADC_Initialize(void);
 [v _ADC_Initialize `(v ~T0 @X0 0 ef ]
+"102 mcc_generated_files/pwm4.h
+[; ;mcc_generated_files/pwm4.h: 102:  void PWM4_Initialize(void);
+[v _PWM4_Initialize `(v ~T0 @X0 0 ef ]
+"100 mcc_generated_files/tmr1.h
+[; ;mcc_generated_files/tmr1.h: 100: void TMR1_Initialize(void);
+[v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
 "1533 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1533: extern volatile unsigned char OSCCON __attribute__((address(0x099)));
 [v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
@@ -623,42 +638,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 56:     WDT_Initialize();
 [e ( _WDT_Initialize ..  ]
 "57
-[; ;mcc_generated_files/mcc.c: 57:     ADC_Initialize();
-[e ( _ADC_Initialize ..  ]
+[; ;mcc_generated_files/mcc.c: 57:     FVR_Initialize();
+[e ( _FVR_Initialize ..  ]
 "58
-[; ;mcc_generated_files/mcc.c: 58: }
+[; ;mcc_generated_files/mcc.c: 58:     PWM1_Initialize();
+[e ( _PWM1_Initialize ..  ]
+"59
+[; ;mcc_generated_files/mcc.c: 59:     PWM2_Initialize();
+[e ( _PWM2_Initialize ..  ]
+"60
+[; ;mcc_generated_files/mcc.c: 60:     ADC_Initialize();
+[e ( _ADC_Initialize ..  ]
+"61
+[; ;mcc_generated_files/mcc.c: 61:     PWM4_Initialize();
+[e ( _PWM4_Initialize ..  ]
+"62
+[; ;mcc_generated_files/mcc.c: 62:     TMR1_Initialize();
+[e ( _TMR1_Initialize ..  ]
+"63
+[; ;mcc_generated_files/mcc.c: 63: }
 [e :UE 452 ]
 }
-"60
-[; ;mcc_generated_files/mcc.c: 60: void OSCILLATOR_Initialize(void)
+"65
+[; ;mcc_generated_files/mcc.c: 65: void OSCILLATOR_Initialize(void)
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"61
-[; ;mcc_generated_files/mcc.c: 61: {
+"66
+[; ;mcc_generated_files/mcc.c: 66: {
 {
 [e :U _OSCILLATOR_Initialize ]
 [f ]
-"63
-[; ;mcc_generated_files/mcc.c: 63:     OSCCON = 0x38;
-[e = _OSCCON -> -> 56 `i `uc ]
-"65
-[; ;mcc_generated_files/mcc.c: 65:     BORCON = 0x00;
+"68
+[; ;mcc_generated_files/mcc.c: 68:     OSCCON = 0x78;
+[e = _OSCCON -> -> 120 `i `uc ]
+"70
+[; ;mcc_generated_files/mcc.c: 70:     BORCON = 0x00;
 [e = _BORCON -> -> 0 `i `uc ]
-"66
-[; ;mcc_generated_files/mcc.c: 66: }
+"71
+[; ;mcc_generated_files/mcc.c: 71: }
 [e :UE 453 ]
 }
-"68
-[; ;mcc_generated_files/mcc.c: 68: void WDT_Initialize(void)
+"73
+[; ;mcc_generated_files/mcc.c: 73: void WDT_Initialize(void)
 [v _WDT_Initialize `(v ~T0 @X0 1 ef ]
-"69
-[; ;mcc_generated_files/mcc.c: 69: {
+"74
+[; ;mcc_generated_files/mcc.c: 74: {
 {
 [e :U _WDT_Initialize ]
 [f ]
-"71
-[; ;mcc_generated_files/mcc.c: 71:     WDTCON = 0x13;
+"76
+[; ;mcc_generated_files/mcc.c: 76:     WDTCON = 0x13;
 [e = _WDTCON -> -> 19 `i `uc ]
-"72
-[; ;mcc_generated_files/mcc.c: 72: }
+"77
+[; ;mcc_generated_files/mcc.c: 77: }
 [e :UE 454 ]
 }
