@@ -17,6 +17,7 @@
         <itemPath>mcc_generated_files/i2c_slave.h</itemPath>
         <itemPath>mcc_generated_files/tmr2.h</itemPath>
       </logicalFolder>
+      <itemPath>mainVars.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -46,7 +47,6 @@
       <itemPath>Makefile</itemPath>
       <itemPath>cell.mc3</itemPath>
     </logicalFolder>
-    <itemPath>mainVars.h</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>

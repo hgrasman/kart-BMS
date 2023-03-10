@@ -1004,16 +1004,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "219
 [; ;main.c: 219:     I2C_Write(memory.status);
 [e ( _I2C_Write (1 . _memory 0 ]
-"221
-[; ;main.c: 221:     uint8_t high = (uint8_t) (memory.TSNS1 >> 8) & 0x00FF;
+"220
+[; ;main.c: 220:     uint8_t high = (uint8_t) (memory.TSNS1 >> 8) & 0x00FF;
 [v _high `uc ~T0 @X0 1 a ]
 [e = _high -> & -> -> >> -> . _memory 2 `ui -> 8 `i `uc `i -> 255 `i `uc ]
-"222
-[; ;main.c: 222:     uint8_t low = (uint8_t) (memory.TSNS1 >> 0) & 0x00FF;
+"221
+[; ;main.c: 221:     uint8_t low = (uint8_t) (memory.TSNS1 >> 0) & 0x00FF;
 [v _low `uc ~T0 @X0 1 a ]
 [e = _low -> & -> -> >> -> . _memory 2 `ui -> 0 `i `uc `i -> 255 `i `uc ]
-"223
-[; ;main.c: 223:     while(SSP1STATbits.BF && !SSP1CON2bits.ACKSTAT){ }
+"222
+[; ;main.c: 222:     while(SSP1STATbits.BF && !SSP1CON2bits.ACKSTAT){ }
 [e $U 481  ]
 [e :U 482 ]
 {
@@ -1021,11 +1021,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 481 ]
 [e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i ! != -> . . _SSP1CON2bits 0 6 `i -> 0 `i 482  ]
 [e :U 483 ]
-"225
-[; ;main.c: 225:     I2C_Write(high);
+"224
+[; ;main.c: 224:     I2C_Write(high);
 [e ( _I2C_Write (1 _high ]
-"226
-[; ;main.c: 226:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+"225
+[; ;main.c: 225:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
 [e $U 484  ]
 [e :U 485 ]
 {
@@ -1033,14 +1033,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 484 ]
 [e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 485  ]
 [e :U 486 ]
-"228
-[; ;main.c: 228:     I2C_Write(low);
+"227
+[; ;main.c: 227:     I2C_Write(low);
 [e ( _I2C_Write (1 _low ]
-"229
-[; ;main.c: 229:     high = (uint8_t) (memory.TSNS2 >> 8) & 0x00FF;
+"228
+[; ;main.c: 228:     high = (uint8_t) (memory.TSNS2 >> 8) & 0x00FF;
 [e = _high -> & -> -> >> -> . _memory 3 `ui -> 8 `i `uc `i -> 255 `i `uc ]
-"230
-[; ;main.c: 230:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+"229
+[; ;main.c: 229:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
 [e $U 487  ]
 [e :U 488 ]
 {

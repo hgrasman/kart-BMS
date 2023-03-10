@@ -217,7 +217,6 @@ static void sendDataToMaster(uint16_t toSend){
 
 static void sendAllDatatoMaster(){
     I2C_Write(memory.status);
-    
     uint8_t high = (uint8_t) (memory.TSNS1 >> 8) & 0x00FF;
     uint8_t low = (uint8_t) (memory.TSNS1 >> 0) & 0x00FF;
     while(SSP1STATbits.BF && !SSP1CON2bits.ACKSTAT){ }
@@ -227,7 +226,8 @@ static void sendAllDatatoMaster(){
     
     I2C_Write(low);
     high = (uint8_t) (memory.TSNS2 >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }   
+    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ } 
+    
     I2C_Write(high);
     low = (uint8_t) (memory.TSNS2 >> 0) & 0x00FF;
     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }   
