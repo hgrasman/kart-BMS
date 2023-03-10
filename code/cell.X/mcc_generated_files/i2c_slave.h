@@ -50,6 +50,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+
 typedef void (*i2cInterruptHandler)(void);
 /**
  * \brief Initialize I2C interface
@@ -125,6 +126,7 @@ void I2C_SendNack(void);
  *
  * \return Nothing
  */
+
 void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler);
 void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler);
 void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler);

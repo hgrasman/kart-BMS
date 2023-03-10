@@ -60,7 +60,7 @@
     extern "C" {
 
 #endif
-
+        
 /**
   Section: Data Types Definitions
 */
@@ -94,6 +94,7 @@ typedef struct
 
 typedef enum
 {
+    channel_AN0 =  0x0,
     channel_AN2 =  0x2,
     channel_AN3 =  0x3,
     channel_AN7 =  0x7,

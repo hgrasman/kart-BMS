@@ -122,6 +122,7 @@ typedef uint32_t uint_fast32_t;
 # 51 "mcc_generated_files/i2c_slave.h" 2
 
 
+
 typedef void (*i2cInterruptHandler)(void);
 
 
@@ -160,7 +161,7 @@ uint8_t I2C_Read(void);
 
 
 void I2C_Write(uint8_t data);
-# 99 "mcc_generated_files/i2c_slave.h"
+# 100 "mcc_generated_files/i2c_slave.h"
 _Bool I2C_IsRead(void);
 
 
@@ -183,13 +184,7 @@ void I2C_SendAck(void);
 
 
 void I2C_SendNack(void);
-
-
-
-
-
-
-
+# 130 "mcc_generated_files/i2c_slave.h"
 void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler);
 void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler);
 void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler);
@@ -6372,6 +6367,7 @@ static void I2C_SlaveWrColCallBack() {
     {
          I2C_SlaveWrColInterruptHandler();
     }
+
 }
 
 static void I2C_SlaveDefWrColInterruptHandler() {

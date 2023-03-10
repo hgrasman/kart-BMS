@@ -65,8 +65,8 @@ void TMR1_Initialize(void)
 {
     //Set the Timer to the options selected in the GUI
 
-    //T1GSS T1G_pin; TMR1GE disabled; T1GTM disabled; T1GPOL low; T1GGO_nDONE done; T1GSPM disabled; 
-    T1GCON = 0x00;
+    //T1GSS TMR0; TMR1GE disabled; T1GTM disabled; T1GPOL low; T1GGO_nDONE done; T1GSPM disabled; 
+    T1GCON = 0x01;
 
     //TMR1H 195; 
     TMR1H = 0xC3;
@@ -86,8 +86,8 @@ void TMR1_Initialize(void)
     // Set Default Interrupt Handler
     TMR1_SetInterruptHandler(TMR1_DefaultInterruptHandler);
 
-    // T1CKPS 1:1; T1OSCEN disabled; nT1SYNC do_not_synchronize; TMR1CS LFINTOSC; TMR1ON enabled; 
-    T1CON = 0xC5;
+    // T1CKPS 1:1; T1OSCEN disabled; nT1SYNC do_not_synchronize; TMR1CS LFINTOSC; TMR1ON disabled; 
+    T1CON = 0xC4;
 }
 
 void TMR1_StartTimer(void)

@@ -5,9 +5,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F3858 `(v ~T0 @X0 0 tf ]
 [v F3860 `(v ~T0 @X0 0 tf ]
 [v F3862 `(v ~T0 @X0 0 tf ]
+"61 main.c
+[; ;main.c: 61: struct toTrack {
+[s S453 `uc 1 `us 1 `us 1 `us 1 `us 1 `us 1 `us 1 ]
+[n S453 toTrack status VSNS TSNS1 TSNS2 TSNS3 TSNS4 TSNS5 ]
+"54
+[; ;main.c: 54: struct criticalValues {
+[s S452 `f 1 `f 1 `f 1 `f 1 ]
+[n S452 criticalValues LOW_VOLTAGE HIGH_VOLTAGE HIGH_TEMP WARN_TEMP ]
+"96
+[; ;main.c: 96: } selectedReference;
+[c E3940 2 3 7 8 9 16 .. ]
+[n E3940 ADC_Reference TSNS1 TSNS2 TSNS3 TSNS4 TSNS5 VSNS  ]
+"114
+[; ;main.c: 114: } I2C_Command;
+[c E3948 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
+[n E3948 I2C_opCodes No_Command Report_TSNS1 Report_TSNS2 Report_TSNS3 Report_TSNS4 Report_TSNS5 Report_VSNS Report_Status Enable_Sleep_WDT Disable_Sleep_WDT Start_Balancing Stop_Balancing Restart_Relay Send_All_Data Controller_Restart  ]
 [p mainexit ]
-"74 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 74: void SYSTEM_Initialize(void);
+"75 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 75: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "358 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 358:     struct {
@@ -24,37 +40,65 @@ Version 4.0 HI-TECH Software Intermediate Code
 "375
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 375: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"76 main.c
-[; ;main.c: 76:     struct toTrack {
-[s S454 `uc 1 `us -> 5 `i `us -> 5 `i `us -> 5 `i `us -> 5 `i `us -> 5 `i `us -> 5 `i ]
-[n S454 toTrack status VSNS TSNS1 TSNS2 TSNS3 TSNS4 TSNS5 ]
-"70
-[; ;main.c: 70:     struct criticalValues{
-[s S453 `f 1 `f 1 `f 1 ]
-[n S453 criticalValues LOW_VOLTAGE HIGH_VOLTAGE HIGH_TEMP ]
-"105
-[; ;main.c: 105:     TSNS5 = 0x09, FVR = 0x31} selectedReference;
-[c E3927 2 3 7 8 9 49 .. ]
-[n E3927 ADC_Reference TSNS1 TSNS2 TSNS3 TSNS4 TSNS5 FVR  ]
-"129 ./mcc_generated_files/tmr1.h
-[; ;./mcc_generated_files/tmr1.h: 129: void TMR1_StartTimer(void);
-[v _TMR1_StartTimer `(v ~T0 @X0 0 ef ]
-"161
-[; ;./mcc_generated_files/tmr1.h: 161: void TMR1_StopTimer(void);
-[v _TMR1_StopTimer `(v ~T0 @X0 0 ef ]
-"271
-[; ;./mcc_generated_files/tmr1.h: 271: void TMR1_Reload(void);
-[v _TMR1_Reload `(v ~T0 @X0 0 ef ]
-"1951 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
+"1480
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1480:     struct {
+[s S82 :1 `uc 1 :5 `uc 1 ]
+[n S82 . SWDTEN WDTPS ]
+"1484
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1484:     struct {
+[s S83 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S83 . . WDTPS0 WDTPS1 WDTPS2 WDTPS3 WDTPS4 ]
+"1479
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1479: typedef union {
+[u S81 `S82 1 `S83 1 ]
+[n S81 . . . ]
+"1493
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1493: extern volatile WDTCONbits_t WDTCONbits __attribute__((address(0x097)));
+[v _WDTCONbits `VS81 ~T0 @X0 0 e@151 ]
+"1951
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1951: extern volatile unsigned char LATC __attribute__((address(0x10E)));
 [v _LATC `Vuc ~T0 @X0 0 e@270 ]
-"124 main.c
-[; ;main.c: 124:         FVR_value = ADC_GetConversion(selectedReference);
-[c E3887 2 3 7 8 9 29 30 31 .. ]
-[n E3887 . channel_AN2 channel_AN3 channel_AN7 channel_AN8 channel_AN9 channel_Temp channel_DAC channel_FVR  ]
-"292 ./mcc_generated_files/adc.h
-[; ;./mcc_generated_files/adc.h: 292: adc_result_t ADC_GetConversion(adc_channel_t channel);
-[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E3887 ]
+"84 ./mcc_generated_files/i2c_slave.h
+[; ;./mcc_generated_files/i2c_slave.h: 84: uint8_t I2C_Read(void);
+[v _I2C_Read `(uc ~T0 @X0 0 ef ]
+"50 main.c
+[; ;main.c: 50: static void sendDataToMaster(uint16_t);
+[v _sendDataToMaster `(v ~T0 @X0 0 sf1`us ]
+"91 ./mcc_generated_files/i2c_slave.h
+[; ;./mcc_generated_files/i2c_slave.h: 91: void I2C_Write(uint8_t data);
+[v _I2C_Write `(v ~T0 @X0 0 ef1`uc ]
+"188 main.c
+[; ;main.c: 188:                 sendAllDataToMaster();
+[v _sendAllDataToMaster `(i ~T0 @X0 0 e? ]
+"195
+[; ;main.c: 195:         memory.TSNS1 = ADC_GetConversion(selectedReference);
+[c E3896 0 2 3 7 8 9 29 30 31 .. ]
+[n E3896 . channel_AN0 channel_AN2 channel_AN3 channel_AN7 channel_AN8 channel_AN9 channel_Temp channel_DAC channel_FVR  ]
+"293 ./mcc_generated_files/adc.h
+[; ;./mcc_generated_files/adc.h: 293: adc_result_t ADC_GetConversion(adc_channel_t channel);
+[v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E3896 ]
+"3373 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 3373:     struct {
+[s S190 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S190 . BF UA R_nW S P D_nA CKE SMP ]
+"3372
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 3372: typedef union {
+[u S189 `S190 1 ]
+[n S189 . . ]
+"3384
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 3384: extern volatile SSP1STATbits_t SSP1STATbits __attribute__((address(0x214)));
+[v _SSP1STATbits `VS189 ~T0 @X0 0 e@532 ]
+"3699
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 3699:     struct {
+[s S203 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S203 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"3698
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 3698: typedef union {
+[u S202 `S203 1 ]
+[n S202 . . ]
+"3710
+[; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 3710: extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0x216)));
+[v _SSP1CON2bits `VS202 ~T0 @X0 0 e@534 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -610,207 +654,545 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9813
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 9813: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"135 ./mcc_generated_files/i2c_slave.h
-[; ;./mcc_generated_files/i2c_slave.h: 135: void (*MSSP_InterruptHandler)(void);
+"137 ./mcc_generated_files/i2c_slave.h
+[; ;./mcc_generated_files/i2c_slave.h: 137: void (*MSSP_InterruptHandler)(void);
 [v _MSSP_InterruptHandler `*F3852 ~T0 @X0 1 e ]
-"136
-[; ;./mcc_generated_files/i2c_slave.h: 136: void (*I2C_SlaveRdInterruptHandler)(void);
-[v _I2C_SlaveRdInterruptHandler `*F3854 ~T0 @X0 1 e ]
-"137
-[; ;./mcc_generated_files/i2c_slave.h: 137: void (*I2C_SlaveWrInterruptHandler)(void);
-[v _I2C_SlaveWrInterruptHandler `*F3856 ~T0 @X0 1 e ]
 "138
-[; ;./mcc_generated_files/i2c_slave.h: 138: void (*I2C_SlaveAddrInterruptHandler)(void);
-[v _I2C_SlaveAddrInterruptHandler `*F3858 ~T0 @X0 1 e ]
+[; ;./mcc_generated_files/i2c_slave.h: 138: void (*I2C_SlaveRdInterruptHandler)(void);
+[v _I2C_SlaveRdInterruptHandler `*F3854 ~T0 @X0 1 e ]
 "139
-[; ;./mcc_generated_files/i2c_slave.h: 139: void (*I2C_SlaveBusColInterruptHandler)(void);
-[v _I2C_SlaveBusColInterruptHandler `*F3860 ~T0 @X0 1 e ]
+[; ;./mcc_generated_files/i2c_slave.h: 139: void (*I2C_SlaveWrInterruptHandler)(void);
+[v _I2C_SlaveWrInterruptHandler `*F3856 ~T0 @X0 1 e ]
 "140
-[; ;./mcc_generated_files/i2c_slave.h: 140: void (*I2C_SlaveWrColInterruptHandler)(void);
+[; ;./mcc_generated_files/i2c_slave.h: 140: void (*I2C_SlaveAddrInterruptHandler)(void);
+[v _I2C_SlaveAddrInterruptHandler `*F3858 ~T0 @X0 1 e ]
+"141
+[; ;./mcc_generated_files/i2c_slave.h: 141: void (*I2C_SlaveBusColInterruptHandler)(void);
+[v _I2C_SlaveBusColInterruptHandler `*F3860 ~T0 @X0 1 e ]
+"142
+[; ;./mcc_generated_files/i2c_slave.h: 142: void (*I2C_SlaveWrColInterruptHandler)(void);
 [v _I2C_SlaveWrColInterruptHandler `*F3862 ~T0 @X0 1 e ]
-[v $root$_main `(v ~T0 @X0 0 e ]
-"49 main.c
-[; ;main.c: 49: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"50
-[; ;main.c: 50: {
-{
-[e :U _main ]
-[f ]
-"52
-[; ;main.c: 52:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"58
-[; ;main.c: 58:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"61
-[; ;main.c: 61:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[v F3922 `S454 ~T0 @X0 1 s ]
-[i F3922
+"72 main.c
+[; ;main.c: 72: struct toTrack memory = {
+[v _memory `S453 ~T0 @X0 1 e ]
+[i _memory
 :U ..
 :U ..
-"87
-[; ;main.c: 87:     struct toTrack memory = {
 -> -> 0 `i `uc
-:U ..
 -> -> 0 `i `us
-..
-:U ..
 -> -> 0 `i `us
-..
-:U ..
 -> -> 0 `i `us
-..
-:U ..
 -> -> 0 `i `us
-..
-:U ..
 -> -> 0 `i `us
-..
-:U ..
 -> -> 0 `i `us
-..
 ..
 ..
 ]
-[v _memory `S454 ~T0 @X0 1 a ]
-[e = _memory F3922 ]
-"96
-[; ;main.c: 96:     static const struct criticalValues safety = {
-[v F3924 `CS453 ~T0 @X0 1 s safety ]
-[i F3924
+"81
+[; ;main.c: 81: static const struct criticalValues safety = {
+[v _safety `CS452 ~T0 @X0 1 s ]
+[i _safety
 :U ..
 :U ..
 -> .3.2 `f
 -> .4.0 `f
--> -> 60 `i `f
+-> .23.88 `f
+-> .28.82 `f
 ..
 ..
 ]
-"102
-[; ;main.c: 102:     uint16_t FVR_value = 0x0000;
-[v _FVR_value `us ~T0 @X0 1 a ]
-[e = _FVR_value -> -> 0 `i `us ]
-"103
-[; ;main.c: 103:     float VBIT = 0.0;
-[v _VBIT `f ~T0 @X0 1 a ]
-[e = _VBIT -> .0.0 `f ]
-"105
-[; ;main.c: 105:     TSNS5 = 0x09, FVR = 0x31} selectedReference;
-[v _selectedReference `E3927 ~T0 @X0 1 a ]
-"106
-[; ;main.c: 106:     uint16_t working = 0x00;
-[v _working `us ~T0 @X0 1 a ]
-[e = _working -> -> 0 `i `us ]
-"107
-[; ;main.c: 107:     float temp = 0.0;
-[v _temp `f ~T0 @X0 1 a ]
-[e = _temp -> .0.0 `f ]
-"108
-[; ;main.c: 108:     while (1)
-[e :U 456 ]
-"109
-[; ;main.c: 109:     {
-{
-"110
-[; ;main.c: 110:         TMR1_StartTimer();
-[e ( _TMR1_StartTimer ..  ]
-"111
-[; ;main.c: 111:         __asm("SLEEP");
-[; <" SLEEP ;# ">
-"113
-[; ;main.c: 113:         TMR1_StopTimer();
-[e ( _TMR1_StopTimer ..  ]
+"96
+[; ;main.c: 96: } selectedReference;
+[v _selectedReference `E3940 ~T0 @X0 1 e ]
 "114
-[; ;main.c: 114:         TMR1_Reload();
-[e ( _TMR1_Reload ..  ]
-"115
-[; ;main.c: 115:         LATC = 0x01;
-[e = _LATC -> -> 1 `i `uc ]
+[; ;main.c: 114: } I2C_Command;
+[v _I2C_Command `E3948 ~T0 @X0 1 e ]
 "116
-[; ;main.c: 116:         for(int i=4; i>0; i--){
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 4 `i ]
-[e $ > _i -> 0 `i 458  ]
-[e $U 459  ]
-[e :U 458 ]
-{
-"117
-[; ;main.c: 117:             memory.TSNS1[i] = memory.TSNS1[i-1];
-[e = *U + &U . _memory 2 * -> -> _i `ui `ux -> -> # *U &U . _memory 2 `ui `ux *U + &U . _memory 2 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 2 `ui `ux ]
-"118
-[; ;main.c: 118:             memory.TSNS2[i] = memory.TSNS2[i-1];
-[e = *U + &U . _memory 3 * -> -> _i `ui `ux -> -> # *U &U . _memory 3 `ui `ux *U + &U . _memory 3 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 3 `ui `ux ]
+[; ;main.c: 116: _Bool currentlyBalancing = 0;
+[v _currentlyBalancing `a ~T0 @X0 1 e ]
+[i _currentlyBalancing
+-> -> 0 `i `a
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
 "119
-[; ;main.c: 119:             memory.TSNS3[i] = memory.TSNS3[i-1];
-[e = *U + &U . _memory 4 * -> -> _i `ui `ux -> -> # *U &U . _memory 4 `ui `ux *U + &U . _memory 4 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 4 `ui `ux ]
+[; ;main.c: 119: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
 "120
-[; ;main.c: 120:             memory.TSNS4[i] = memory.TSNS4[i-1];
-[e = *U + &U . _memory 5 * -> -> _i `ui `ux -> -> # *U &U . _memory 5 `ui `ux *U + &U . _memory 5 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 5 `ui `ux ]
-"121
-[; ;main.c: 121:             memory.TSNS5[i] = memory.TSNS5[i-1];
-[e = *U + &U . _memory 6 * -> -> _i `ui `ux -> -> # *U &U . _memory 6 `ui `ux *U + &U . _memory 6 * -> -> - _i -> 1 `i `ui `ux -> -> # *U &U . _memory 6 `ui `ux ]
+[; ;main.c: 120: {
+{
+[e :U _main ]
+[f ]
 "122
-[; ;main.c: 122:         }
-}
-[e -- _i -> 1 `i ]
-[e $ > _i -> 0 `i 458  ]
-[e :U 459 ]
-}
-"123
-[; ;main.c: 123:         selectedReference = FVR;
-[e = _selectedReference . `E3927 5 ]
-"124
-[; ;main.c: 124:         FVR_value = ADC_GetConversion(selectedReference);
-[e = _FVR_value ( _ADC_GetConversion (1 -> _selectedReference `E3887 ]
-"125
-[; ;main.c: 125:         VBIT = 2.048 / FVR_value;
-[e = _VBIT -> / .2.048 -> -> _FVR_value `ui `d `f ]
-"127
-[; ;main.c: 127:         selectedReference = TSNS1;
-[e = _selectedReference . `E3927 0 ]
+[; ;main.c: 122:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
 "128
-[; ;main.c: 128:         working = ADC_GetConversion(selectedReference);
-[e = _working ( _ADC_GetConversion (1 -> _selectedReference `E3887 ]
-"129
-[; ;main.c: 129:         temp = -1 * (working * 100000) / (working - 1024);
-[e = _temp -> / * -> -U -> 1 `i `l * -> _working `l -> 100000 `l -> - -> _working `ui -> -> 1024 `i `ui `l `f ]
-"132
-[; ;main.c: 132:         selectedReference = TSNS2;
-[e = _selectedReference . `E3927 1 ]
-"133
-[; ;main.c: 133:         memory.TSNS2[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
-[e = *U + &U . _memory 3 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _memory 3 `ui `ux -> * -> -> ( _ADC_GetConversion (1 -> _selectedReference `E3887 `ui `f _VBIT `us ]
-"135
-[; ;main.c: 135:         selectedReference = TSNS3;
-[e = _selectedReference . `E3927 2 ]
-"136
-[; ;main.c: 136:         memory.TSNS3[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
-[e = *U + &U . _memory 4 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _memory 4 `ui `ux -> * -> -> ( _ADC_GetConversion (1 -> _selectedReference `E3887 `ui `f _VBIT `us ]
-"138
-[; ;main.c: 138:         selectedReference = TSNS4;
-[e = _selectedReference . `E3927 3 ]
-"139
-[; ;main.c: 139:         memory.TSNS4[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
-[e = *U + &U . _memory 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _memory 5 `ui `ux -> * -> -> ( _ADC_GetConversion (1 -> _selectedReference `E3887 `ui `f _VBIT `us ]
+[; ;main.c: 128:     (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"131
+[; ;main.c: 131:     (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"140
+[; ;main.c: 140:     WDTCONbits.SWDTEN = 0;
+[e = . . _WDTCONbits 0 0 -> -> 0 `i `uc ]
 "141
-[; ;main.c: 141:         selectedReference = TSNS5;
-[e = _selectedReference . `E3927 4 ]
+[; ;main.c: 141:     while (1)
+[e :U 456 ]
 "142
-[; ;main.c: 142:         memory.TSNS5[0] = (uint16_t) ADC_GetConversion(selectedReference) * VBIT;
-[e = *U + &U . _memory 6 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _memory 6 `ui `ux -> * -> -> ( _ADC_GetConversion (1 -> _selectedReference `E3887 `ui `f _VBIT `us ]
+[; ;main.c: 142:     {
+{
+"143
+[; ;main.c: 143:         if(WDTCONbits.SWDTEN == 1){
+[e $ ! == -> . . _WDTCONbits 0 0 `i -> 1 `i 458  ]
+{
 "144
-[; ;main.c: 144:         LATC = 0x00;
-[e = _LATC -> -> 0 `i `uc ]
+[; ;main.c: 144:             __asm("SLEEP");
+[; <" SLEEP ;# ">
 "145
-[; ;main.c: 145:     }
+[; ;main.c: 145:         }
+}
+[e :U 458 ]
+"146
+[; ;main.c: 146:         LATC = 0x01;
+[e = _LATC -> -> 1 `i `uc ]
+"147
+[; ;main.c: 147:         I2C_Command = I2C_Read();
+[e = _I2C_Command -> ( _I2C_Read ..  `E3948 ]
+"148
+[; ;main.c: 148:         switch(I2C_Command){
+[e $U 460  ]
+{
+"149
+[; ;main.c: 149:             case No_Command:
+[e :U 461 ]
+"150
+[; ;main.c: 150:                 break;
+[e $U 459  ]
+"151
+[; ;main.c: 151:             case Report_TSNS1:
+[e :U 462 ]
+"152
+[; ;main.c: 152:                 sendDataToMaster(memory.TSNS1);
+[e ( _sendDataToMaster (1 . _memory 2 ]
+"153
+[; ;main.c: 153:                 break;
+[e $U 459  ]
+"154
+[; ;main.c: 154:             case Report_TSNS2:
+[e :U 463 ]
+"155
+[; ;main.c: 155:                 sendDataToMaster(memory.TSNS2);
+[e ( _sendDataToMaster (1 . _memory 3 ]
+"156
+[; ;main.c: 156:                 break;
+[e $U 459  ]
+"157
+[; ;main.c: 157:             case Report_TSNS3:
+[e :U 464 ]
+"158
+[; ;main.c: 158:                 sendDataToMaster(memory.TSNS3);
+[e ( _sendDataToMaster (1 . _memory 4 ]
+"159
+[; ;main.c: 159:                 break;
+[e $U 459  ]
+"160
+[; ;main.c: 160:             case Report_TSNS4:
+[e :U 465 ]
+"161
+[; ;main.c: 161:                 sendDataToMaster(memory.TSNS4);
+[e ( _sendDataToMaster (1 . _memory 5 ]
+"162
+[; ;main.c: 162:                 break;
+[e $U 459  ]
+"163
+[; ;main.c: 163:             case Report_TSNS5:
+[e :U 466 ]
+"164
+[; ;main.c: 164:                 sendDataToMaster(memory.TSNS5);
+[e ( _sendDataToMaster (1 . _memory 6 ]
+"165
+[; ;main.c: 165:                 break;
+[e $U 459  ]
+"166
+[; ;main.c: 166:             case Report_VSNS:
+[e :U 467 ]
+"167
+[; ;main.c: 167:                 sendDataToMaster(memory.VSNS);
+[e ( _sendDataToMaster (1 . _memory 1 ]
+"168
+[; ;main.c: 168:                 break;
+[e $U 459  ]
+"169
+[; ;main.c: 169:             case Report_Status:
+[e :U 468 ]
+"170
+[; ;main.c: 170:                 I2C_Write(memory.status);
+[e ( _I2C_Write (1 . _memory 0 ]
+"171
+[; ;main.c: 171:                 break;
+[e $U 459  ]
+"172
+[; ;main.c: 172:             case Enable_Sleep_WDT:
+[e :U 469 ]
+"173
+[; ;main.c: 173:                 WDTCONbits.SWDTEN = 1;
+[e = . . _WDTCONbits 0 0 -> -> 1 `i `uc ]
+"174
+[; ;main.c: 174:                 break;
+[e $U 459  ]
+"175
+[; ;main.c: 175:             case Disable_Sleep_WDT:
+[e :U 470 ]
+"176
+[; ;main.c: 176:                 WDTCONbits.SWDTEN = 0;
+[e = . . _WDTCONbits 0 0 -> -> 0 `i `uc ]
+"177
+[; ;main.c: 177:                 break;
+[e $U 459  ]
+"178
+[; ;main.c: 178:             case Start_Balancing:
+[e :U 471 ]
+"179
+[; ;main.c: 179:                 currentlyBalancing = 1;
+[e = _currentlyBalancing -> -> 1 `i `a ]
+"180
+[; ;main.c: 180:                 break;
+[e $U 459  ]
+"181
+[; ;main.c: 181:             case Stop_Balancing:
+[e :U 472 ]
+"182
+[; ;main.c: 182:                 currentlyBalancing = 0;
+[e = _currentlyBalancing -> -> 0 `i `a ]
+"183
+[; ;main.c: 183:                 break;
+[e $U 459  ]
+"184
+[; ;main.c: 184:             case Restart_Relay:
+[e :U 473 ]
+"185
+[; ;main.c: 185:                 LATC = 0x00;
+[e = _LATC -> -> 0 `i `uc ]
+"186
+[; ;main.c: 186:                 break;
+[e $U 459  ]
+"187
+[; ;main.c: 187:             case Send_All_Data:
+[e :U 474 ]
+"188
+[; ;main.c: 188:                 sendAllDataToMaster();
+[e ( _sendAllDataToMaster ..  ]
+"189
+[; ;main.c: 189:                 break;
+[e $U 459  ]
+"190
+[; ;main.c: 190:             case Controller_Restart:
+[e :U 475 ]
+"191
+[; ;main.c: 191:                 __asm("RESET");
+[; <" RESET ;# ">
+"192
+[; ;main.c: 192:         }
+}
+[e $U 459  ]
+[e :U 460 ]
+[e [\ -> _I2C_Command `ui , $ -> . `E3948 0 `ui 461
+ , $ -> . `E3948 1 `ui 462
+ , $ -> . `E3948 2 `ui 463
+ , $ -> . `E3948 3 `ui 464
+ , $ -> . `E3948 4 `ui 465
+ , $ -> . `E3948 5 `ui 466
+ , $ -> . `E3948 6 `ui 467
+ , $ -> . `E3948 7 `ui 468
+ , $ -> . `E3948 8 `ui 469
+ , $ -> . `E3948 9 `ui 470
+ , $ -> . `E3948 10 `ui 471
+ , $ -> . `E3948 11 `ui 472
+ , $ -> . `E3948 12 `ui 473
+ , $ -> . `E3948 13 `ui 474
+ , $ -> . `E3948 14 `ui 475
+ 459 ]
+[e :U 459 ]
+"194
+[; ;main.c: 194:         selectedReference = TSNS1;
+[e = _selectedReference . `E3940 0 ]
+"195
+[; ;main.c: 195:         memory.TSNS1 = ADC_GetConversion(selectedReference);
+[e = . _memory 2 ( _ADC_GetConversion (1 -> _selectedReference `E3896 ]
+"196
+[; ;main.c: 196:         selectedReference = TSNS2;
+[e = _selectedReference . `E3940 1 ]
+"197
+[; ;main.c: 197:         memory.TSNS2 = ADC_GetConversion(selectedReference);
+[e = . _memory 3 ( _ADC_GetConversion (1 -> _selectedReference `E3896 ]
+"198
+[; ;main.c: 198:         selectedReference = TSNS3;
+[e = _selectedReference . `E3940 2 ]
+"199
+[; ;main.c: 199:         memory.TSNS3 = ADC_GetConversion(selectedReference);
+[e = . _memory 4 ( _ADC_GetConversion (1 -> _selectedReference `E3896 ]
+"200
+[; ;main.c: 200:         selectedReference = TSNS4;
+[e = _selectedReference . `E3940 3 ]
+"201
+[; ;main.c: 201:         memory.TSNS4 = ADC_GetConversion(selectedReference);
+[e = . _memory 5 ( _ADC_GetConversion (1 -> _selectedReference `E3896 ]
+"202
+[; ;main.c: 202:         selectedReference = TSNS5;
+[e = _selectedReference . `E3940 4 ]
+"203
+[; ;main.c: 203:         memory.TSNS5 = ADC_GetConversion(selectedReference);
+[e = . _memory 6 ( _ADC_GetConversion (1 -> _selectedReference `E3896 ]
+"204
+[; ;main.c: 204:         LATC = 0x00;
+[e = _LATC -> -> 0 `i `uc ]
+"205
+[; ;main.c: 205:     }
 }
 [e :U 455 ]
 [e $U 456  ]
 [e :U 457 ]
-"148
-[; ;main.c: 148: }
-[e :UE 452 ]
+"206
+[; ;main.c: 206: }
+[e :UE 454 ]
+}
+"208
+[; ;main.c: 208: static void sendDataToMaster(uint16_t toSend){
+[v _sendDataToMaster `(v ~T0 @X0 1 sf1`us ]
+{
+[e :U _sendDataToMaster ]
+[v _toSend `us ~T0 @X0 1 r1 ]
+[f ]
+"209
+[; ;main.c: 209:     uint8_t high = (uint8_t) (toSend >> 8) & 0x00FF;
+[v _high `uc ~T0 @X0 1 a ]
+[e = _high -> & -> -> >> -> _toSend `ui -> 8 `i `uc `i -> 255 `i `uc ]
+"210
+[; ;main.c: 210:     uint8_t low = (uint8_t) (toSend >> 0) & 0x00FF;
+[v _low `uc ~T0 @X0 1 a ]
+[e = _low -> & -> -> >> -> _toSend `ui -> 0 `i `uc `i -> 255 `i `uc ]
+"211
+[; ;main.c: 211:     I2C_Write(high);
+[e ( _I2C_Write (1 _high ]
+"212
+[; ;main.c: 212:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 1){ }
+[e $U 477  ]
+[e :U 478 ]
+{
+}
+[e :U 477 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 1 `i 478  ]
+[e :U 479 ]
+"213
+[; ;main.c: 213:     I2C_Write(low);
+[e ( _I2C_Write (1 _low ]
+"214
+[; ;main.c: 214:     I2C_Command = No_Command;
+[e = _I2C_Command . `E3948 0 ]
+"215
+[; ;main.c: 215:     return;
+[e $UE 476  ]
+"216
+[; ;main.c: 216: }
+[e :UE 476 ]
+}
+"218
+[; ;main.c: 218: static void _sendAllDatatoMaster(){
+[v __sendAllDatatoMaster `(v ~T0 @X0 1 sf ]
+{
+[e :U __sendAllDatatoMaster ]
+[f ]
+"219
+[; ;main.c: 219:     I2C_Write(memory.status);
+[e ( _I2C_Write (1 . _memory 0 ]
+"221
+[; ;main.c: 221:     uint8_t high = (uint8_t) (memory.TSNS1 >> 8) & 0x00FF;
+[v _high `uc ~T0 @X0 1 a ]
+[e = _high -> & -> -> >> -> . _memory 2 `ui -> 8 `i `uc `i -> 255 `i `uc ]
+"222
+[; ;main.c: 222:     uint8_t low = (uint8_t) (memory.TSNS1 >> 0) & 0x00FF;
+[v _low `uc ~T0 @X0 1 a ]
+[e = _low -> & -> -> >> -> . _memory 2 `ui -> 0 `i `uc `i -> 255 `i `uc ]
+"223
+[; ;main.c: 223:     while(SSP1STATbits.BF && !SSP1CON2bits.ACKSTAT){ }
+[e $U 481  ]
+[e :U 482 ]
+{
+}
+[e :U 481 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i ! != -> . . _SSP1CON2bits 0 6 `i -> 0 `i 482  ]
+[e :U 483 ]
+"225
+[; ;main.c: 225:     I2C_Write(high);
+[e ( _I2C_Write (1 _high ]
+"226
+[; ;main.c: 226:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 484  ]
+[e :U 485 ]
+{
+}
+[e :U 484 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 485  ]
+[e :U 486 ]
+"228
+[; ;main.c: 228:     I2C_Write(low);
+[e ( _I2C_Write (1 _low ]
+"229
+[; ;main.c: 229:     high = (uint8_t) (memory.TSNS2 >> 8) & 0x00FF;
+[e = _high -> & -> -> >> -> . _memory 3 `ui -> 8 `i `uc `i -> 255 `i `uc ]
+"230
+[; ;main.c: 230:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 487  ]
+[e :U 488 ]
+{
+}
+[e :U 487 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 488  ]
+[e :U 489 ]
+"231
+[; ;main.c: 231:     I2C_Write(high);
+[e ( _I2C_Write (1 _high ]
+"232
+[; ;main.c: 232:     low = (uint8_t) (memory.TSNS2 >> 0) & 0x00FF;
+[e = _low -> & -> -> >> -> . _memory 3 `ui -> 0 `i `uc `i -> 255 `i `uc ]
+"233
+[; ;main.c: 233:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 490  ]
+[e :U 491 ]
+{
+}
+[e :U 490 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 491  ]
+[e :U 492 ]
+"235
+[; ;main.c: 235:     I2C_Write(low);
+[e ( _I2C_Write (1 _low ]
+"236
+[; ;main.c: 236:     high = (uint8_t) (memory.TSNS3 >> 8) & 0x00FF;
+[e = _high -> & -> -> >> -> . _memory 4 `ui -> 8 `i `uc `i -> 255 `i `uc ]
+"237
+[; ;main.c: 237:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 493  ]
+[e :U 494 ]
+{
+}
+[e :U 493 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 494  ]
+[e :U 495 ]
+"239
+[; ;main.c: 239:     I2C_Write(high);
+[e ( _I2C_Write (1 _high ]
+"240
+[; ;main.c: 240:     low = (uint8_t) (memory.TSNS3 >> 0) & 0x00FF;
+[e = _low -> & -> -> >> -> . _memory 4 `ui -> 0 `i `uc `i -> 255 `i `uc ]
+"241
+[; ;main.c: 241:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 496  ]
+[e :U 497 ]
+{
+}
+[e :U 496 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 497  ]
+[e :U 498 ]
+"243
+[; ;main.c: 243:     I2C_Write(low);
+[e ( _I2C_Write (1 _low ]
+"244
+[; ;main.c: 244:     high = (uint8_t) (memory.TSNS4 >> 8) & 0x00FF;
+[e = _high -> & -> -> >> -> . _memory 5 `ui -> 8 `i `uc `i -> 255 `i `uc ]
+"245
+[; ;main.c: 245:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 499  ]
+[e :U 500 ]
+{
+}
+[e :U 499 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 500  ]
+[e :U 501 ]
+"247
+[; ;main.c: 247:     I2C_Write(high);
+[e ( _I2C_Write (1 _high ]
+"248
+[; ;main.c: 248:     low = (uint8_t) (memory.TSNS4 >> 0) & 0x00FF;
+[e = _low -> & -> -> >> -> . _memory 5 `ui -> 0 `i `uc `i -> 255 `i `uc ]
+"249
+[; ;main.c: 249:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 502  ]
+[e :U 503 ]
+{
+}
+[e :U 502 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 503  ]
+[e :U 504 ]
+"251
+[; ;main.c: 251:     I2C_Write(low);
+[e ( _I2C_Write (1 _low ]
+"252
+[; ;main.c: 252:     high = (uint8_t) (memory.TSNS5 >> 8) & 0x00FF;
+[e = _high -> & -> -> >> -> . _memory 6 `ui -> 8 `i `uc `i -> 255 `i `uc ]
+"253
+[; ;main.c: 253:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 505  ]
+[e :U 506 ]
+{
+}
+[e :U 505 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 506  ]
+[e :U 507 ]
+"255
+[; ;main.c: 255:     I2C_Write(high);
+[e ( _I2C_Write (1 _high ]
+"256
+[; ;main.c: 256:     low = (uint8_t) (memory.TSNS5 >> 0) & 0x00FF;
+[e = _low -> & -> -> >> -> . _memory 6 `ui -> 0 `i `uc `i -> 255 `i `uc ]
+"257
+[; ;main.c: 257:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 508  ]
+[e :U 509 ]
+{
+}
+[e :U 508 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 509  ]
+[e :U 510 ]
+"259
+[; ;main.c: 259:     I2C_Write(low);
+[e ( _I2C_Write (1 _low ]
+"260
+[; ;main.c: 260:     high = (uint8_t) (memory.VSNS >> 8) & 0x00FF;
+[e = _high -> & -> -> >> -> . _memory 1 `ui -> 8 `i `uc `i -> 255 `i `uc ]
+"261
+[; ;main.c: 261:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 511  ]
+[e :U 512 ]
+{
+}
+[e :U 511 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 512  ]
+[e :U 513 ]
+"263
+[; ;main.c: 263:     I2C_Write(high);
+[e ( _I2C_Write (1 _high ]
+"264
+[; ;main.c: 264:     low = (uint8_t) (memory.VSNS >> 0) & 0x00FF;
+[e = _low -> & -> -> >> -> . _memory 1 `ui -> 0 `i `uc `i -> 255 `i `uc ]
+"265
+[; ;main.c: 265:     while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
+[e $U 514  ]
+[e :U 515 ]
+{
+}
+[e :U 514 ]
+[e $ && != -> . . _SSP1STATbits 0 0 `i -> 0 `i == -> . . _SSP1CON2bits 0 6 `i -> 0 `i 515  ]
+[e :U 516 ]
+"267
+[; ;main.c: 267:     I2C_Write(low);
+[e ( _I2C_Write (1 _low ]
+"269
+[; ;main.c: 269:     I2C_Command = No_Command;
+[e = _I2C_Command . `E3948 0 ]
+"270
+[; ;main.c: 270:     return;
+[e $UE 480  ]
+"271
+[; ;main.c: 271: }
+[e :UE 480 ]
 }

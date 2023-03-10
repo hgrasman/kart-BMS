@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "mcc_generated_files/tmr2.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 44 "main.c"
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/tmr2.c" 2
+# 51 "mcc_generated_files/tmr2.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -6034,579 +6032,85 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
+# 51 "mcc_generated_files/tmr2.c" 2
 
-# 1 "./mcc_generated_files/device_config.h" 1
-# 50 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 235 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 247 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 51 "./mcc_generated_files/mcc.h" 2
-
-
+# 1 "mcc_generated_files/tmr2.h" 1
+# 55 "mcc_generated_files/tmr2.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\conio.h" 1 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 1 3
-
-
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int printf(const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int fprintf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int sprintf(char *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 3, 4)))
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-__attribute__((__format__(__printf__, 1, 0)))
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 2, 0)))
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 3, 0)))
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-__attribute__((__format__(__scanf__, 1, 2)))
-int scanf(const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int fscanf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int sscanf(const char *restrict, const char *restrict, ...);
-
-__attribute__((__format__(__scanf__, 1, 0)))
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__scanf__, 2, 0)))
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 7 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\c99\\conio.h" 2 3
-# 54 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/interrupt_manager.h" 1
-# 55 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/i2c_slave.h" 1
-# 54 "./mcc_generated_files/i2c_slave.h"
-typedef void (*i2cInterruptHandler)(void);
-
-
-
-
-
-
-
-void I2C_Initialize(void);
-
-
-
-
-
-
-void I2C_Open(void);
-
-
-
-
-
-
-
-void I2C_Close(void);
-
-
-
-
-
-
-uint8_t I2C_Read(void);
-
-
-
-
-
-
-void I2C_Write(uint8_t data);
-# 100 "./mcc_generated_files/i2c_slave.h"
-_Bool I2C_IsRead(void);
-
-
-
-
-
-
-void I2C_Enable(void);
-
-
-
-
-
-
-void I2C_SendAck(void);
-
-
-
-
-
-
-void I2C_SendNack(void);
-# 130 "./mcc_generated_files/i2c_slave.h"
-void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler);
-void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler);
-void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler);
-void I2C_SlaveSetWriteIntHandler(i2cInterruptHandler handler);
-void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler);
-void I2C_SlaveSetWrColIntHandler(i2cInterruptHandler handler);
-
-void (*MSSP_InterruptHandler)(void);
-void (*I2C_SlaveRdInterruptHandler)(void);
-void (*I2C_SlaveWrInterruptHandler)(void);
-void (*I2C_SlaveAddrInterruptHandler)(void);
-void (*I2C_SlaveBusColInterruptHandler)(void);
-void (*I2C_SlaveWrColInterruptHandler)(void);
-# 56 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/fvr.h" 1
-# 93 "./mcc_generated_files/fvr.h"
- void FVR_Initialize(void);
-# 127 "./mcc_generated_files/fvr.h"
-_Bool FVR_IsOutputReady(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr1.h" 1
-# 100 "./mcc_generated_files/tmr1.h"
-void TMR1_Initialize(void);
-# 129 "./mcc_generated_files/tmr1.h"
-void TMR1_StartTimer(void);
-# 161 "./mcc_generated_files/tmr1.h"
-void TMR1_StopTimer(void);
-# 196 "./mcc_generated_files/tmr1.h"
-uint16_t TMR1_ReadTimer(void);
-# 235 "./mcc_generated_files/tmr1.h"
-void TMR1_WriteTimer(uint16_t timerVal);
-# 271 "./mcc_generated_files/tmr1.h"
-void TMR1_Reload(void);
-# 310 "./mcc_generated_files/tmr1.h"
-void TMR1_StartSinglePulseAcquisition(void);
-# 349 "./mcc_generated_files/tmr1.h"
-uint8_t TMR1_CheckGateValueStatus(void);
-# 367 "./mcc_generated_files/tmr1.h"
-void TMR1_ISR(void);
-# 385 "./mcc_generated_files/tmr1.h"
- void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 403 "./mcc_generated_files/tmr1.h"
-extern void (*TMR1_InterruptHandler)(void);
-# 421 "./mcc_generated_files/tmr1.h"
-void TMR1_DefaultInterruptHandler(void);
-# 58 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr2.h" 1
-# 103 "./mcc_generated_files/tmr2.h"
+# 55 "mcc_generated_files/tmr2.h" 2
+# 103 "mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
-# 132 "./mcc_generated_files/tmr2.h"
+# 132 "mcc_generated_files/tmr2.h"
 void TMR2_StartTimer(void);
-# 164 "./mcc_generated_files/tmr2.h"
+# 164 "mcc_generated_files/tmr2.h"
 void TMR2_StopTimer(void);
-# 199 "./mcc_generated_files/tmr2.h"
+# 199 "mcc_generated_files/tmr2.h"
 uint8_t TMR2_ReadTimer(void);
-# 238 "./mcc_generated_files/tmr2.h"
+# 238 "mcc_generated_files/tmr2.h"
 void TMR2_WriteTimer(uint8_t timerVal);
-# 290 "./mcc_generated_files/tmr2.h"
+# 290 "mcc_generated_files/tmr2.h"
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 325 "./mcc_generated_files/tmr2.h"
+# 325 "mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
-# 59 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/adc.h" 1
-# 72 "./mcc_generated_files/adc.h"
-typedef uint16_t adc_result_t;
-
-
-
-
-typedef struct
-{
-    adc_result_t adcResult1;
-    adc_result_t adcResult2;
-} adc_sync_double_result_t;
-# 95 "./mcc_generated_files/adc.h"
-typedef enum
-{
-    channel_AN0 = 0x0,
-    channel_AN2 = 0x2,
-    channel_AN3 = 0x3,
-    channel_AN7 = 0x7,
-    channel_AN8 = 0x8,
-    channel_AN9 = 0x9,
-    channel_Temp = 0x1D,
-    channel_DAC = 0x1E,
-    channel_FVR = 0x1F
-} adc_channel_t;
-# 141 "./mcc_generated_files/adc.h"
-void ADC_Initialize(void);
-# 171 "./mcc_generated_files/adc.h"
-void ADC_SelectChannel(adc_channel_t channel);
-# 198 "./mcc_generated_files/adc.h"
-void ADC_StartConversion(void);
-# 230 "./mcc_generated_files/adc.h"
-_Bool ADC_IsConversionDone(void);
-# 263 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversionResult(void);
-# 293 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 321 "./mcc_generated_files/adc.h"
-void ADC_TemperatureAcquisitionDelay(void);
-# 60 "./mcc_generated_files/mcc.h" 2
-# 75 "./mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 88 "./mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 100 "./mcc_generated_files/mcc.h"
-void WDT_Initialize(void);
-# 44 "main.c" 2
-
-# 1 "./mainVars.h" 1
-# 15 "./mainVars.h"
-static void sendDataToMaster(uint16_t toSend);
-static void _sendAllDatatoMaster();
-# 45 "main.c" 2
-
-
-
-
-static void _sendAllDatatoMaster();
-static void sendDataToMaster(uint16_t);
-
-
-
-struct criticalValues {
-    float LOW_VOLTAGE;
-    float HIGH_VOLTAGE;
-    float HIGH_TEMP;
-    float WARN_TEMP;
-};
-
-struct toTrack {
-    uint8_t status;
-    uint16_t VSNS;
-    uint16_t TSNS1;
-    uint16_t TSNS2;
-    uint16_t TSNS3;
-    uint16_t TSNS4;
-    uint16_t TSNS5;
-};
-
-
-struct toTrack memory = {
-    .status = 0x00,
-    .VSNS = 0x0000,
-    .TSNS1 = 0x0000,
-    .TSNS2 = 0x0000,
-    .TSNS3 = 0x0000,
-    .TSNS4 = 0x0000,
-    .TSNS5 = 0x0000
-};
-static const struct criticalValues safety = {
-    .LOW_VOLTAGE = 3.2,
-    .HIGH_VOLTAGE = 4.0,
-    .HIGH_TEMP = 23.88,
-    .WARN_TEMP = 28.82
-};
-
-
-enum ADC_Reference {
-    TSNS1 = 0x02,
-    TSNS2 = 0x03,
-    TSNS3 = 0x07,
-    TSNS4 = 0x08,
-    TSNS5 = 0x09,
-    VSNS = 0x10
-} selectedReference;
-
-enum I2C_opCodes {
-    No_Command = 0x00,
-    Report_TSNS1 = 0x01,
-    Report_TSNS2 = 0x02,
-    Report_TSNS3 = 0x03,
-    Report_TSNS4 = 0x04,
-    Report_TSNS5 = 0x05,
-    Report_VSNS = 0x06,
-    Report_Status = 0x07,
-    Enable_Sleep_WDT = 0x08,
-    Disable_Sleep_WDT = 0x09,
-    Start_Balancing = 0x0A,
-    Stop_Balancing = 0x0B,
-    Restart_Relay = 0x0C,
-    Send_All_Data = 0x0D,
-    Controller_Restart = 0x0E
-} I2C_Command;
-
-_Bool currentlyBalancing = 0;
-
-
-void main(void)
+# 52 "mcc_generated_files/tmr2.c" 2
+# 62 "mcc_generated_files/tmr2.c"
+void TMR2_Initialize(void)
 {
 
-    SYSTEM_Initialize();
 
 
+    PR2 = 0xF9;
 
 
+    TMR2 = 0x00;
 
-    (INTCONbits.GIE = 1);
+
+    PIR1bits.TMR2IF = 0;
 
 
-    (INTCONbits.PEIE = 1);
-# 140 "main.c"
-    WDTCONbits.SWDTEN = 0;
-    while (1)
+    T2CON = 0x7C;
+}
+
+void TMR2_StartTimer(void)
+{
+
+    T2CONbits.TMR2ON = 1;
+}
+
+void TMR2_StopTimer(void)
+{
+
+    T2CONbits.TMR2ON = 0;
+}
+
+uint8_t TMR2_ReadTimer(void)
+{
+    uint8_t readVal;
+
+    readVal = TMR2;
+
+    return readVal;
+}
+
+void TMR2_WriteTimer(uint8_t timerVal)
+{
+
+    TMR2 = timerVal;
+}
+
+void TMR2_LoadPeriodRegister(uint8_t periodVal)
+{
+   PR2 = periodVal;
+}
+
+_Bool TMR2_HasOverflowOccured(void)
+{
+
+    _Bool status = PIR1bits.TMR2IF;
+    if(status)
     {
-        if(WDTCONbits.SWDTEN == 1){
-            __asm("SLEEP");
-        }
-        LATC = 0x01;
-        I2C_Command = I2C_Read();
-        switch(I2C_Command){
-            case No_Command:
-                break;
-            case Report_TSNS1:
-                sendDataToMaster(memory.TSNS1);
-                break;
-            case Report_TSNS2:
-                sendDataToMaster(memory.TSNS2);
-                break;
-            case Report_TSNS3:
-                sendDataToMaster(memory.TSNS3);
-                break;
-            case Report_TSNS4:
-                sendDataToMaster(memory.TSNS4);
-                break;
-            case Report_TSNS5:
-                sendDataToMaster(memory.TSNS5);
-                break;
-            case Report_VSNS:
-                sendDataToMaster(memory.VSNS);
-                break;
-            case Report_Status:
-                I2C_Write(memory.status);
-                break;
-            case Enable_Sleep_WDT:
-                WDTCONbits.SWDTEN = 1;
-                break;
-            case Disable_Sleep_WDT:
-                WDTCONbits.SWDTEN = 0;
-                break;
-            case Start_Balancing:
-                currentlyBalancing = 1;
-                break;
-            case Stop_Balancing:
-                currentlyBalancing = 0;
-                break;
-            case Restart_Relay:
-                LATC = 0x00;
-                break;
-            case Send_All_Data:
-                sendAllDataToMaster();
-                break;
-            case Controller_Restart:
-                __asm("RESET");
-        }
 
-        selectedReference = TSNS1;
-        memory.TSNS1 = ADC_GetConversion(selectedReference);
-        selectedReference = TSNS2;
-        memory.TSNS2 = ADC_GetConversion(selectedReference);
-        selectedReference = TSNS3;
-        memory.TSNS3 = ADC_GetConversion(selectedReference);
-        selectedReference = TSNS4;
-        memory.TSNS4 = ADC_GetConversion(selectedReference);
-        selectedReference = TSNS5;
-        memory.TSNS5 = ADC_GetConversion(selectedReference);
-        LATC = 0x00;
+        PIR1bits.TMR2IF = 0;
     }
-}
-
-static void sendDataToMaster(uint16_t toSend){
-    uint8_t high = (uint8_t) (toSend >> 8) & 0x00FF;
-    uint8_t low = (uint8_t) (toSend >> 0) & 0x00FF;
-    I2C_Write(high);
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 1){ }
-    I2C_Write(low);
-    I2C_Command = No_Command;
-    return;
-}
-
-static void _sendAllDatatoMaster(){
-    I2C_Write(memory.status);
-
-    uint8_t high = (uint8_t) (memory.TSNS1 >> 8) & 0x00FF;
-    uint8_t low = (uint8_t) (memory.TSNS1 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && !SSP1CON2bits.ACKSTAT){ }
-
-    I2C_Write(high);
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.TSNS2 >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-    I2C_Write(high);
-    low = (uint8_t) (memory.TSNS2 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.TSNS3 >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(high);
-    low = (uint8_t) (memory.TSNS3 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.TSNS4 >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(high);
-    low = (uint8_t) (memory.TSNS4 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.TSNS5 >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(high);
-    low = (uint8_t) (memory.TSNS5 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.VSNS >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(high);
-    low = (uint8_t) (memory.VSNS >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-
-    I2C_Command = No_Command;
-    return;
+    return status;
 }

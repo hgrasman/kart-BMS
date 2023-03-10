@@ -46,43 +46,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/i2c_slave.c: 89: static __attribute__((inline)) void I2C_SlaveSetSlaveMask(uint8_t maskAddr);
 [v _I2C_SlaveSetSlaveMask `TF3573 ~T0 @X0 0 s ]
 [v F49 `(v ~T0 @X0 0 tf ]
-"128 mcc_generated_files/i2c_slave.h
-[; ;mcc_generated_files/i2c_slave.h: 128: void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler);
+"130 mcc_generated_files/i2c_slave.h
+[; ;mcc_generated_files/i2c_slave.h: 130: void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler);
 [v _I2C_SlaveSetIsrHandler `(v ~T0 @X0 0 ef1`*F49 ]
 "73 mcc_generated_files/i2c_slave.c
 [; ;mcc_generated_files/i2c_slave.c: 73: static void I2C_Isr(void);
 [v _I2C_Isr `(v ~T0 @X0 0 sf ]
 [v F65 `(v ~T0 @X0 0 tf ]
-"132 mcc_generated_files/i2c_slave.h
-[; ;mcc_generated_files/i2c_slave.h: 132: void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler);
+"134 mcc_generated_files/i2c_slave.h
+[; ;mcc_generated_files/i2c_slave.h: 134: void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler);
 [v _I2C_SlaveSetBusColIntHandler `(v ~T0 @X0 0 ef1`*F65 ]
 "78 mcc_generated_files/i2c_slave.c
 [; ;mcc_generated_files/i2c_slave.c: 78: static void I2C_SlaveDefBusColInterruptHandler(void);
 [v _I2C_SlaveDefBusColInterruptHandler `(v ~T0 @X0 0 sf ]
 [v F61 `(v ~T0 @X0 0 tf ]
-"131 mcc_generated_files/i2c_slave.h
-[; ;mcc_generated_files/i2c_slave.h: 131: void I2C_SlaveSetWriteIntHandler(i2cInterruptHandler handler);
+"133 mcc_generated_files/i2c_slave.h
+[; ;mcc_generated_files/i2c_slave.h: 133: void I2C_SlaveSetWriteIntHandler(i2cInterruptHandler handler);
 [v _I2C_SlaveSetWriteIntHandler `(v ~T0 @X0 0 ef1`*F61 ]
 "75 mcc_generated_files/i2c_slave.c
 [; ;mcc_generated_files/i2c_slave.c: 75: static void I2C_SlaveDefWrInterruptHandler(void);
 [v _I2C_SlaveDefWrInterruptHandler `(v ~T0 @X0 0 sf ]
 [v F57 `(v ~T0 @X0 0 tf ]
-"130 mcc_generated_files/i2c_slave.h
-[; ;mcc_generated_files/i2c_slave.h: 130: void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler);
+"132 mcc_generated_files/i2c_slave.h
+[; ;mcc_generated_files/i2c_slave.h: 132: void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler);
 [v _I2C_SlaveSetReadIntHandler `(v ~T0 @X0 0 ef1`*F57 ]
 "74 mcc_generated_files/i2c_slave.c
 [; ;mcc_generated_files/i2c_slave.c: 74: static void I2C_SlaveDefRdInterruptHandler(void);
 [v _I2C_SlaveDefRdInterruptHandler `(v ~T0 @X0 0 sf ]
 [v F53 `(v ~T0 @X0 0 tf ]
-"129 mcc_generated_files/i2c_slave.h
-[; ;mcc_generated_files/i2c_slave.h: 129: void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler);
+"131 mcc_generated_files/i2c_slave.h
+[; ;mcc_generated_files/i2c_slave.h: 131: void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler);
 [v _I2C_SlaveSetAddrIntHandler `(v ~T0 @X0 0 ef1`*F53 ]
 "76 mcc_generated_files/i2c_slave.c
 [; ;mcc_generated_files/i2c_slave.c: 76: static void I2C_SlaveDefAddrInterruptHandler(void);
 [v _I2C_SlaveDefAddrInterruptHandler `(v ~T0 @X0 0 sf ]
 [v F69 `(v ~T0 @X0 0 tf ]
-"133 mcc_generated_files/i2c_slave.h
-[; ;mcc_generated_files/i2c_slave.h: 133: void I2C_SlaveSetWrColIntHandler(i2cInterruptHandler handler);
+"135 mcc_generated_files/i2c_slave.h
+[; ;mcc_generated_files/i2c_slave.h: 135: void I2C_SlaveSetWrColIntHandler(i2cInterruptHandler handler);
 [v _I2C_SlaveSetWrColIntHandler `(v ~T0 @X0 0 ef1`*F69 ]
 "77 mcc_generated_files/i2c_slave.c
 [; ;mcc_generated_files/i2c_slave.c: 77: static void I2C_SlaveDefWrColInterruptHandler(void);
@@ -214,23 +214,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3248
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 3248: extern volatile unsigned char SSP1BUF __attribute__((address(0x211)));
 [v _SSP1BUF `Vuc ~T0 @X0 0 e@529 ]
-"135 mcc_generated_files/i2c_slave.h
-[; ;mcc_generated_files/i2c_slave.h: 135: void (*MSSP_InterruptHandler)(void);
+"137 mcc_generated_files/i2c_slave.h
+[; ;mcc_generated_files/i2c_slave.h: 137: void (*MSSP_InterruptHandler)(void);
 [v _MSSP_InterruptHandler `*F73 ~T0 @X0 1 e ]
-"136
-[; ;mcc_generated_files/i2c_slave.h: 136: void (*I2C_SlaveRdInterruptHandler)(void);
-[v _I2C_SlaveRdInterruptHandler `*F75 ~T0 @X0 1 e ]
-"137
-[; ;mcc_generated_files/i2c_slave.h: 137: void (*I2C_SlaveWrInterruptHandler)(void);
-[v _I2C_SlaveWrInterruptHandler `*F77 ~T0 @X0 1 e ]
 "138
-[; ;mcc_generated_files/i2c_slave.h: 138: void (*I2C_SlaveAddrInterruptHandler)(void);
-[v _I2C_SlaveAddrInterruptHandler `*F79 ~T0 @X0 1 e ]
+[; ;mcc_generated_files/i2c_slave.h: 138: void (*I2C_SlaveRdInterruptHandler)(void);
+[v _I2C_SlaveRdInterruptHandler `*F75 ~T0 @X0 1 e ]
 "139
-[; ;mcc_generated_files/i2c_slave.h: 139: void (*I2C_SlaveBusColInterruptHandler)(void);
-[v _I2C_SlaveBusColInterruptHandler `*F81 ~T0 @X0 1 e ]
+[; ;mcc_generated_files/i2c_slave.h: 139: void (*I2C_SlaveWrInterruptHandler)(void);
+[v _I2C_SlaveWrInterruptHandler `*F77 ~T0 @X0 1 e ]
 "140
-[; ;mcc_generated_files/i2c_slave.h: 140: void (*I2C_SlaveWrColInterruptHandler)(void);
+[; ;mcc_generated_files/i2c_slave.h: 140: void (*I2C_SlaveAddrInterruptHandler)(void);
+[v _I2C_SlaveAddrInterruptHandler `*F79 ~T0 @X0 1 e ]
+"141
+[; ;mcc_generated_files/i2c_slave.h: 141: void (*I2C_SlaveBusColInterruptHandler)(void);
+[v _I2C_SlaveBusColInterruptHandler `*F81 ~T0 @X0 1 e ]
+"142
+[; ;mcc_generated_files/i2c_slave.h: 142: void (*I2C_SlaveWrColInterruptHandler)(void);
 [v _I2C_SlaveWrColInterruptHandler `*F83 ~T0 @X0 1 e ]
 "55 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 55: __asm("INDF0 equ 00h");
@@ -1363,450 +1363,450 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/i2c_slave.c: 288:     }
 }
 [e :U 490 ]
-"289
-[; ;mcc_generated_files/i2c_slave.c: 289: }
+"290
+[; ;mcc_generated_files/i2c_slave.c: 290: }
 [e :UE 489 ]
 }
-"291
-[; ;mcc_generated_files/i2c_slave.c: 291: static void I2C_SlaveDefWrColInterruptHandler() {
+"292
+[; ;mcc_generated_files/i2c_slave.c: 292: static void I2C_SlaveDefWrColInterruptHandler() {
 [v _I2C_SlaveDefWrColInterruptHandler `(v ~T0 @X0 1 sf ]
 {
 [e :U _I2C_SlaveDefWrColInterruptHandler ]
 [f ]
-"292
-[; ;mcc_generated_files/i2c_slave.c: 292: }
+"293
+[; ;mcc_generated_files/i2c_slave.c: 293: }
 [e :UE 491 ]
 }
-"295
-[; ;mcc_generated_files/i2c_slave.c: 295: void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler){
+"296
+[; ;mcc_generated_files/i2c_slave.c: 296: void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler){
 [v _I2C_SlaveSetBusColIntHandler `(v ~T0 @X0 1 ef1`*F3665 ]
 {
 [e :U _I2C_SlaveSetBusColIntHandler ]
 [v _handler `*F3667 ~T0 @X0 1 r1 ]
 [f ]
-"296
-[; ;mcc_generated_files/i2c_slave.c: 296:     I2C_SlaveBusColInterruptHandler = handler;
-[e = _I2C_SlaveBusColInterruptHandler _handler ]
 "297
-[; ;mcc_generated_files/i2c_slave.c: 297: }
+[; ;mcc_generated_files/i2c_slave.c: 297:     I2C_SlaveBusColInterruptHandler = handler;
+[e = _I2C_SlaveBusColInterruptHandler _handler ]
+"298
+[; ;mcc_generated_files/i2c_slave.c: 298: }
 [e :UE 492 ]
 }
-"299
-[; ;mcc_generated_files/i2c_slave.c: 299: static void I2C_SlaveBusColCallBack() {
+"300
+[; ;mcc_generated_files/i2c_slave.c: 300: static void I2C_SlaveBusColCallBack() {
 [v _I2C_SlaveBusColCallBack `(v ~T0 @X0 1 sf ]
 {
 [e :U _I2C_SlaveBusColCallBack ]
 [f ]
-"301
-[; ;mcc_generated_files/i2c_slave.c: 301:     if ( I2C_SlaveBusColInterruptHandler)
-[e $ ! != _I2C_SlaveBusColInterruptHandler -> -> 0 `i `*F3670 494  ]
 "302
-[; ;mcc_generated_files/i2c_slave.c: 302:     {
-{
+[; ;mcc_generated_files/i2c_slave.c: 302:     if ( I2C_SlaveBusColInterruptHandler)
+[e $ ! != _I2C_SlaveBusColInterruptHandler -> -> 0 `i `*F3670 494  ]
 "303
-[; ;mcc_generated_files/i2c_slave.c: 303:          I2C_SlaveBusColInterruptHandler();
-[e ( *U _I2C_SlaveBusColInterruptHandler ..  ]
+[; ;mcc_generated_files/i2c_slave.c: 303:     {
+{
 "304
-[; ;mcc_generated_files/i2c_slave.c: 304:     }
+[; ;mcc_generated_files/i2c_slave.c: 304:          I2C_SlaveBusColInterruptHandler();
+[e ( *U _I2C_SlaveBusColInterruptHandler ..  ]
+"305
+[; ;mcc_generated_files/i2c_slave.c: 305:     }
 }
 [e :U 494 ]
-"305
-[; ;mcc_generated_files/i2c_slave.c: 305: }
+"306
+[; ;mcc_generated_files/i2c_slave.c: 306: }
 [e :UE 493 ]
 }
-"307
-[; ;mcc_generated_files/i2c_slave.c: 307: static void I2C_SlaveDefBusColInterruptHandler() {
+"308
+[; ;mcc_generated_files/i2c_slave.c: 308: static void I2C_SlaveDefBusColInterruptHandler() {
 [v _I2C_SlaveDefBusColInterruptHandler `(v ~T0 @X0 1 sf ]
 {
 [e :U _I2C_SlaveDefBusColInterruptHandler ]
 [f ]
-"308
-[; ;mcc_generated_files/i2c_slave.c: 308: }
+"309
+[; ;mcc_generated_files/i2c_slave.c: 309: }
 [e :UE 495 ]
 }
 [v F3673 `(a ~T0 @X0 1 tf ]
-"310
-[; ;mcc_generated_files/i2c_slave.c: 310: static __attribute__((inline)) _Bool I2C_SlaveOpen()
-[v _I2C_SlaveOpen `TF3673 ~T0 @X0 1 s ]
 "311
-[; ;mcc_generated_files/i2c_slave.c: 311: {
+[; ;mcc_generated_files/i2c_slave.c: 311: static __attribute__((inline)) _Bool I2C_SlaveOpen()
+[v _I2C_SlaveOpen `TF3673 ~T0 @X0 1 s ]
+"312
+[; ;mcc_generated_files/i2c_slave.c: 312: {
 {
 [e :U _I2C_SlaveOpen ]
 [f ]
-"312
-[; ;mcc_generated_files/i2c_slave.c: 312:     if(!SSP1CON1bits.SSPEN)
-[e $ ! ! != -> . . _SSP1CON1bits 0 5 `i -> 0 `i 497  ]
 "313
-[; ;mcc_generated_files/i2c_slave.c: 313:     {
-{
+[; ;mcc_generated_files/i2c_slave.c: 313:     if(!SSP1CON1bits.SSPEN)
+[e $ ! ! != -> . . _SSP1CON1bits 0 5 `i -> 0 `i 497  ]
 "314
-[; ;mcc_generated_files/i2c_slave.c: 314:         SSP1STAT = 0x00;
-[e = _SSP1STAT -> -> 0 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 314:     {
+{
 "315
-[; ;mcc_generated_files/i2c_slave.c: 315:         SSP1CON1 |= 0x06;
-[e =| _SSP1CON1 -> -> 6 `i `Vuc ]
+[; ;mcc_generated_files/i2c_slave.c: 315:         SSP1STAT = 0x00;
+[e = _SSP1STAT -> -> 0 `i `uc ]
 "316
-[; ;mcc_generated_files/i2c_slave.c: 316:         SSP1CON2 = 0x81;
-[e = _SSP1CON2 -> -> 129 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 316:         SSP1CON1 |= 0x06;
+[e =| _SSP1CON1 -> -> 6 `i `Vuc ]
 "317
-[; ;mcc_generated_files/i2c_slave.c: 317:         SSP1CON1bits.SSPEN = 1;
-[e = . . _SSP1CON1bits 0 5 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 317:         SSP1CON2 = 0x81;
+[e = _SSP1CON2 -> -> 129 `i `uc ]
 "318
-[; ;mcc_generated_files/i2c_slave.c: 318:         return 1;
+[; ;mcc_generated_files/i2c_slave.c: 318:         SSP1CON1bits.SSPEN = 1;
+[e = . . _SSP1CON1bits 0 5 -> -> 1 `i `uc ]
+"319
+[; ;mcc_generated_files/i2c_slave.c: 319:         return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 496  ]
-"319
-[; ;mcc_generated_files/i2c_slave.c: 319:     }
+"320
+[; ;mcc_generated_files/i2c_slave.c: 320:     }
 }
 [e :U 497 ]
-"320
-[; ;mcc_generated_files/i2c_slave.c: 320:     return 0;
+"321
+[; ;mcc_generated_files/i2c_slave.c: 321:     return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 496  ]
-"321
-[; ;mcc_generated_files/i2c_slave.c: 321: }
+"322
+[; ;mcc_generated_files/i2c_slave.c: 322: }
 [e :UE 496 ]
 }
 [v F3675 `(v ~T0 @X0 1 tf ]
-"323
-[; ;mcc_generated_files/i2c_slave.c: 323: static __attribute__((inline)) void I2C_SlaveClose()
-[v _I2C_SlaveClose `TF3675 ~T0 @X0 1 s ]
 "324
-[; ;mcc_generated_files/i2c_slave.c: 324: {
+[; ;mcc_generated_files/i2c_slave.c: 324: static __attribute__((inline)) void I2C_SlaveClose()
+[v _I2C_SlaveClose `TF3675 ~T0 @X0 1 s ]
+"325
+[; ;mcc_generated_files/i2c_slave.c: 325: {
 {
 [e :U _I2C_SlaveClose ]
 [f ]
-"325
-[; ;mcc_generated_files/i2c_slave.c: 325:     SSP1STAT = 0x00;
-[e = _SSP1STAT -> -> 0 `i `uc ]
 "326
-[; ;mcc_generated_files/i2c_slave.c: 326:     SSP1CON1 |= 0x06;
-[e =| _SSP1CON1 -> -> 6 `i `Vuc ]
+[; ;mcc_generated_files/i2c_slave.c: 326:     SSP1STAT = 0x00;
+[e = _SSP1STAT -> -> 0 `i `uc ]
 "327
-[; ;mcc_generated_files/i2c_slave.c: 327:     SSP1CON2 = 0x81;
-[e = _SSP1CON2 -> -> 129 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 327:     SSP1CON1 |= 0x06;
+[e =| _SSP1CON1 -> -> 6 `i `Vuc ]
 "328
-[; ;mcc_generated_files/i2c_slave.c: 328:     SSP1CON1bits.SSPEN = 0;
-[e = . . _SSP1CON1bits 0 5 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 328:     SSP1CON2 = 0x81;
+[e = _SSP1CON2 -> -> 129 `i `uc ]
 "329
-[; ;mcc_generated_files/i2c_slave.c: 329: }
+[; ;mcc_generated_files/i2c_slave.c: 329:     SSP1CON1bits.SSPEN = 0;
+[e = . . _SSP1CON1bits 0 5 -> -> 0 `i `uc ]
+"330
+[; ;mcc_generated_files/i2c_slave.c: 330: }
 [e :UE 498 ]
 }
 [v F3677 `(v ~T0 @X0 1 tf1`uc ]
-"331
-[; ;mcc_generated_files/i2c_slave.c: 331: static __attribute__((inline)) void I2C_SlaveSetSlaveAddr(uint8_t slaveAddr)
-[v _I2C_SlaveSetSlaveAddr `TF3677 ~T0 @X0 1 s ]
 "332
-[; ;mcc_generated_files/i2c_slave.c: 332: {
+[; ;mcc_generated_files/i2c_slave.c: 332: static __attribute__((inline)) void I2C_SlaveSetSlaveAddr(uint8_t slaveAddr)
+[v _I2C_SlaveSetSlaveAddr `TF3677 ~T0 @X0 1 s ]
+"333
+[; ;mcc_generated_files/i2c_slave.c: 333: {
 {
 [e :U _I2C_SlaveSetSlaveAddr ]
-"331
-[; ;mcc_generated_files/i2c_slave.c: 331: static __attribute__((inline)) void I2C_SlaveSetSlaveAddr(uint8_t slaveAddr)
-[v _slaveAddr `uc ~T0 @X0 1 r1 ]
 "332
-[; ;mcc_generated_files/i2c_slave.c: 332: {
-[f ]
+[; ;mcc_generated_files/i2c_slave.c: 332: static __attribute__((inline)) void I2C_SlaveSetSlaveAddr(uint8_t slaveAddr)
+[v _slaveAddr `uc ~T0 @X0 1 r1 ]
 "333
-[; ;mcc_generated_files/i2c_slave.c: 333:     SSP1ADD = (uint8_t) (slaveAddr << 1);
-[e = _SSP1ADD -> << -> _slaveAddr `i -> 1 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 333: {
+[f ]
 "334
-[; ;mcc_generated_files/i2c_slave.c: 334: }
+[; ;mcc_generated_files/i2c_slave.c: 334:     SSP1ADD = (uint8_t) (slaveAddr << 1);
+[e = _SSP1ADD -> << -> _slaveAddr `i -> 1 `i `uc ]
+"335
+[; ;mcc_generated_files/i2c_slave.c: 335: }
 [e :UE 499 ]
 }
 [v F3680 `(v ~T0 @X0 1 tf1`uc ]
-"336
-[; ;mcc_generated_files/i2c_slave.c: 336: static __attribute__((inline)) void I2C_SlaveSetSlaveMask(uint8_t maskAddr)
-[v _I2C_SlaveSetSlaveMask `TF3680 ~T0 @X0 1 s ]
 "337
-[; ;mcc_generated_files/i2c_slave.c: 337: {
+[; ;mcc_generated_files/i2c_slave.c: 337: static __attribute__((inline)) void I2C_SlaveSetSlaveMask(uint8_t maskAddr)
+[v _I2C_SlaveSetSlaveMask `TF3680 ~T0 @X0 1 s ]
+"338
+[; ;mcc_generated_files/i2c_slave.c: 338: {
 {
 [e :U _I2C_SlaveSetSlaveMask ]
-"336
-[; ;mcc_generated_files/i2c_slave.c: 336: static __attribute__((inline)) void I2C_SlaveSetSlaveMask(uint8_t maskAddr)
-[v _maskAddr `uc ~T0 @X0 1 r1 ]
 "337
-[; ;mcc_generated_files/i2c_slave.c: 337: {
-[f ]
+[; ;mcc_generated_files/i2c_slave.c: 337: static __attribute__((inline)) void I2C_SlaveSetSlaveMask(uint8_t maskAddr)
+[v _maskAddr `uc ~T0 @X0 1 r1 ]
 "338
-[; ;mcc_generated_files/i2c_slave.c: 338:     SSP1MSK = (uint8_t) (maskAddr << 1);
-[e = _SSP1MSK -> << -> _maskAddr `i -> 1 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 338: {
+[f ]
 "339
-[; ;mcc_generated_files/i2c_slave.c: 339: }
+[; ;mcc_generated_files/i2c_slave.c: 339:     SSP1MSK = (uint8_t) (maskAddr << 1);
+[e = _SSP1MSK -> << -> _maskAddr `i -> 1 `i `uc ]
+"340
+[; ;mcc_generated_files/i2c_slave.c: 340: }
 [e :UE 500 ]
 }
 [v F3683 `(v ~T0 @X0 1 tf ]
-"341
-[; ;mcc_generated_files/i2c_slave.c: 341: static __attribute__((inline)) void I2C_SlaveEnableIrq()
-[v _I2C_SlaveEnableIrq `TF3683 ~T0 @X0 1 s ]
 "342
-[; ;mcc_generated_files/i2c_slave.c: 342: {
+[; ;mcc_generated_files/i2c_slave.c: 342: static __attribute__((inline)) void I2C_SlaveEnableIrq()
+[v _I2C_SlaveEnableIrq `TF3683 ~T0 @X0 1 s ]
+"343
+[; ;mcc_generated_files/i2c_slave.c: 343: {
 {
 [e :U _I2C_SlaveEnableIrq ]
 [f ]
-"343
-[; ;mcc_generated_files/i2c_slave.c: 343:     PIE1bits.SSP1IE = 1;
-[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
 "344
-[; ;mcc_generated_files/i2c_slave.c: 344: }
+[; ;mcc_generated_files/i2c_slave.c: 344:     PIE1bits.SSP1IE = 1;
+[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
+"345
+[; ;mcc_generated_files/i2c_slave.c: 345: }
 [e :UE 501 ]
 }
 [v F3685 `(a ~T0 @X0 1 tf ]
-"346
-[; ;mcc_generated_files/i2c_slave.c: 346: static __attribute__((inline)) _Bool I2C_SlaveIsAddr()
-[v _I2C_SlaveIsAddr `TF3685 ~T0 @X0 1 s ]
 "347
-[; ;mcc_generated_files/i2c_slave.c: 347: {
+[; ;mcc_generated_files/i2c_slave.c: 347: static __attribute__((inline)) _Bool I2C_SlaveIsAddr()
+[v _I2C_SlaveIsAddr `TF3685 ~T0 @X0 1 s ]
+"348
+[; ;mcc_generated_files/i2c_slave.c: 348: {
 {
 [e :U _I2C_SlaveIsAddr ]
 [f ]
-"348
-[; ;mcc_generated_files/i2c_slave.c: 348:     return !(SSP1STATbits.D_nA);
+"349
+[; ;mcc_generated_files/i2c_slave.c: 349:     return !(SSP1STATbits.D_nA);
 [e ) -> -> ! != -> . . _SSP1STATbits 0 5 `i -> 0 `i `i `a ]
 [e $UE 502  ]
-"349
-[; ;mcc_generated_files/i2c_slave.c: 349: }
+"350
+[; ;mcc_generated_files/i2c_slave.c: 350: }
 [e :UE 502 ]
 }
 [v F3687 `(a ~T0 @X0 1 tf ]
-"351
-[; ;mcc_generated_files/i2c_slave.c: 351: static __attribute__((inline)) _Bool I2C_SlaveIsRead()
-[v _I2C_SlaveIsRead `TF3687 ~T0 @X0 1 s ]
 "352
-[; ;mcc_generated_files/i2c_slave.c: 352: {
+[; ;mcc_generated_files/i2c_slave.c: 352: static __attribute__((inline)) _Bool I2C_SlaveIsRead()
+[v _I2C_SlaveIsRead `TF3687 ~T0 @X0 1 s ]
+"353
+[; ;mcc_generated_files/i2c_slave.c: 353: {
 {
 [e :U _I2C_SlaveIsRead ]
 [f ]
-"353
-[; ;mcc_generated_files/i2c_slave.c: 353:     return (SSP1STATbits.R_nW);
+"354
+[; ;mcc_generated_files/i2c_slave.c: 354:     return (SSP1STATbits.R_nW);
 [e ) -> . . _SSP1STATbits 0 2 `a ]
 [e $UE 503  ]
-"354
-[; ;mcc_generated_files/i2c_slave.c: 354: }
+"355
+[; ;mcc_generated_files/i2c_slave.c: 355: }
 [e :UE 503 ]
 }
 [v F3689 `(v ~T0 @X0 1 tf ]
-"356
-[; ;mcc_generated_files/i2c_slave.c: 356: static __attribute__((inline)) void I2C_SlaveClearIrq()
-[v _I2C_SlaveClearIrq `TF3689 ~T0 @X0 1 s ]
 "357
-[; ;mcc_generated_files/i2c_slave.c: 357: {
+[; ;mcc_generated_files/i2c_slave.c: 357: static __attribute__((inline)) void I2C_SlaveClearIrq()
+[v _I2C_SlaveClearIrq `TF3689 ~T0 @X0 1 s ]
+"358
+[; ;mcc_generated_files/i2c_slave.c: 358: {
 {
 [e :U _I2C_SlaveClearIrq ]
 [f ]
-"358
-[; ;mcc_generated_files/i2c_slave.c: 358:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "359
-[; ;mcc_generated_files/i2c_slave.c: 359: }
+[; ;mcc_generated_files/i2c_slave.c: 359:     PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"360
+[; ;mcc_generated_files/i2c_slave.c: 360: }
 [e :UE 504 ]
 }
 [v F3691 `(v ~T0 @X0 1 tf ]
-"361
-[; ;mcc_generated_files/i2c_slave.c: 361: static __attribute__((inline)) void I2C_SlaveReleaseClock()
-[v _I2C_SlaveReleaseClock `TF3691 ~T0 @X0 1 s ]
 "362
-[; ;mcc_generated_files/i2c_slave.c: 362: {
+[; ;mcc_generated_files/i2c_slave.c: 362: static __attribute__((inline)) void I2C_SlaveReleaseClock()
+[v _I2C_SlaveReleaseClock `TF3691 ~T0 @X0 1 s ]
+"363
+[; ;mcc_generated_files/i2c_slave.c: 363: {
 {
 [e :U _I2C_SlaveReleaseClock ]
 [f ]
-"363
-[; ;mcc_generated_files/i2c_slave.c: 363:     SSP1CON1bits.CKP = 1;
-[e = . . _SSP1CON1bits 0 4 -> -> 1 `i `uc ]
 "364
-[; ;mcc_generated_files/i2c_slave.c: 364: }
+[; ;mcc_generated_files/i2c_slave.c: 364:     SSP1CON1bits.CKP = 1;
+[e = . . _SSP1CON1bits 0 4 -> -> 1 `i `uc ]
+"365
+[; ;mcc_generated_files/i2c_slave.c: 365: }
 [e :UE 505 ]
 }
 [v F3693 `(a ~T0 @X0 1 tf ]
-"366
-[; ;mcc_generated_files/i2c_slave.c: 366: static __attribute__((inline)) _Bool I2C_SlaveIsWriteCollision()
-[v _I2C_SlaveIsWriteCollision `TF3693 ~T0 @X0 1 s ]
 "367
-[; ;mcc_generated_files/i2c_slave.c: 367: {
+[; ;mcc_generated_files/i2c_slave.c: 367: static __attribute__((inline)) _Bool I2C_SlaveIsWriteCollision()
+[v _I2C_SlaveIsWriteCollision `TF3693 ~T0 @X0 1 s ]
+"368
+[; ;mcc_generated_files/i2c_slave.c: 368: {
 {
 [e :U _I2C_SlaveIsWriteCollision ]
 [f ]
-"368
-[; ;mcc_generated_files/i2c_slave.c: 368:     return SSP1CON1bits.WCOL;
+"369
+[; ;mcc_generated_files/i2c_slave.c: 369:     return SSP1CON1bits.WCOL;
 [e ) -> . . _SSP1CON1bits 0 7 `a ]
 [e $UE 506  ]
-"369
-[; ;mcc_generated_files/i2c_slave.c: 369: }
+"370
+[; ;mcc_generated_files/i2c_slave.c: 370: }
 [e :UE 506 ]
 }
 [v F3695 `(a ~T0 @X0 1 tf ]
-"371
-[; ;mcc_generated_files/i2c_slave.c: 371: static __attribute__((inline)) _Bool I2C_SlaveIsData()
-[v _I2C_SlaveIsData `TF3695 ~T0 @X0 1 s ]
 "372
-[; ;mcc_generated_files/i2c_slave.c: 372: {
+[; ;mcc_generated_files/i2c_slave.c: 372: static __attribute__((inline)) _Bool I2C_SlaveIsData()
+[v _I2C_SlaveIsData `TF3695 ~T0 @X0 1 s ]
+"373
+[; ;mcc_generated_files/i2c_slave.c: 373: {
 {
 [e :U _I2C_SlaveIsData ]
 [f ]
-"373
-[; ;mcc_generated_files/i2c_slave.c: 373:     return SSP1STATbits.D_nA;
+"374
+[; ;mcc_generated_files/i2c_slave.c: 374:     return SSP1STATbits.D_nA;
 [e ) -> . . _SSP1STATbits 0 5 `a ]
 [e $UE 507  ]
-"374
-[; ;mcc_generated_files/i2c_slave.c: 374: }
+"375
+[; ;mcc_generated_files/i2c_slave.c: 375: }
 [e :UE 507 ]
 }
 [v F3697 `(v ~T0 @X0 1 tf ]
-"376
-[; ;mcc_generated_files/i2c_slave.c: 376: static __attribute__((inline)) void I2C_SlaveRestart(void)
-[v _I2C_SlaveRestart `TF3697 ~T0 @X0 1 s ]
 "377
-[; ;mcc_generated_files/i2c_slave.c: 377: {
+[; ;mcc_generated_files/i2c_slave.c: 377: static __attribute__((inline)) void I2C_SlaveRestart(void)
+[v _I2C_SlaveRestart `TF3697 ~T0 @X0 1 s ]
+"378
+[; ;mcc_generated_files/i2c_slave.c: 378: {
 {
 [e :U _I2C_SlaveRestart ]
 [f ]
-"378
-[; ;mcc_generated_files/i2c_slave.c: 378:     SSP1CON2bits.RSEN = 1;
-[e = . . _SSP1CON2bits 0 1 -> -> 1 `i `uc ]
 "379
-[; ;mcc_generated_files/i2c_slave.c: 379: }
+[; ;mcc_generated_files/i2c_slave.c: 379:     SSP1CON2bits.RSEN = 1;
+[e = . . _SSP1CON2bits 0 1 -> -> 1 `i `uc ]
+"380
+[; ;mcc_generated_files/i2c_slave.c: 380: }
 [e :UE 508 ]
 }
 [v F3699 `(a ~T0 @X0 1 tf ]
-"381
-[; ;mcc_generated_files/i2c_slave.c: 381: static __attribute__((inline)) _Bool I2C_SlaveIsTxBufEmpty()
-[v _I2C_SlaveIsTxBufEmpty `TF3699 ~T0 @X0 1 s ]
 "382
-[; ;mcc_generated_files/i2c_slave.c: 382: {
+[; ;mcc_generated_files/i2c_slave.c: 382: static __attribute__((inline)) _Bool I2C_SlaveIsTxBufEmpty()
+[v _I2C_SlaveIsTxBufEmpty `TF3699 ~T0 @X0 1 s ]
+"383
+[; ;mcc_generated_files/i2c_slave.c: 383: {
 {
 [e :U _I2C_SlaveIsTxBufEmpty ]
 [f ]
-"383
-[; ;mcc_generated_files/i2c_slave.c: 383:     return !SSP1STATbits.BF;
+"384
+[; ;mcc_generated_files/i2c_slave.c: 384:     return !SSP1STATbits.BF;
 [e ) -> -> ! != -> . . _SSP1STATbits 0 0 `i -> 0 `i `i `a ]
 [e $UE 509  ]
-"384
-[; ;mcc_generated_files/i2c_slave.c: 384: }
+"385
+[; ;mcc_generated_files/i2c_slave.c: 385: }
 [e :UE 509 ]
 }
 [v F3701 `(a ~T0 @X0 1 tf ]
-"386
-[; ;mcc_generated_files/i2c_slave.c: 386: static __attribute__((inline)) _Bool I2C_SlaveIsRxBufFull()
-[v _I2C_SlaveIsRxBufFull `TF3701 ~T0 @X0 1 s ]
 "387
-[; ;mcc_generated_files/i2c_slave.c: 387: {
+[; ;mcc_generated_files/i2c_slave.c: 387: static __attribute__((inline)) _Bool I2C_SlaveIsRxBufFull()
+[v _I2C_SlaveIsRxBufFull `TF3701 ~T0 @X0 1 s ]
+"388
+[; ;mcc_generated_files/i2c_slave.c: 388: {
 {
 [e :U _I2C_SlaveIsRxBufFull ]
 [f ]
-"388
-[; ;mcc_generated_files/i2c_slave.c: 388:     return SSP1STATbits.BF;
+"389
+[; ;mcc_generated_files/i2c_slave.c: 389:     return SSP1STATbits.BF;
 [e ) -> . . _SSP1STATbits 0 0 `a ]
 [e $UE 510  ]
-"389
-[; ;mcc_generated_files/i2c_slave.c: 389: }
+"390
+[; ;mcc_generated_files/i2c_slave.c: 390: }
 [e :UE 510 ]
 }
 [v F3703 `(v ~T0 @X0 1 tf1`uc ]
-"391
-[; ;mcc_generated_files/i2c_slave.c: 391: static __attribute__((inline)) void I2C_SlaveSendTxData(uint8_t data)
-[v _I2C_SlaveSendTxData `TF3703 ~T0 @X0 1 s ]
 "392
-[; ;mcc_generated_files/i2c_slave.c: 392: {
+[; ;mcc_generated_files/i2c_slave.c: 392: static __attribute__((inline)) void I2C_SlaveSendTxData(uint8_t data)
+[v _I2C_SlaveSendTxData `TF3703 ~T0 @X0 1 s ]
+"393
+[; ;mcc_generated_files/i2c_slave.c: 393: {
 {
 [e :U _I2C_SlaveSendTxData ]
-"391
-[; ;mcc_generated_files/i2c_slave.c: 391: static __attribute__((inline)) void I2C_SlaveSendTxData(uint8_t data)
-[v _data `uc ~T0 @X0 1 r1 ]
 "392
-[; ;mcc_generated_files/i2c_slave.c: 392: {
-[f ]
+[; ;mcc_generated_files/i2c_slave.c: 392: static __attribute__((inline)) void I2C_SlaveSendTxData(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
 "393
-[; ;mcc_generated_files/i2c_slave.c: 393:     SSP1BUF = data;
-[e = _SSP1BUF _data ]
+[; ;mcc_generated_files/i2c_slave.c: 393: {
+[f ]
 "394
-[; ;mcc_generated_files/i2c_slave.c: 394: }
+[; ;mcc_generated_files/i2c_slave.c: 394:     SSP1BUF = data;
+[e = _SSP1BUF _data ]
+"395
+[; ;mcc_generated_files/i2c_slave.c: 395: }
 [e :UE 511 ]
 }
 [v F3706 `(uc ~T0 @X0 1 tf ]
-"396
-[; ;mcc_generated_files/i2c_slave.c: 396: static __attribute__((inline)) uint8_t I2C_SlaveGetRxData()
-[v _I2C_SlaveGetRxData `TF3706 ~T0 @X0 1 s ]
 "397
-[; ;mcc_generated_files/i2c_slave.c: 397: {
+[; ;mcc_generated_files/i2c_slave.c: 397: static __attribute__((inline)) uint8_t I2C_SlaveGetRxData()
+[v _I2C_SlaveGetRxData `TF3706 ~T0 @X0 1 s ]
+"398
+[; ;mcc_generated_files/i2c_slave.c: 398: {
 {
 [e :U _I2C_SlaveGetRxData ]
 [f ]
-"398
-[; ;mcc_generated_files/i2c_slave.c: 398:     return SSP1BUF;
+"399
+[; ;mcc_generated_files/i2c_slave.c: 399:     return SSP1BUF;
 [e ) _SSP1BUF ]
 [e $UE 512  ]
-"399
-[; ;mcc_generated_files/i2c_slave.c: 399: }
+"400
+[; ;mcc_generated_files/i2c_slave.c: 400: }
 [e :UE 512 ]
 }
 [v F3708 `(uc ~T0 @X0 1 tf ]
-"401
-[; ;mcc_generated_files/i2c_slave.c: 401: static __attribute__((inline)) uint8_t I2C_SlaveGetAddr()
-[v _I2C_SlaveGetAddr `TF3708 ~T0 @X0 1 s ]
 "402
-[; ;mcc_generated_files/i2c_slave.c: 402: {
+[; ;mcc_generated_files/i2c_slave.c: 402: static __attribute__((inline)) uint8_t I2C_SlaveGetAddr()
+[v _I2C_SlaveGetAddr `TF3708 ~T0 @X0 1 s ]
+"403
+[; ;mcc_generated_files/i2c_slave.c: 403: {
 {
 [e :U _I2C_SlaveGetAddr ]
 [f ]
-"403
-[; ;mcc_generated_files/i2c_slave.c: 403:     return SSP1ADD;
+"404
+[; ;mcc_generated_files/i2c_slave.c: 404:     return SSP1ADD;
 [e ) _SSP1ADD ]
 [e $UE 513  ]
-"404
-[; ;mcc_generated_files/i2c_slave.c: 404: }
+"405
+[; ;mcc_generated_files/i2c_slave.c: 405: }
 [e :UE 513 ]
 }
 [v F3710 `(v ~T0 @X0 1 tf ]
-"406
-[; ;mcc_generated_files/i2c_slave.c: 406: static __attribute__((inline)) void I2C_SlaveSendAck()
-[v _I2C_SlaveSendAck `TF3710 ~T0 @X0 1 s ]
 "407
-[; ;mcc_generated_files/i2c_slave.c: 407: {
+[; ;mcc_generated_files/i2c_slave.c: 407: static __attribute__((inline)) void I2C_SlaveSendAck()
+[v _I2C_SlaveSendAck `TF3710 ~T0 @X0 1 s ]
+"408
+[; ;mcc_generated_files/i2c_slave.c: 408: {
 {
 [e :U _I2C_SlaveSendAck ]
 [f ]
-"408
-[; ;mcc_generated_files/i2c_slave.c: 408:     SSP1CON2bits.ACKDT = 0;
-[e = . . _SSP1CON2bits 0 5 -> -> 0 `i `uc ]
 "409
-[; ;mcc_generated_files/i2c_slave.c: 409:     SSP1CON2bits.ACKEN = 1;
-[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 409:     SSP1CON2bits.ACKDT = 0;
+[e = . . _SSP1CON2bits 0 5 -> -> 0 `i `uc ]
 "410
-[; ;mcc_generated_files/i2c_slave.c: 410: }
+[; ;mcc_generated_files/i2c_slave.c: 410:     SSP1CON2bits.ACKEN = 1;
+[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+"411
+[; ;mcc_generated_files/i2c_slave.c: 411: }
 [e :UE 514 ]
 }
 [v F3712 `(v ~T0 @X0 1 tf ]
-"412
-[; ;mcc_generated_files/i2c_slave.c: 412: static __attribute__((inline)) void I2C_SlaveSendNack()
-[v _I2C_SlaveSendNack `TF3712 ~T0 @X0 1 s ]
 "413
-[; ;mcc_generated_files/i2c_slave.c: 413: {
+[; ;mcc_generated_files/i2c_slave.c: 413: static __attribute__((inline)) void I2C_SlaveSendNack()
+[v _I2C_SlaveSendNack `TF3712 ~T0 @X0 1 s ]
+"414
+[; ;mcc_generated_files/i2c_slave.c: 414: {
 {
 [e :U _I2C_SlaveSendNack ]
 [f ]
-"414
-[; ;mcc_generated_files/i2c_slave.c: 414:     SSP1CON2bits.ACKDT = 1;
-[e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
 "415
-[; ;mcc_generated_files/i2c_slave.c: 415:     SSP1CON2bits.ACKEN = 1;
-[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 415:     SSP1CON2bits.ACKDT = 1;
+[e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
 "416
-[; ;mcc_generated_files/i2c_slave.c: 416: }
+[; ;mcc_generated_files/i2c_slave.c: 416:     SSP1CON2bits.ACKEN = 1;
+[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+"417
+[; ;mcc_generated_files/i2c_slave.c: 417: }
 [e :UE 515 ]
 }
 [v F3714 `(a ~T0 @X0 1 tf ]
-"418
-[; ;mcc_generated_files/i2c_slave.c: 418: static __attribute__((inline)) _Bool I2C_SlaveIsOverFlow()
-[v _I2C_SlaveIsOverFlow `TF3714 ~T0 @X0 1 s ]
 "419
-[; ;mcc_generated_files/i2c_slave.c: 419: {
+[; ;mcc_generated_files/i2c_slave.c: 419: static __attribute__((inline)) _Bool I2C_SlaveIsOverFlow()
+[v _I2C_SlaveIsOverFlow `TF3714 ~T0 @X0 1 s ]
+"420
+[; ;mcc_generated_files/i2c_slave.c: 420: {
 {
 [e :U _I2C_SlaveIsOverFlow ]
 [f ]
-"420
-[; ;mcc_generated_files/i2c_slave.c: 420:     return SSP1CON1bits.SSPOV;
+"421
+[; ;mcc_generated_files/i2c_slave.c: 421:     return SSP1CON1bits.SSPOV;
 [e ) -> . . _SSP1CON1bits 0 6 `a ]
 [e $UE 516  ]
-"421
-[; ;mcc_generated_files/i2c_slave.c: 421: }
+"422
+[; ;mcc_generated_files/i2c_slave.c: 422: }
 [e :UE 516 ]
 }

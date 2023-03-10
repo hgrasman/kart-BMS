@@ -644,8 +644,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _TMR1_Initialize ]
 [f ]
 "69
-[; ;mcc_generated_files/tmr1.c: 69:     T1GCON = 0x00;
-[e = _T1GCON -> -> 0 `i `uc ]
+[; ;mcc_generated_files/tmr1.c: 69:     T1GCON = 0x01;
+[e = _T1GCON -> -> 1 `i `uc ]
 "72
 [; ;mcc_generated_files/tmr1.c: 72:     TMR1H = 0xC3;
 [e = _TMR1H -> -> 195 `i `uc ]
@@ -665,8 +665,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr1.c: 87:     TMR1_SetInterruptHandler(TMR1_DefaultInterruptHandler);
 [e ( _TMR1_SetInterruptHandler (1 &U _TMR1_DefaultInterruptHandler ]
 "90
-[; ;mcc_generated_files/tmr1.c: 90:     T1CON = 0xC5;
-[e = _T1CON -> -> 197 `i `uc ]
+[; ;mcc_generated_files/tmr1.c: 90:     T1CON = 0xC4;
+[e = _T1CON -> -> 196 `i `uc ]
 "91
 [; ;mcc_generated_files/tmr1.c: 91: }
 [e :UE 449 ]
