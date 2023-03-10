@@ -67,9 +67,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "91 ./mcc_generated_files/i2c_slave.h
 [; ;./mcc_generated_files/i2c_slave.h: 91: void I2C_Write(uint8_t data);
 [v _I2C_Write `(v ~T0 @X0 0 ef1`uc ]
-"188 main.c
-[; ;main.c: 188:                 sendAllDataToMaster();
-[v _sendAllDataToMaster `(i ~T0 @X0 0 e? ]
+"49 main.c
+[; ;main.c: 49: static void sendAllDatatoMaster();
+[v _sendAllDatatoMaster `(v ~T0 @X0 0 s? ]
 "195
 [; ;main.c: 195:         memory.TSNS1 = ADC_GetConversion(selectedReference);
 [c E3896 0 2 3 7 8 9 29 30 31 .. ]
@@ -879,8 +879,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 187:             case Send_All_Data:
 [e :U 474 ]
 "188
-[; ;main.c: 188:                 sendAllDataToMaster();
-[e ( _sendAllDataToMaster ..  ]
+[; ;main.c: 188:                 sendAllDatatoMaster();
+[e ( _sendAllDatatoMaster ..  ]
 "189
 [; ;main.c: 189:                 break;
 [e $U 459  ]
@@ -996,10 +996,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 476 ]
 }
 "218
-[; ;main.c: 218: static void _sendAllDatatoMaster(){
-[v __sendAllDatatoMaster `(v ~T0 @X0 1 sf ]
+[; ;main.c: 218: static void sendAllDatatoMaster(){
+[v _sendAllDatatoMaster `(v ~T0 @X0 1 sf ]
 {
-[e :U __sendAllDatatoMaster ]
+[e :U _sendAllDatatoMaster ]
 [f ]
 "219
 [; ;main.c: 219:     I2C_Write(memory.status);

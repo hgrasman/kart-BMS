@@ -13,7 +13,7 @@ extern "C" {
 #endif
 
 static void sendDataToMaster(uint16_t toSend);
-static void _sendAllDatatoMaster();
+static void sendAllDatatoMaster();
 
 
 #ifdef	__cplusplus

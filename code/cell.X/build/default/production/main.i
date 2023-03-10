@@ -6388,13 +6388,13 @@ void WDT_Initialize(void);
 # 1 "./mainVars.h" 1
 # 15 "./mainVars.h"
 static void sendDataToMaster(uint16_t toSend);
-static void _sendAllDatatoMaster();
+static void sendAllDatatoMaster();
 # 45 "main.c" 2
 
 
 
 
-static void _sendAllDatatoMaster();
+static void sendAllDatatoMaster();
 static void sendDataToMaster(uint16_t);
 
 
@@ -6526,7 +6526,7 @@ void main(void)
                 LATC = 0x00;
                 break;
             case Send_All_Data:
-                sendAllDataToMaster();
+                sendAllDatatoMaster();
                 break;
             case Controller_Restart:
                 __asm("RESET");
@@ -6556,7 +6556,7 @@ static void sendDataToMaster(uint16_t toSend){
     return;
 }
 
-static void _sendAllDatatoMaster(){
+static void sendAllDatatoMaster(){
     I2C_Write(memory.status);
 
     uint8_t high = (uint8_t) (memory.TSNS1 >> 8) & 0x00FF;

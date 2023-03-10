@@ -70,6 +70,8 @@ I2C_DATA_RX 4
 [v _main main `(v  1 e 1 0 ]
 "208
 [v _sendDataToMaster sendDataToMaster `(v  1 s 1 sendDataToMaster ]
+"218
+[v _sendAllDatatoMaster sendAllDatatoMaster `(v  1 s 1 sendAllDatatoMaster ]
 "67 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "115
@@ -491,6 +493,15 @@ I2C_DATA_RX 4
 "208
 [v sendDataToMaster@toSend toSend `us  1 p 2 5 ]
 "216
+} 0
+"218
+[v _sendAllDatatoMaster sendAllDatatoMaster `(v  1 s 1 sendAllDatatoMaster ]
+{
+"222
+[v sendAllDatatoMaster@low low `uc  1 a 1 6 ]
+"221
+[v sendAllDatatoMaster@high high `uc  1 a 1 5 ]
+"271
 } 0
 "140 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/i2c_slave.c
 [v _I2C_Write I2C_Write `(v  1 e 1 0 ]
