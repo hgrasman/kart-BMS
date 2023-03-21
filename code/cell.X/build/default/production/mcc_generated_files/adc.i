@@ -6058,23 +6058,24 @@ typedef enum
     channel_AN7 = 0x7,
     channel_AN8 = 0x8,
     channel_AN9 = 0x9,
+    channel_AN11 = 0xB,
     channel_Temp = 0x1D,
     channel_DAC = 0x1E,
     channel_FVR = 0x1F
 } adc_channel_t;
-# 141 "mcc_generated_files/adc.h"
+# 142 "mcc_generated_files/adc.h"
 void ADC_Initialize(void);
-# 171 "mcc_generated_files/adc.h"
+# 172 "mcc_generated_files/adc.h"
 void ADC_SelectChannel(adc_channel_t channel);
-# 198 "mcc_generated_files/adc.h"
+# 199 "mcc_generated_files/adc.h"
 void ADC_StartConversion(void);
-# 230 "mcc_generated_files/adc.h"
+# 231 "mcc_generated_files/adc.h"
 _Bool ADC_IsConversionDone(void);
-# 263 "mcc_generated_files/adc.h"
+# 264 "mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversionResult(void);
-# 293 "mcc_generated_files/adc.h"
+# 294 "mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 321 "mcc_generated_files/adc.h"
+# 322 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
 # 52 "mcc_generated_files/adc.c" 2
 
@@ -6102,7 +6103,7 @@ void ADC_Initialize(void)
     ADCON1 = 0xD0;
 
 
-    ADCON2 = 0x30;
+    ADCON2 = 0x00;
 
 
     ADRESL = 0x00;

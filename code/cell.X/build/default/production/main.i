@@ -6040,9 +6040,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 235 "./mcc_generated_files/pin_manager.h"
+# 266 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 247 "./mcc_generated_files/pin_manager.h"
+# 278 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -6358,23 +6358,24 @@ typedef enum
     channel_AN7 = 0x7,
     channel_AN8 = 0x8,
     channel_AN9 = 0x9,
+    channel_AN11 = 0xB,
     channel_Temp = 0x1D,
     channel_DAC = 0x1E,
     channel_FVR = 0x1F
 } adc_channel_t;
-# 141 "./mcc_generated_files/adc.h"
+# 142 "./mcc_generated_files/adc.h"
 void ADC_Initialize(void);
-# 171 "./mcc_generated_files/adc.h"
+# 172 "./mcc_generated_files/adc.h"
 void ADC_SelectChannel(adc_channel_t channel);
-# 198 "./mcc_generated_files/adc.h"
+# 199 "./mcc_generated_files/adc.h"
 void ADC_StartConversion(void);
-# 230 "./mcc_generated_files/adc.h"
+# 231 "./mcc_generated_files/adc.h"
 _Bool ADC_IsConversionDone(void);
-# 263 "./mcc_generated_files/adc.h"
+# 264 "./mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversionResult(void);
-# 293 "./mcc_generated_files/adc.h"
+# 294 "./mcc_generated_files/adc.h"
 adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 321 "./mcc_generated_files/adc.h"
+# 322 "./mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
 # 60 "./mcc_generated_files/mcc.h" 2
 # 75 "./mcc_generated_files/mcc.h"
@@ -6396,19 +6397,20 @@ static void sendAllDatatoMaster();
 
 static void sendAllDatatoMaster();
 static void sendDataToMaster(uint16_t);
+static void sendVSNSDataToMaster();
+static void setDangerSignalLine(_Bool);
 
 
 
 struct criticalValues {
     float LOW_VOLTAGE;
     float HIGH_VOLTAGE;
-    float HIGH_TEMP;
-    float WARN_TEMP;
+    uint16_t HIGH_TEMP;
+    uint16_t WARN_TEMP;
 };
 
 struct toTrack {
     uint8_t status;
-    uint16_t VSNS;
     uint16_t TSNS1;
     uint16_t TSNS2;
     uint16_t TSNS3;
@@ -6419,7 +6421,6 @@ struct toTrack {
 
 struct toTrack memory = {
     .status = 0x00,
-    .VSNS = 0x0000,
     .TSNS1 = 0x0000,
     .TSNS2 = 0x0000,
     .TSNS3 = 0x0000,
@@ -6428,9 +6429,9 @@ struct toTrack memory = {
 };
 static const struct criticalValues safety = {
     .LOW_VOLTAGE = 3.2,
-    .HIGH_VOLTAGE = 4.0,
-    .HIGH_TEMP = 23.88,
-    .WARN_TEMP = 28.82
+    .HIGH_VOLTAGE = 4.2,
+    .HIGH_TEMP = 226,
+    .WARN_TEMP = 230
 };
 
 
@@ -6440,7 +6441,8 @@ enum ADC_Reference {
     TSNS3 = 0x07,
     TSNS4 = 0x08,
     TSNS5 = 0x09,
-    VSNS = 0x10
+    VSNS = 0x10,
+    FVR = 0x1F
 } selectedReference;
 
 enum I2C_opCodes {
@@ -6461,7 +6463,13 @@ enum I2C_opCodes {
     Controller_Restart = 0x0E
 } I2C_Command;
 
-_Bool currentlyBalancing = 0;
+union floatToBytes {
+
+    char buffer[4];
+    float voltageReading;
+
+  } converter;
+
 
 
 void main(void)
@@ -6477,15 +6485,26 @@ void main(void)
 
 
     (INTCONbits.PEIE = 1);
-# 140 "main.c"
+
+
+
+
+
+
+
+    I2C_Open();
     WDTCONbits.SWDTEN = 0;
+    uint8_t test = 0x00;
     while (1)
     {
         if(WDTCONbits.SWDTEN == 1){
             __asm("SLEEP");
         }
-        LATC = 0x01;
+
+
+
         I2C_Command = I2C_Read();
+
         switch(I2C_Command){
             case No_Command:
                 break;
@@ -6505,7 +6524,7 @@ void main(void)
                 sendDataToMaster(memory.TSNS5);
                 break;
             case Report_VSNS:
-                sendDataToMaster(memory.VSNS);
+                sendVSNSDataToMaster();
                 break;
             case Report_Status:
                 I2C_Write(memory.status);
@@ -6517,13 +6536,17 @@ void main(void)
                 WDTCONbits.SWDTEN = 0;
                 break;
             case Start_Balancing:
-                currentlyBalancing = 1;
+                T1CONbits.TMR1ON = 1;
+                LATBbits.LATB7 = 1;
+                WDTCONbits.SWDTEN = 0;
                 break;
             case Stop_Balancing:
-                currentlyBalancing = 0;
+                T1CONbits.TMR1ON = 0;
+                LATBbits.LATB7 = 0;
+                WDTCONbits.SWDTEN = 1;
                 break;
             case Restart_Relay:
-                LATC = 0x00;
+                setDangerSignalLine(1);
                 break;
             case Send_All_Data:
                 sendAllDatatoMaster();
@@ -6531,19 +6554,85 @@ void main(void)
             case Controller_Restart:
                 __asm("RESET");
         }
-
+        SSP1BUF = 0x00;
+        if(T1CONbits.TMR1ON == 1){
+            LATBbits.LATB7 = 1;
+            _delay((unsigned long)((900)*(16000000/4000.0)));
+            LATBbits.LATB7 = 0;
+            _delay((unsigned long)((100)*(16000000/4000.0)));
+        }
         selectedReference = TSNS1;
-        memory.TSNS1 = ADC_GetConversion(selectedReference);
+        memory.TSNS1 = (uint16_t) ADC_GetConversion(selectedReference);
+        if(memory.TSNS1 <= safety.HIGH_TEMP){
+            LATCbits.LATC1 = 0;
+        }
+
+        if(memory.TSNS1 <= safety.WARN_TEMP){
+            LATCbits.LATC2 = 0;
+        }else{
+            LATCbits.LATC2 = 1;
+        }
+
         selectedReference = TSNS2;
-        memory.TSNS2 = ADC_GetConversion(selectedReference);
+        memory.TSNS2 = (uint16_t) ADC_GetConversion(selectedReference);
+        if(memory.TSNS2 <= safety.HIGH_TEMP){
+            LATCbits.LATC1 = 0;
+        }
+
+        if(memory.TSNS2 <= safety.WARN_TEMP){
+            LATCbits.LATC2 = 0;
+        }else{
+            LATCbits.LATC2 = 1;
+        }
+
         selectedReference = TSNS3;
-        memory.TSNS3 = ADC_GetConversion(selectedReference);
+        memory.TSNS3 = (uint16_t) ADC_GetConversion(selectedReference);
+        if(memory.TSNS3 <= safety.HIGH_TEMP){
+            LATCbits.LATC1 = 0;
+        }
+
+        if(memory.TSNS3 <= safety.WARN_TEMP){
+            LATCbits.LATC2 = 0;
+        }else{
+            LATCbits.LATC2 = 1;
+        }
+
         selectedReference = TSNS4;
-        memory.TSNS4 = ADC_GetConversion(selectedReference);
+        memory.TSNS4 = (uint16_t) ADC_GetConversion(selectedReference);
+        if(memory.TSNS4 <= safety.HIGH_TEMP){
+            LATCbits.LATC1 = 0;
+        }
+
+        if(memory.TSNS4 <= safety.WARN_TEMP){
+            LATCbits.LATC2 = 0;
+        }else{
+            LATCbits.LATC2 = 1;
+        }
         selectedReference = TSNS5;
-        memory.TSNS5 = ADC_GetConversion(selectedReference);
-        LATC = 0x00;
+        memory.TSNS5 = (uint16_t) ADC_GetConversion(selectedReference);
+        if(memory.TSNS5 <= safety.HIGH_TEMP){
+            LATCbits.LATC1 = 0;
+        }
+
+        if(memory.TSNS5 <= safety.WARN_TEMP){
+            LATCbits.LATC2 = 0;
+        }else{
+            LATCbits.LATC2 = 1;
+        }
+
+        selectedReference = FVR;
+
+        uint16_t fvr_Test = ADC_GetConversion(selectedReference);
+        float Vbit = 2.048 / (float) fvr_Test;
+        converter.voltageReading = Vbit * 1024;
+        if(converter.voltageReading >= safety.HIGH_VOLTAGE || converter.voltageReading <= safety.LOW_VOLTAGE){
+            LATCbits.LATC1 = 0;
+        }
+
+
+        test = SSP1BUF;
     }
+
 }
 
 static void sendDataToMaster(uint16_t toSend){
@@ -6556,57 +6645,46 @@ static void sendDataToMaster(uint16_t toSend){
     return;
 }
 
+static void sendVSNSDataToMaster(){
+    I2C_Write(converter.buffer[3]);
+    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 1){ }
+    I2C_Write(converter.buffer[2]);
+    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 1){ }
+    I2C_Write(converter.buffer[1]);
+    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 1){ }
+    I2C_Write(converter.buffer[0]);
+    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 1){ }
+    I2C_Command = No_Command;
+    return;
+}
+
 static void sendAllDatatoMaster(){
     I2C_Write(memory.status);
-    uint8_t high = (uint8_t) (memory.TSNS1 >> 8) & 0x00FF;
-    uint8_t low = (uint8_t) (memory.TSNS1 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && !SSP1CON2bits.ACKSTAT){ }
+    sendDataToMaster(memory.TSNS1);
+    sendDataToMaster(memory.TSNS2);
+    sendDataToMaster(memory.TSNS3);
+    sendDataToMaster(memory.TSNS4);
+    sendDataToMaster(memory.TSNS5);
+    sendVSNSDataToMaster();
+    return;
+}
 
-    I2C_Write(high);
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.TSNS2 >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(high);
-    low = (uint8_t) (memory.TSNS2 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.TSNS3 >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(high);
-    low = (uint8_t) (memory.TSNS3 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.TSNS4 >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(high);
-    low = (uint8_t) (memory.TSNS4 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.TSNS5 >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(high);
-    low = (uint8_t) (memory.TSNS5 >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-    high = (uint8_t) (memory.VSNS >> 8) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(high);
-    low = (uint8_t) (memory.VSNS >> 0) & 0x00FF;
-    while(SSP1STATbits.BF && SSP1CON2bits.ACKSTAT == 0){ }
-
-    I2C_Write(low);
-
-    I2C_Command = No_Command;
+static void setDangerSignalLine(_Bool isTurnOff){
+        if(isTurnOff){
+            for (int i=0;i<1000;i++){
+                _delay((unsigned long)((1000)*(16000000/4000000.0)));
+                LATCbits.LATC1 = ~LATCbits.LATC1;
+            }
+            LATCbits.LATC1 = 0;
+            goto endFunction;
+        }else{
+            for (int i=0;i<1000;i++){
+                _delay((unsigned long)((1000)*(16000000/4000000.0)));
+                LATCbits.LATC1 = ~LATCbits.LATC1;
+            }
+            LATCbits.LATC1 = 1;
+            goto endFunction;
+        }
+    endFunction:
     return;
 }

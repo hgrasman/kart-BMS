@@ -100,6 +100,7 @@ typedef enum
     channel_AN7 =  0x7,
     channel_AN8 =  0x8,
     channel_AN9 =  0x9,
+    channel_AN11 =  0xB,
     channel_Temp =  0x1D,
     channel_DAC =  0x1E,
     channel_FVR =  0x1F

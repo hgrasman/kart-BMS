@@ -6190,15 +6190,15 @@ void I2C_Initialize()
 {
     SSP1STAT = 0x00;
     SSP1CON1 |= 0x06;
-    SSP1CON2 = 0x81;
+    SSP1CON2 = 0x00;
     SSP1CON1bits.SSPEN = 0;
 }
 
 void I2C_Open()
 {
     I2C_SlaveOpen();
-    I2C_SlaveSetSlaveAddr(10);
-    I2C_SlaveSetSlaveMask(10);
+    I2C_SlaveSetSlaveAddr(8);
+    I2C_SlaveSetSlaveMask(0);
     I2C_SlaveSetIsrHandler(I2C_Isr);
     I2C_SlaveSetBusColIntHandler(I2C_SlaveDefBusColInterruptHandler);
     I2C_SlaveSetWriteIntHandler(I2C_SlaveDefWrInterruptHandler);
@@ -6246,7 +6246,7 @@ void I2C_SendNack()
 static void I2C_Isr()
 {
     I2C_SlaveClearIrq();
-
+    LATCbits.LATC0 = ~LATCbits.LATC0;
     if(I2C_SlaveIsAddr())
     {
         if(I2C_SlaveIsRead())
@@ -6367,7 +6367,6 @@ static void I2C_SlaveWrColCallBack() {
     {
          I2C_SlaveWrColInterruptHandler();
     }
-
 }
 
 static void I2C_SlaveDefWrColInterruptHandler() {
@@ -6395,7 +6394,7 @@ static __attribute__((inline)) _Bool I2C_SlaveOpen()
     {
         SSP1STAT = 0x00;
         SSP1CON1 |= 0x06;
-        SSP1CON2 = 0x81;
+        SSP1CON2 = 0x00;
         SSP1CON1bits.SSPEN = 1;
         return 1;
     }
@@ -6406,7 +6405,7 @@ static __attribute__((inline)) void I2C_SlaveClose()
 {
     SSP1STAT = 0x00;
     SSP1CON1 |= 0x06;
-    SSP1CON2 = 0x81;
+    SSP1CON2 = 0x00;
     SSP1CON1bits.SSPEN = 0;
 }
 

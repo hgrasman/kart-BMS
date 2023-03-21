@@ -51,6 +51,13 @@
 #include <stdint.h>
 
 
+extern volatile uint8_t i2cWrData;
+extern volatile uint8_t i2cRdData;
+extern volatile uint8_t i2cSlaveAddr;
+extern static volatile i2c_slave_state_t
+i2cSlaveState// </editor-fold>
+;
+
 typedef void (*i2cInterruptHandler)(void);
 /**
  * \brief Initialize I2C interface

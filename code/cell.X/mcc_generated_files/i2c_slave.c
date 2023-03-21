@@ -47,8 +47,8 @@
 #include "i2c_slave.h"
 #include <xc.h>
 
-#define I2C_SLAVE_ADDRESS      10
-#define I2C_SLAVE_MASK         10
+#define I2C_SLAVE_ADDRESS      8
+#define I2C_SLAVE_MASK         0
 
 typedef enum
 {
@@ -109,7 +109,7 @@ void I2C_Initialize()
 {
     SSP1STAT  = 0x00;
     SSP1CON1 |= 0x06;
-    SSP1CON2  = 0x81;
+    SSP1CON2  = 0x00;
     SSP1CON1bits.SSPEN = 0;
 }
 
@@ -165,7 +165,7 @@ void I2C_SendNack()
 static void I2C_Isr() 
 { 
     I2C_SlaveClearIrq();
-
+    LATCbits.LATC0 = ~LATCbits.LATC0;
     if(I2C_SlaveIsAddr())
     {
         if(I2C_SlaveIsRead())
@@ -286,7 +286,6 @@ static void  I2C_SlaveWrColCallBack() {
     {
          I2C_SlaveWrColInterruptHandler();
     }
-    
 }
 
 static void I2C_SlaveDefWrColInterruptHandler() {
@@ -314,7 +313,7 @@ static inline bool I2C_SlaveOpen()
     {      
         SSP1STAT  = 0x00;
         SSP1CON1 |= 0x06;
-        SSP1CON2  = 0x81;
+        SSP1CON2  = 0x00;
         SSP1CON1bits.SSPEN = 1;
         return true;
     }
@@ -325,7 +324,7 @@ static inline void I2C_SlaveClose()
 {
     SSP1STAT  = 0x00;
     SSP1CON1 |= 0x06;
-    SSP1CON2  = 0x81;
+    SSP1CON2  = 0x00;
     SSP1CON1bits.SSPEN = 0;
 }
 

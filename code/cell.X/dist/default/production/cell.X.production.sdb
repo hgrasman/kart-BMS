@@ -3,17 +3,39 @@
 [d edition pro ]
 [d chip 16F1508 ]
 [d frameptr 6 ]
-"96 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\main.c
-[e E3940 ADC_Reference `uc
+"88 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/adc.c
+[e E3500 . `uc
+channel_AN0 0
+channel_AN2 2
+channel_AN3 3
+channel_AN7 7
+channel_AN8 8
+channel_AN9 9
+channel_AN11 11
+channel_Temp 29
+channel_DAC 30
+channel_FVR 31
+]
+"68 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/i2c_slave.c
+[e E3543 . `uc
+I2C_IDLE 0
+I2C_ADDR_TX 1
+I2C_ADDR_RX 2
+I2C_DATA_TX 3
+I2C_DATA_RX 4
+]
+"97 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\main.c
+[e E3943 ADC_Reference `uc
 TSNS1 2
 TSNS2 3
 TSNS3 7
 TSNS4 8
 TSNS5 9
 VSNS 16
+FVR 31
 ]
-"114
-[e E3948 I2C_opCodes `uc
+"115
+[e E3952 I2C_opCodes `uc
 No_Command 0
 Report_TSNS1 1
 Report_TSNS2 2
@@ -30,7 +52,7 @@ Restart_Relay 12
 Send_All_Data 13
 Controller_Restart 14
 ]
-"195
+"216
 [e E3896 . `uc
 channel_AN0 0
 channel_AN2 2
@@ -38,40 +60,33 @@ channel_AN3 3
 channel_AN7 7
 channel_AN8 8
 channel_AN9 9
+channel_AN11 11
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"88 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/adc.c
-[e E3500 . `uc
-channel_AN0 0
-channel_AN2 2
-channel_AN3 3
-channel_AN7 7
-channel_AN8 8
-channel_AN9 9
-channel_Temp 29
-channel_DAC 30
-channel_FVR 31
-]
-"68 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/i2c_slave.c
-[e E3543 . `uc
-I2C_IDLE 0
-I2C_ADDR_TX 1
-I2C_ADDR_RX 2
-I2C_DATA_TX 3
-I2C_DATA_RX 4
-]
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"119 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\main.c
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"126 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"208
+"289
 [v _sendDataToMaster sendDataToMaster `(v  1 s 1 sendDataToMaster ]
-"218
+"299
+[v _sendVSNSDataToMaster sendVSNSDataToMaster `(v  1 s 1 sendVSNSDataToMaster ]
+"312
 [v _sendAllDatatoMaster sendAllDatatoMaster `(v  1 s 1 sendAllDatatoMaster ]
+"323
+[v _setDangerSignalLine setDangerSignalLine `(v  1 s 1 setDangerSignalLine ]
 "67 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "115
@@ -80,6 +95,8 @@ I2C_DATA_RX 4
 [v _FVR_Initialize FVR_Initialize `(v  1 e 1 0 ]
 "108 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/i2c_slave.c
 [v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+"116
+[v _I2C_Open I2C_Open `(v  1 e 1 0 ]
 "135
 [v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
 "140
@@ -108,43 +125,43 @@ I2C_DATA_RX 4
 [v _I2C_SlaveDefAddrInterruptHandler I2C_SlaveDefAddrInterruptHandler `(v  1 s 1 I2C_SlaveDefAddrInterruptHandler ]
 "279
 [v _I2C_SlaveSetWrColIntHandler I2C_SlaveSetWrColIntHandler `(v  1 e 1 0 ]
-"292
+"291
 [v _I2C_SlaveDefWrColInterruptHandler I2C_SlaveDefWrColInterruptHandler `(v  1 s 1 I2C_SlaveDefWrColInterruptHandler ]
-"296
+"295
 [v _I2C_SlaveSetBusColIntHandler I2C_SlaveSetBusColIntHandler `(v  1 e 1 0 ]
-"308
+"307
 [v _I2C_SlaveDefBusColInterruptHandler I2C_SlaveDefBusColInterruptHandler `(v  1 s 1 I2C_SlaveDefBusColInterruptHandler ]
-"311
+"310
 [v _I2C_SlaveOpen I2C_SlaveOpen `T(a  1 s 1 I2C_SlaveOpen ]
-"324
+"323
 [v _I2C_SlaveClose I2C_SlaveClose `T(v  1 s 1 I2C_SlaveClose ]
-"332
+"331
 [v _I2C_SlaveSetSlaveAddr I2C_SlaveSetSlaveAddr `T(v  1 s 1 I2C_SlaveSetSlaveAddr ]
-"337
+"336
 [v _I2C_SlaveSetSlaveMask I2C_SlaveSetSlaveMask `T(v  1 s 1 I2C_SlaveSetSlaveMask ]
-"342
+"341
 [v _I2C_SlaveEnableIrq I2C_SlaveEnableIrq `T(v  1 s 1 I2C_SlaveEnableIrq ]
-"347
+"346
 [v _I2C_SlaveIsAddr I2C_SlaveIsAddr `T(a  1 s 1 I2C_SlaveIsAddr ]
-"352
+"351
 [v _I2C_SlaveIsRead I2C_SlaveIsRead `T(a  1 s 1 I2C_SlaveIsRead ]
-"357
+"356
 [v _I2C_SlaveClearIrq I2C_SlaveClearIrq `T(v  1 s 1 I2C_SlaveClearIrq ]
-"362
+"361
 [v _I2C_SlaveReleaseClock I2C_SlaveReleaseClock `T(v  1 s 1 I2C_SlaveReleaseClock ]
-"382
+"381
 [v _I2C_SlaveIsTxBufEmpty I2C_SlaveIsTxBufEmpty `T(a  1 s 1 I2C_SlaveIsTxBufEmpty ]
-"387
+"386
 [v _I2C_SlaveIsRxBufFull I2C_SlaveIsRxBufFull `T(a  1 s 1 I2C_SlaveIsRxBufFull ]
-"392
+"391
 [v _I2C_SlaveSendTxData I2C_SlaveSendTxData `T(v  1 s 1 I2C_SlaveSendTxData ]
 [v i1_I2C_SlaveSendTxData I2C_SlaveSendTxData `T(v  1 s 1 i1_I2C_SlaveSendTxData ]
-"397
+"396
 [v _I2C_SlaveGetRxData I2C_SlaveGetRxData `T(uc  1 s 1 I2C_SlaveGetRxData ]
 [v i1_I2C_SlaveGetRxData I2C_SlaveGetRxData `T(uc  1 s 1 i1_I2C_SlaveGetRxData ]
-"407
+"406
 [v _I2C_SlaveSendAck I2C_SlaveSendAck `T(v  1 s 1 I2C_SlaveSendAck ]
-"413
+"412
 [v _I2C_SlaveSendNack I2C_SlaveSendNack `T(v  1 s 1 I2C_SlaveSendNack ]
 "52 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -168,7 +185,19 @@ I2C_DATA_RX 4
 [v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
 "62 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-[s S68 . 1 `uc 1 IOCIF 1 0 :1:0 
+"137 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X/mcc_generated_files/i2c_slave.h
+[v _MSSP_InterruptHandler MSSP_InterruptHandler `*.37(v  1 e 2 0 ]
+"138
+[v _I2C_SlaveRdInterruptHandler I2C_SlaveRdInterruptHandler `*.37(v  1 e 2 0 ]
+"139
+[v _I2C_SlaveWrInterruptHandler I2C_SlaveWrInterruptHandler `*.37(v  1 e 2 0 ]
+"140
+[v _I2C_SlaveAddrInterruptHandler I2C_SlaveAddrInterruptHandler `*.37(v  1 e 2 0 ]
+"141
+[v _I2C_SlaveBusColInterruptHandler I2C_SlaveBusColInterruptHandler `*.37(v  1 e 2 0 ]
+"142
+[v _I2C_SlaveWrColInterruptHandler I2C_SlaveWrColInterruptHandler `*.37(v  1 e 2 0 ]
+[s S130 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -178,14 +207,14 @@ I2C_DATA_RX 4
 `uc 1 GIE 1 0 :1:7 
 ]
 "375 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
-[s S77 . 1 `uc 1 . 1 0 :2:0 
+[s S139 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S82 . 1 `S68 1 . 1 0 `S77 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES82  1 e 1 @11 ]
-[s S445 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S144 . 1 `S130 1 . 1 0 `S139 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES144  1 e 1 @11 ]
+[s S221 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -195,9 +224,9 @@ I2C_DATA_RX 4
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "598
-[u S454 . 1 `S445 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES454  1 e 1 @17 ]
-[s S405 . 1 `uc 1 . 1 0 :2:0 
+[u S230 . 1 `S221 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES230  1 e 1 @17 ]
+[s S181 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NCO1IF 1 0 :1:2 
 `uc 1 BCL1IF 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
@@ -206,15 +235,15 @@ I2C_DATA_RX 4
 `uc 1 OSFIF 1 0 :1:7 
 ]
 "654
-[u S413 . 1 `S405 1 . 1 0 ]
-[v _PIR2bits PIR2bits `VES413  1 e 1 @18 ]
+[u S189 . 1 `S181 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES189  1 e 1 @18 ]
 "749
 [v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
 "769
 [v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
 "789
 [v _T1CON T1CON `VEuc  1 e 1 @24 ]
-[s S551 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S335 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -222,17 +251,17 @@ I2C_DATA_RX 4
 `uc 1 TMR1CS 1 0 :2:6 
 ]
 "811
-[s S558 . 1 `uc 1 . 1 0 :4:0 
+[s S342 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 `uc 1 TMR1CS0 1 0 :1:6 
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
-[u S564 . 1 `S551 1 . 1 0 `S558 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES564  1 e 1 @24 ]
+[u S348 . 1 `S335 1 . 1 0 `S342 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES348  1 e 1 @24 ]
 "861
 [v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
-[s S581 . 1 `uc 1 T1GSS 1 0 :2:0 
+[s S365 . 1 `uc 1 T1GSS 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -241,23 +270,23 @@ I2C_DATA_RX 4
 `uc 1 TMR1GE 1 0 :1:7 
 ]
 "881
-[s S589 . 1 `uc 1 T1GSS0 1 0 :1:0 
+[s S373 . 1 `uc 1 T1GSS0 1 0 :1:0 
 `uc 1 T1GSS1 1 0 :1:1 
 ]
-[u S592 . 1 `S581 1 . 1 0 `S589 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES592  1 e 1 @25 ]
+[u S376 . 1 `S365 1 . 1 0 `S373 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES376  1 e 1 @25 ]
 "931
 [v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
 "951
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
 "971
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
-[s S1127 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S975 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "992
-[s S1131 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S979 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -265,15 +294,15 @@ I2C_DATA_RX 4
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[u S1139 . 1 `S1127 1 . 1 0 `S1131 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1139  1 e 1 @28 ]
+[u S987 . 1 `S975 1 . 1 0 `S979 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES987  1 e 1 @28 ]
 "1042
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1092
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 "1131
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S424 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S200 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -283,9 +312,9 @@ I2C_DATA_RX 4
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1210
-[u S433 . 1 `S424 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES433  1 e 1 @145 ]
-[s S386 . 1 `uc 1 . 1 0 :2:0 
+[u S209 . 1 `S200 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES209  1 e 1 @145 ]
+[s S162 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NCO1IE 1 0 :1:2 
 `uc 1 BCL1IE 1 0 :1:3 
 `uc 1 . 1 0 :1:4 
@@ -294,9 +323,9 @@ I2C_DATA_RX 4
 `uc 1 OSFIE 1 0 :1:7 
 ]
 "1266
-[u S394 . 1 `S386 1 . 1 0 ]
-[v _PIE2bits PIE2bits `VES394  1 e 1 @146 ]
-[s S321 . 1 `uc 1 PS 1 0 :3:0 
+[u S170 . 1 `S162 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES170  1 e 1 @146 ]
+[s S83 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
 `uc 1 TMR0CS 1 0 :1:5 
@@ -304,30 +333,30 @@ I2C_DATA_RX 4
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1357
-[s S328 . 1 `uc 1 PS0 1 0 :1:0 
+[s S90 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S335 . 1 `S321 1 . 1 0 `S328 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES335  1 e 1 @149 ]
+[u S97 . 1 `S83 1 . 1 0 `S90 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES97  1 e 1 @149 ]
 "1474
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
-[s S100 . 1 `uc 1 SWDTEN 1 0 :1:0 
+[s S1082 . 1 `uc 1 SWDTEN 1 0 :1:0 
 `uc 1 WDTPS 1 0 :5:1 
 ]
 "1493
-[s S103 . 1 `uc 1 . 1 0 :1:0 
+[s S1085 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 WDTPS0 1 0 :1:1 
 `uc 1 WDTPS1 1 0 :1:2 
 `uc 1 WDTPS2 1 0 :1:3 
 `uc 1 WDTPS3 1 0 :1:4 
 `uc 1 WDTPS4 1 0 :1:5 
 ]
-[u S110 . 1 `S100 1 . 1 0 `S103 1 . 1 0 ]
-[v _WDTCONbits WDTCONbits `VES110  1 e 1 @151 ]
+[u S1092 . 1 `S1082 1 . 1 0 `S1085 1 . 1 0 ]
+[v _WDTCONbits WDTCONbits `VES1092  1 e 1 @151 ]
 "1533
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "1652
@@ -336,12 +365,12 @@ I2C_DATA_RX 4
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "1692
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S663 . 1 `uc 1 ADON 1 0 :1:0 
+[s S448 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
 "1717
-[s S667 . 1 `uc 1 . 1 0 :1:0 
+[s S452 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -349,11 +378,11 @@ I2C_DATA_RX 4
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S675 . 1 `uc 1 . 1 0 :1:0 
+[s S460 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S678 . 1 `S663 1 . 1 0 `S667 1 . 1 0 `S675 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES678  1 e 1 @157 ]
+[u S463 . 1 `S448 1 . 1 0 `S452 1 . 1 0 `S460 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES463  1 e 1 @157 ]
 "1772
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "1819
@@ -362,13 +391,34 @@ I2C_DATA_RX 4
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "1912
 [v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S1134 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"1926
+[u S1140 . 1 `S1134 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1140  1 e 1 @269 ]
 "1951
 [v _LATC LATC `VEuc  1 e 1 @270 ]
+[s S698 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"1968
+[u S707 . 1 `S698 1 . 1 0 ]
+[v _LATCbits LATCbits `VES707  1 e 1 @270 ]
 "2297
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
 "2330
 [v _FVRCON FVRCON `VEuc  1 e 1 @279 ]
-[s S718 . 1 `uc 1 ADFVR 1 0 :2:0 
+[s S503 . 1 `uc 1 ADFVR 1 0 :2:0 
 `uc 1 CDAFVR 1 0 :2:2 
 `uc 1 TSRNG 1 0 :1:4 
 `uc 1 TSEN 1 0 :1:5 
@@ -376,13 +426,13 @@ I2C_DATA_RX 4
 `uc 1 FVREN 1 0 :1:7 
 ]
 "2351
-[s S725 . 1 `uc 1 ADFVR0 1 0 :1:0 
+[s S510 . 1 `uc 1 ADFVR0 1 0 :1:0 
 `uc 1 ADFVR1 1 0 :1:1 
 `uc 1 CDAFVR0 1 0 :1:2 
 `uc 1 CDAFVR1 1 0 :1:3 
 ]
-[u S730 . 1 `S718 1 . 1 0 `S725 1 . 1 0 ]
-[v _FVRCONbits FVRCONbits `VES730  1 e 1 @279 ]
+[u S515 . 1 `S503 1 . 1 0 `S510 1 . 1 0 ]
+[v _FVRCONbits FVRCONbits `VES515  1 e 1 @279 ]
 "2499
 [v _APFCON APFCON `VEuc  1 e 1 @285 ]
 "2546
@@ -403,7 +453,7 @@ I2C_DATA_RX 4
 [v _SSP1MSK SSP1MSK `VEuc  1 e 1 @531 ]
 "3362
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
-[s S158 . 1 `uc 1 BF 1 0 :1:0 
+[s S782 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -413,11 +463,11 @@ I2C_DATA_RX 4
 `uc 1 SMP 1 0 :1:7 
 ]
 "3384
-[u S167 . 1 `S158 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES167  1 e 1 @532 ]
+[u S791 . 1 `S782 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES791  1 e 1 @532 ]
 "3484
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-[s S769 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S554 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
@@ -427,13 +477,13 @@ I2C_DATA_RX 4
 `uc 1 WCOL 1 0 :1:7 
 ]
 "3513
-[s S778 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S563 . 1 `uc 1 SSPM 1 0 :4:0 
 ]
-[u S780 . 1 `S769 1 . 1 0 `S778 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES780  1 e 1 @533 ]
+[u S565 . 1 `S554 1 . 1 0 `S563 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES565  1 e 1 @533 ]
 "3688
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
-[s S179 . 1 `uc 1 SEN 1 0 :1:0 
+[s S815 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -443,17 +493,21 @@ I2C_DATA_RX 4
 `uc 1 GCEN 1 0 :1:7 
 ]
 "3710
-[u S188 . 1 `S179 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES188  1 e 1 @534 ]
-[s S28 toTrack 13 `uc 1 status 1 0 `us 1 VSNS 2 1 `us 1 TSNS1 2 3 `us 1 TSNS2 2 5 `us 1 TSNS3 2 7 `us 1 TSNS4 2 9 `us 1 TSNS5 2 11 ]
-"72 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\main.c
-[v _memory memory `S28  1 e 13 0 ]
-"96
-[v _selectedReference selectedReference `E3940  1 e 1 0 ]
-"114
-[v _I2C_Command I2C_Command `E3948  1 e 1 0 ]
-"116
-[v _currentlyBalancing currentlyBalancing `a  1 e 1 0 ]
+[u S824 . 1 `S815 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES824  1 e 1 @534 ]
+[s S1023 toTrack 11 `uc 1 status 1 0 `us 1 TSNS1 2 1 `us 1 TSNS2 2 3 `us 1 TSNS3 2 5 `us 1 TSNS4 2 7 `us 1 TSNS5 2 9 ]
+"73 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\main.c
+[v _memory memory `S1023  1 e 11 0 ]
+[s S1030 criticalValues 12 `f 1 LOW_VOLTAGE 4 0 `f 1 HIGH_VOLTAGE 4 4 `us 1 HIGH_TEMP 2 8 `us 1 WARN_TEMP 2 10 ]
+"81
+[v _safety safety `DCS1030  1 s 12 safety ]
+"97
+[v _selectedReference selectedReference `E3943  1 e 1 0 ]
+"115
+[v _I2C_Command I2C_Command `E3952  1 e 1 0 ]
+[u S1059 floatToBytes 4 `[4]uc 1 buffer 4 0 `f 1 voltageReading 4 0 ]
+"122
+[v _converter converter `S1059  1 e 4 0 ]
 "65 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/i2c_slave.c
 [v _i2cWrData i2cWrData `VEuc  1 e 1 0 ]
 "66
@@ -462,46 +516,52 @@ I2C_DATA_RX 4
 [v _i2cSlaveAddr i2cSlaveAddr `VEuc  1 e 1 0 ]
 "68
 [v _i2cSlaveState i2cSlaveState `VEE3543  1 s 1 i2cSlaveState ]
-"137 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/i2c_slave.h
-[v _MSSP_InterruptHandler MSSP_InterruptHandler `*.37(v  1 e 2 0 ]
-"138
-[v _I2C_SlaveRdInterruptHandler I2C_SlaveRdInterruptHandler `*.37(v  1 e 2 0 ]
-"139
-[v _I2C_SlaveWrInterruptHandler I2C_SlaveWrInterruptHandler `*.37(v  1 e 2 0 ]
-"140
-[v _I2C_SlaveAddrInterruptHandler I2C_SlaveAddrInterruptHandler `*.37(v  1 e 2 0 ]
-"141
-[v _I2C_SlaveBusColInterruptHandler I2C_SlaveBusColInterruptHandler `*.37(v  1 e 2 0 ]
-"142
-[v _I2C_SlaveWrColInterruptHandler I2C_SlaveWrColInterruptHandler `*.37(v  1 e 2 0 ]
 "57 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
-"119 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\main.c
+"126 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"206
+"277
+[v main@Vbit Vbit `f  1 a 4 0 ]
+"276
+[v main@fvr_Test fvr_Test `us  1 a 2 4 ]
+"287
 } 0
-"208
-[v _sendDataToMaster sendDataToMaster `(v  1 s 1 sendDataToMaster ]
+"323
+[v _setDangerSignalLine setDangerSignalLine `(v  1 s 1 setDangerSignalLine ]
 {
-"210
-[v sendDataToMaster@low low `uc  1 a 1 1 ]
-"209
-[v sendDataToMaster@high high `uc  1 a 1 0 ]
-"208
-[v sendDataToMaster@toSend toSend `us  1 p 2 5 ]
-"216
+[v setDangerSignalLine@isTurnOff isTurnOff `a  1 a 1 wreg ]
+"332
+[v setDangerSignalLine@i_1261 i `i  1 a 2 3 ]
+"325
+[v setDangerSignalLine@i i `i  1 a 2 1 ]
+"323
+[v setDangerSignalLine@isTurnOff isTurnOff `a  1 a 1 wreg ]
+[v setDangerSignalLine@isTurnOff isTurnOff `a  1 a 1 0 ]
+"341
 } 0
-"218
+"312
 [v _sendAllDatatoMaster sendAllDatatoMaster `(v  1 s 1 sendAllDatatoMaster ]
 {
-"221
-[v sendAllDatatoMaster@low low `uc  1 a 1 6 ]
-"220
-[v sendAllDatatoMaster@high high `uc  1 a 1 5 ]
-"271
+"321
+} 0
+"299
+[v _sendVSNSDataToMaster sendVSNSDataToMaster `(v  1 s 1 sendVSNSDataToMaster ]
+{
+"310
+} 0
+"289
+[v _sendDataToMaster sendDataToMaster `(v  1 s 1 sendDataToMaster ]
+{
+"291
+[v sendDataToMaster@low low `uc  1 a 1 1 ]
+"290
+[v sendDataToMaster@high high `uc  1 a 1 0 ]
+"289
+[v sendDataToMaster@toSend toSend `us  1 p 2 5 ]
+"297
 } 0
 "140 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/i2c_slave.c
 [v _I2C_Write I2C_Write `(v  1 e 1 0 ]
@@ -512,14 +572,95 @@ I2C_DATA_RX 4
 [v I2C_Write@data data `uc  1 a 1 4 ]
 "143
 } 0
-"392
+"391
 [v _I2C_SlaveSendTxData I2C_SlaveSendTxData `T(v  1 s 1 I2C_SlaveSendTxData ]
 {
 [v I2C_SlaveSendTxData@data data `uc  1 a 1 wreg ]
 [v I2C_SlaveSendTxData@data data `uc  1 a 1 wreg ]
-"394
+"393
 [v I2C_SlaveSendTxData@data data `uc  1 a 1 3 ]
-"395
+"394
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 6 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 5 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 3 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 4 ]
+"44
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1427 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1432 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1435 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1427 1 fAsBytes 4 0 `S1432 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1435  1 a 4 25 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 20 ]
+[s S1504 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1507 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1504 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1507  1 a 2 29 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 24 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 19 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 18 ]
+"8
+[v ___flmul@b b `d  1 p 4 5 ]
+[v ___flmul@a a `d  1 p 4 9 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 2 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 0 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 3 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 4 ]
+"60
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 0 ]
+[v ___flge@ff2 ff2 `d  1 p 4 4 ]
+"19
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 30 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 23 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 28 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 35 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 34 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 27 ]
+"8
+[v ___fldiv@a a `d  1 p 4 10 ]
+[v ___fldiv@b b `d  1 p 4 14 ]
+"185
 } 0
 "50 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -577,10 +718,79 @@ I2C_DATA_RX 4
 {
 "138
 } 0
-"397
+"396
 [v _I2C_SlaveGetRxData I2C_SlaveGetRxData `T(uc  1 s 1 I2C_SlaveGetRxData ]
 {
-"400
+"399
+} 0
+"116
+[v _I2C_Open I2C_Open `(v  1 e 1 0 ]
+{
+"128
+} 0
+"246
+[v _I2C_SlaveSetWriteIntHandler I2C_SlaveSetWriteIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetWriteIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"248
+} 0
+"279
+[v _I2C_SlaveSetWrColIntHandler I2C_SlaveSetWrColIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetWrColIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"281
+} 0
+"336
+[v _I2C_SlaveSetSlaveMask I2C_SlaveSetSlaveMask `T(v  1 s 1 I2C_SlaveSetSlaveMask ]
+{
+[v I2C_SlaveSetSlaveMask@maskAddr maskAddr `uc  1 a 1 wreg ]
+[v I2C_SlaveSetSlaveMask@maskAddr maskAddr `uc  1 a 1 wreg ]
+"338
+[v I2C_SlaveSetSlaveMask@maskAddr maskAddr `uc  1 a 1 3 ]
+"339
+} 0
+"331
+[v _I2C_SlaveSetSlaveAddr I2C_SlaveSetSlaveAddr `T(v  1 s 1 I2C_SlaveSetSlaveAddr ]
+{
+[v I2C_SlaveSetSlaveAddr@slaveAddr slaveAddr `uc  1 a 1 wreg ]
+[v I2C_SlaveSetSlaveAddr@slaveAddr slaveAddr `uc  1 a 1 wreg ]
+"333
+[v I2C_SlaveSetSlaveAddr@slaveAddr slaveAddr `uc  1 a 1 3 ]
+"334
+} 0
+"229
+[v _I2C_SlaveSetReadIntHandler I2C_SlaveSetReadIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetReadIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"231
+} 0
+"223
+[v _I2C_SlaveSetIsrHandler I2C_SlaveSetIsrHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetIsrHandler@handler handler `*.37(v  1 p 2 3 ]
+"226
+} 0
+"295
+[v _I2C_SlaveSetBusColIntHandler I2C_SlaveSetBusColIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetBusColIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"297
+} 0
+"263
+[v _I2C_SlaveSetAddrIntHandler I2C_SlaveSetAddrIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetAddrIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"265
+} 0
+"310
+[v _I2C_SlaveOpen I2C_SlaveOpen `T(a  1 s 1 I2C_SlaveOpen ]
+{
+"321
+} 0
+"341
+[v _I2C_SlaveEnableIrq I2C_SlaveEnableIrq `T(v  1 s 1 I2C_SlaveEnableIrq ]
+{
+"344
 } 0
 "115 C:\Users\pcguy\Desktop\GitLab\BMS\bms\code\cell.X\mcc_generated_files/adc.c
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
@@ -627,19 +837,19 @@ I2C_DATA_RX 4
 {
 "260
 } 0
-"392
+"391
 [v i1_I2C_SlaveSendTxData I2C_SlaveSendTxData `T(v  1 s 1 i1_I2C_SlaveSendTxData ]
 {
 [v i1I2C_SlaveSendTxData@data data `uc  1 a 1 wreg ]
 [v i1I2C_SlaveSendTxData@data data `uc  1 a 1 wreg ]
-"394
+"393
 [v i1I2C_SlaveSendTxData@data data `uc  1 a 1 0 ]
-"395
+"394
 } 0
-"362
+"361
 [v _I2C_SlaveReleaseClock I2C_SlaveReleaseClock `T(v  1 s 1 I2C_SlaveReleaseClock ]
 {
-"365
+"364
 } 0
 "233
 [v _I2C_SlaveRdCallBack I2C_SlaveRdCallBack `(v  1 s 1 I2C_SlaveRdCallBack ]
@@ -651,30 +861,30 @@ I2C_DATA_RX 4
 {
 "243
 } 0
-"382
+"381
 [v _I2C_SlaveIsTxBufEmpty I2C_SlaveIsTxBufEmpty `T(a  1 s 1 I2C_SlaveIsTxBufEmpty ]
 {
-"385
+"384
 } 0
-"387
+"386
 [v _I2C_SlaveIsRxBufFull I2C_SlaveIsRxBufFull `T(a  1 s 1 I2C_SlaveIsRxBufFull ]
 {
-"390
+"389
 } 0
-"352
+"351
 [v _I2C_SlaveIsRead I2C_SlaveIsRead `T(a  1 s 1 I2C_SlaveIsRead ]
 {
-"355
+"354
 } 0
-"347
+"346
 [v _I2C_SlaveIsAddr I2C_SlaveIsAddr `T(a  1 s 1 I2C_SlaveIsAddr ]
 {
-"350
+"349
 } 0
-"357
+"356
 [v _I2C_SlaveClearIrq I2C_SlaveClearIrq `T(v  1 s 1 I2C_SlaveClearIrq ]
 {
-"360
+"359
 } 0
 "267
 [v _I2C_SlaveAddrCallBack I2C_SlaveAddrCallBack `(v  1 s 1 I2C_SlaveAddrCallBack ]
@@ -686,8 +896,8 @@ I2C_DATA_RX 4
 {
 "276
 } 0
-"397
+"396
 [v i1_I2C_SlaveGetRxData I2C_SlaveGetRxData `T(uc  1 s 1 i1_I2C_SlaveGetRxData ]
 {
-"400
+"399
 } 0
