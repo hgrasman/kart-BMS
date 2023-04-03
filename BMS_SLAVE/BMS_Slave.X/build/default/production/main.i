@@ -6039,9 +6039,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 190 "./mcc_generated_files/pin_manager.h"
+# 232 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 202 "./mcc_generated_files/pin_manager.h"
+# 244 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -6354,11 +6354,8 @@ void OSCILLATOR_Initialize(void);
 # 98 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 5 "main.c" 2
-
-
-
-
-
+# 15 "main.c"
+_Bool danger_flag = 0;
 void main(void)
 {
 
@@ -6392,5 +6389,23 @@ void main(void)
         Volt1ptr->value = (uint16_t) ADC_GetConversion(channel_FVR);
 
 
+        danger_flag = 0;
+        if (Temp1ptr->value < 198){danger_flag = 1;}
+        if (Temp2ptr->value < 198){danger_flag = 1;}
+        if (Temp3ptr->value < 198){danger_flag = 1;}
+        if (Temp4ptr->value < 198){danger_flag = 1;}
+        if (Temp5ptr->value < 198){danger_flag = 1;}
+        if (Volt1ptr->value > 655){danger_flag = 1;}
+        if (Volt1ptr->value < 494){danger_flag = 1;}
+
+        if (danger_flag){
+            do { LATCbits.LATC0 = 1; } while(0);
+            do { LATCbits.LATC1 = 1; } while(0);
+            _delay((unsigned long)((20)*(16000000/4000.0)));
+            do { LATCbits.LATC1 = 0; } while(0);
+            _delay((unsigned long)((30)*(16000000/4000.0)));
+        }else{
+            do { LATCbits.LATC0 = 0; } while(0);
+        }
     }
 }

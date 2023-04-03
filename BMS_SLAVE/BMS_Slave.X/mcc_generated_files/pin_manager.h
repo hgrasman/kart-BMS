@@ -135,6 +135,48 @@
 #define Balance_SetPullup()          do { WPUBbits.WPUB7 = 1; } while(0)
 #define Balance_ResetPullup()        do { WPUBbits.WPUB7 = 0; } while(0)
 
+// get/set LED aliases
+#define LED_TRIS                 TRISCbits.TRISC0
+#define LED_LAT                  LATCbits.LATC0
+#define LED_PORT                 PORTCbits.RC0
+#define LED_ANS                  ANSELCbits.ANSC0
+#define LED_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
+#define LED_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
+#define LED_Toggle()             do { LATCbits.LATC0 = ~LATCbits.LATC0; } while(0)
+#define LED_GetValue()           PORTCbits.RC0
+#define LED_SetDigitalInput()    do { TRISCbits.TRISC0 = 1; } while(0)
+#define LED_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
+#define LED_SetAnalogMode()      do { ANSELCbits.ANSC0 = 1; } while(0)
+#define LED_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
+
+// get/set Danger aliases
+#define Danger_TRIS                 TRISCbits.TRISC1
+#define Danger_LAT                  LATCbits.LATC1
+#define Danger_PORT                 PORTCbits.RC1
+#define Danger_ANS                  ANSELCbits.ANSC1
+#define Danger_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
+#define Danger_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
+#define Danger_Toggle()             do { LATCbits.LATC1 = ~LATCbits.LATC1; } while(0)
+#define Danger_GetValue()           PORTCbits.RC1
+#define Danger_SetDigitalInput()    do { TRISCbits.TRISC1 = 1; } while(0)
+#define Danger_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
+#define Danger_SetAnalogMode()      do { ANSELCbits.ANSC1 = 1; } while(0)
+#define Danger_SetDigitalMode()     do { ANSELCbits.ANSC1 = 0; } while(0)
+
+// get/set Warning aliases
+#define Warning_TRIS                 TRISCbits.TRISC2
+#define Warning_LAT                  LATCbits.LATC2
+#define Warning_PORT                 PORTCbits.RC2
+#define Warning_ANS                  ANSELCbits.ANSC2
+#define Warning_SetHigh()            do { LATCbits.LATC2 = 1; } while(0)
+#define Warning_SetLow()             do { LATCbits.LATC2 = 0; } while(0)
+#define Warning_Toggle()             do { LATCbits.LATC2 = ~LATCbits.LATC2; } while(0)
+#define Warning_GetValue()           PORTCbits.RC2
+#define Warning_SetDigitalInput()    do { TRISCbits.TRISC2 = 1; } while(0)
+#define Warning_SetDigitalOutput()   do { TRISCbits.TRISC2 = 0; } while(0)
+#define Warning_SetAnalogMode()      do { ANSELCbits.ANSC2 = 1; } while(0)
+#define Warning_SetDigitalMode()     do { ANSELCbits.ANSC2 = 0; } while(0)
+
 // get/set TSNS3 aliases
 #define TSNS3_TRIS                 TRISCbits.TRISC3
 #define TSNS3_LAT                  LATCbits.LATC3

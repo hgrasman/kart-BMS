@@ -52,13 +52,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\builtins.h
 [v __delay `JF192 ~T0 @X0 0 e ]
 [p i __delay ]
-"35 main.c
-[; ;main.c: 35:         Temp1ptr->value = (uint16_t) ADC_GetConversion(TSNS1);
+"41 main.c
+[; ;main.c: 41:         Temp1ptr->value = (uint16_t) ADC_GetConversion(TSNS1);
 [c E3884 2 3 7 8 9 29 30 31 .. ]
 [n E3884 . TSNS1 TSNS2 TSNS3 TSNS4 TSNS5 channel_Temp channel_DAC channel_FVR  ]
 "292 ./mcc_generated_files/adc.h
 [; ;./mcc_generated_files/adc.h: 292: adc_result_t ADC_GetConversion(adc_channel_t channel);
 [v _ADC_GetConversion `(us ~T0 @X0 0 ef1`E3884 ]
+"1957 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1957:     struct {
+[s S108 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S108 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"1956
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1956: typedef union {
+[u S107 `S108 1 ]
+[n S107 . . ]
+"1968
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 1968: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
+[v _LATCbits `VS107 ~T0 @X0 0 e@270 ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1508.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -643,95 +654,201 @@ Version 4.0 HI-TECH Software Intermediate Code
 "148
 [; ;./mcc_generated_files/i2c_slave.h: 148: void (*I2C_SlaveWrColInterruptHandler)(void);
 [v _I2C_SlaveWrColInterruptHandler `*F3876 ~T0 @X0 1 e ]
+"15 main.c
+[; ;main.c: 15: _Bool danger_flag = 0;
+[v _danger_flag `a ~T0 @X0 1 e ]
+[i _danger_flag
+-> -> 0 `i `a
+]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"10 main.c
-[; ;main.c: 10: void main(void)
+"16
+[; ;main.c: 16: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"11
-[; ;main.c: 11: {
+"17
+[; ;main.c: 17: {
 {
 [e :U _main ]
 [f ]
-"13
-[; ;main.c: 13:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"16
-[; ;main.c: 16:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"17
-[; ;main.c: 17:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "19
-[; ;main.c: 19:     I2C_Open();
-[e ( _I2C_Open ..  ]
-"20
-[; ;main.c: 20:     ADC_Initialize();
-[e ( _ADC_Initialize ..  ]
-"21
-[; ;main.c: 21:     FVR_Initialize();
-[e ( _FVR_Initialize ..  ]
+[; ;main.c: 19:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"22
+[; ;main.c: 22:     (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "23
-[; ;main.c: 23:     while (1)
-[e :U 455 ]
-"24
-[; ;main.c: 24:     {
-{
+[; ;main.c: 23:     (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"25
+[; ;main.c: 25:     I2C_Open();
+[e ( _I2C_Open ..  ]
 "26
-[; ;main.c: 26:         if (balanceFlag){
+[; ;main.c: 26:     ADC_Initialize();
+[e ( _ADC_Initialize ..  ]
+"27
+[; ;main.c: 27:     FVR_Initialize();
+[e ( _FVR_Initialize ..  ]
+"29
+[; ;main.c: 29:     while (1)
+[e :U 455 ]
+"30
+[; ;main.c: 30:     {
+{
+"32
+[; ;main.c: 32:         if (balanceFlag){
 [e $ ! != -> _balanceFlag `i -> 0 `i 457  ]
 {
-"27
-[; ;main.c: 27:             balanceFlag = 0;
+"33
+[; ;main.c: 33:             balanceFlag = 0;
 [e = _balanceFlag -> -> 0 `i `a ]
-"28
-[; ;main.c: 28:             do { LATBbits.LATB7 = 1; } while(0);
+"34
+[; ;main.c: 34:             do { LATBbits.LATB7 = 1; } while(0);
 [e :U 460 ]
 {
 [e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 459 ]
-"29
-[; ;main.c: 29:             _delay((unsigned long)((900)*(16000000/4000.0)));
+"35
+[; ;main.c: 35:             _delay((unsigned long)((900)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 900 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"30
-[; ;main.c: 30:             do { LATBbits.LATB7 = 0; } while(0);
+"36
+[; ;main.c: 36:             do { LATBbits.LATB7 = 0; } while(0);
 [e :U 463 ]
 {
 [e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 462 ]
-"31
-[; ;main.c: 31:             _delay((unsigned long)((80)*(16000000/4000.0)));
+"37
+[; ;main.c: 37:             _delay((unsigned long)((80)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 80 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"32
-[; ;main.c: 32:         }
+"38
+[; ;main.c: 38:         }
 }
 [e :U 457 ]
-"35
-[; ;main.c: 35:         Temp1ptr->value = (uint16_t) ADC_GetConversion(TSNS1);
+"41
+[; ;main.c: 41:         Temp1ptr->value = (uint16_t) ADC_GetConversion(TSNS1);
 [e = . *U _Temp1ptr 0 ( _ADC_GetConversion (1 . `E3884 0 ]
-"36
-[; ;main.c: 36:         Temp2ptr->value = (uint16_t) ADC_GetConversion(TSNS2);
+"42
+[; ;main.c: 42:         Temp2ptr->value = (uint16_t) ADC_GetConversion(TSNS2);
 [e = . *U _Temp2ptr 0 ( _ADC_GetConversion (1 . `E3884 1 ]
-"37
-[; ;main.c: 37:         Temp3ptr->value = (uint16_t) ADC_GetConversion(TSNS3);
-[e = . *U _Temp3ptr 0 ( _ADC_GetConversion (1 . `E3884 2 ]
-"38
-[; ;main.c: 38:         Temp4ptr->value = (uint16_t) ADC_GetConversion(TSNS4);
-[e = . *U _Temp4ptr 0 ( _ADC_GetConversion (1 . `E3884 3 ]
-"39
-[; ;main.c: 39:         Temp5ptr->value = (uint16_t) ADC_GetConversion(TSNS5);
-[e = . *U _Temp5ptr 0 ( _ADC_GetConversion (1 . `E3884 4 ]
-"40
-[; ;main.c: 40:         Volt1ptr->value = (uint16_t) ADC_GetConversion(channel_FVR);
-[e = . *U _Volt1ptr 0 ( _ADC_GetConversion (1 . `E3884 7 ]
 "43
-[; ;main.c: 43:     }
+[; ;main.c: 43:         Temp3ptr->value = (uint16_t) ADC_GetConversion(TSNS3);
+[e = . *U _Temp3ptr 0 ( _ADC_GetConversion (1 . `E3884 2 ]
+"44
+[; ;main.c: 44:         Temp4ptr->value = (uint16_t) ADC_GetConversion(TSNS4);
+[e = . *U _Temp4ptr 0 ( _ADC_GetConversion (1 . `E3884 3 ]
+"45
+[; ;main.c: 45:         Temp5ptr->value = (uint16_t) ADC_GetConversion(TSNS5);
+[e = . *U _Temp5ptr 0 ( _ADC_GetConversion (1 . `E3884 4 ]
+"46
+[; ;main.c: 46:         Volt1ptr->value = (uint16_t) ADC_GetConversion(channel_FVR);
+[e = . *U _Volt1ptr 0 ( _ADC_GetConversion (1 . `E3884 7 ]
+"49
+[; ;main.c: 49:         danger_flag = 0;
+[e = _danger_flag -> -> 0 `i `a ]
+"50
+[; ;main.c: 50:         if (Temp1ptr->value < 198){danger_flag = 1;}
+[e $ ! < -> . *U _Temp1ptr 0 `ui -> -> 198 `i `ui 464  ]
+{
+[e = _danger_flag -> -> 1 `i `a ]
+}
+[e :U 464 ]
+"51
+[; ;main.c: 51:         if (Temp2ptr->value < 198){danger_flag = 1;}
+[e $ ! < -> . *U _Temp2ptr 0 `ui -> -> 198 `i `ui 465  ]
+{
+[e = _danger_flag -> -> 1 `i `a ]
+}
+[e :U 465 ]
+"52
+[; ;main.c: 52:         if (Temp3ptr->value < 198){danger_flag = 1;}
+[e $ ! < -> . *U _Temp3ptr 0 `ui -> -> 198 `i `ui 466  ]
+{
+[e = _danger_flag -> -> 1 `i `a ]
+}
+[e :U 466 ]
+"53
+[; ;main.c: 53:         if (Temp4ptr->value < 198){danger_flag = 1;}
+[e $ ! < -> . *U _Temp4ptr 0 `ui -> -> 198 `i `ui 467  ]
+{
+[e = _danger_flag -> -> 1 `i `a ]
+}
+[e :U 467 ]
+"54
+[; ;main.c: 54:         if (Temp5ptr->value < 198){danger_flag = 1;}
+[e $ ! < -> . *U _Temp5ptr 0 `ui -> -> 198 `i `ui 468  ]
+{
+[e = _danger_flag -> -> 1 `i `a ]
+}
+[e :U 468 ]
+"55
+[; ;main.c: 55:         if (Volt1ptr->value > 655){danger_flag = 1;}
+[e $ ! > -> . *U _Volt1ptr 0 `ui -> -> 655 `i `ui 469  ]
+{
+[e = _danger_flag -> -> 1 `i `a ]
+}
+[e :U 469 ]
+"56
+[; ;main.c: 56:         if (Volt1ptr->value < 494){danger_flag = 1;}
+[e $ ! < -> . *U _Volt1ptr 0 `ui -> -> 494 `i `ui 470  ]
+{
+[e = _danger_flag -> -> 1 `i `a ]
+}
+[e :U 470 ]
+"58
+[; ;main.c: 58:         if (danger_flag){
+[e $ ! != -> _danger_flag `i -> 0 `i 471  ]
+{
+"59
+[; ;main.c: 59:             do { LATCbits.LATC0 = 1; } while(0);
+[e :U 474 ]
+{
+[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
+}
+[e :U 473 ]
+"60
+[; ;main.c: 60:             do { LATCbits.LATC1 = 1; } while(0);
+[e :U 477 ]
+{
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+}
+[e :U 476 ]
+"61
+[; ;main.c: 61:             _delay((unsigned long)((20)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"62
+[; ;main.c: 62:             do { LATCbits.LATC1 = 0; } while(0);
+[e :U 480 ]
+{
+[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
+}
+[e :U 479 ]
+"63
+[; ;main.c: 63:             _delay((unsigned long)((30)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 30 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"64
+[; ;main.c: 64:         }else{
+}
+[e $U 481  ]
+[e :U 471 ]
+{
+"65
+[; ;main.c: 65:             do { LATCbits.LATC0 = 0; } while(0);
+[e :U 484 ]
+{
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+}
+[e :U 483 ]
+"66
+[; ;main.c: 66:         }
+}
+[e :U 481 ]
+"67
+[; ;main.c: 67:     }
 }
 [e :U 454 ]
 [e $U 455  ]
 [e :U 456 ]
-"44
-[; ;main.c: 44: }
+"68
+[; ;main.c: 68: }
 [e :UE 453 ]
 }
