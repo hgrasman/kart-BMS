@@ -4,15 +4,9 @@
 
 #include "mcc_generated_files/mcc.h"
 
-//Calculation of thresholds
-#define TEMP_HIGH 198
-#define VOLT_LOW 655
-#define VOLT_HIGH 494 
-
 /*
                          Main application
  */
-bool danger_flag = false;
 void main(void)
 {
     // initialize the device
@@ -37,6 +31,7 @@ void main(void)
             __delay_ms(80);            
         }
         
+        
         //measure Thermistors and Pack Voltage
         Temp1ptr->value = (uint16_t) ADC_GetConversion(TSNS1);
         Temp2ptr->value = (uint16_t) ADC_GetConversion(TSNS2);
@@ -45,25 +40,6 @@ void main(void)
         Temp5ptr->value = (uint16_t) ADC_GetConversion(TSNS5);
         Volt1ptr->value = (uint16_t) ADC_GetConversion(channel_FVR);
         
-        //WARN/DANGER CODE
-        danger_flag = false;
-        if (Temp1ptr->value < TEMP_HIGH){danger_flag = true;}
-        if (Temp2ptr->value < TEMP_HIGH){danger_flag = true;}
-        if (Temp3ptr->value < TEMP_HIGH){danger_flag = true;}
-        if (Temp4ptr->value < TEMP_HIGH){danger_flag = true;}
-        if (Temp5ptr->value < TEMP_HIGH){danger_flag = true;}
-        if (Volt1ptr->value > VOLT_LOW){danger_flag = true;}
-        if (Volt1ptr->value < VOLT_HIGH){danger_flag = true;}
-        
-        if (danger_flag){
-            LED_SetHigh();
-            Danger_SetHigh();
-            __delay_ms(20);
-            Danger_SetLow();
-            __delay_ms(30);
-        }else{
-            LED_SetLow();
-        }
     }
 }
 /**

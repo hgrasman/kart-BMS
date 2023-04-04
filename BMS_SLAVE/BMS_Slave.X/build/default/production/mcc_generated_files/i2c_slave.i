@@ -6136,14 +6136,7 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
 # 3 "mcc_generated_files/i2c_slave.c" 2
-
-
-
-
-
-
-
-
+# 12 "mcc_generated_files/i2c_slave.c"
 typedef enum
 {
     I2C_IDLE,
@@ -6363,7 +6356,7 @@ static void I2C_SlaveRdCallBack() {
             current_Data.value = Volt1.value;
             break;
         default:
-
+            current_Data.value = (uint16_t) 0xFFFF;
             break;
     }
 

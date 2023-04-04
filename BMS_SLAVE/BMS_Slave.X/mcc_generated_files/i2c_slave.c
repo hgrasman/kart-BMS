@@ -7,6 +7,7 @@
 
 #define DATA_MASK 0x1F
 #define BALANCE_MASK 0x20
+#define CALIBRATE_MASK 0x40
 
 typedef enum
 {
@@ -227,7 +228,7 @@ static void I2C_SlaveRdCallBack() {
             current_Data.value = Volt1.value;
             break;
         default:
-            //don't change
+            current_Data.value = (uint16_t) 0xFFFF;
             break;      
     }
     
