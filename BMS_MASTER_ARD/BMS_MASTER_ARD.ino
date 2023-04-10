@@ -8,11 +8,10 @@
 #define SAM_SSTART_PIN 10
 #define SAM_CURR_PIN A2
 #define SAM_CHARGE_SWITCH_PIN 7
-#define ESTOP_SENSE_PIN 2
 
 inline void slowStartRelay(){ //  
   digitalWrite(SAM_SSTART_PIN, HIGH); //precharge for 4.5 seconds
-  delay(4500);
+  delay(1500);
   digitalWrite(SAM_RELAY_PIN, HIGH); //close main relay
   delay(500);
   digitalWrite(SAM_SSTART_PIN, LOW); //disconnect precharge relay after additional .5s
@@ -46,9 +45,6 @@ void setup() {
 
   //setup charge/discharge switch pin
   pinMode(SAM_CHARGE_SWITCH_PIN, INPUT_PULLUP);
-
-  //setup estop sensor
-  pinMode(ESTOP_SENSE_PIN, INPUT);
       
   lastRead = millis();
 }
