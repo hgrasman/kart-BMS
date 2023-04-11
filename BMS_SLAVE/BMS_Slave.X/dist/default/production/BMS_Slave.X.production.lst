@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Tue Apr 04 12:09:47 2023
+                                                                                               Wed Apr 05 01:10:37 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	16F1508
@@ -2519,8 +2519,8 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
   2505                           ;mcc_generated_files/i2c_slave.c: 88:     I2C_SlaveOpen();
   2506     0174  3182  2215  3181   	fcall	_I2C_SlaveOpen
   2507                           
-  2508                           ;mcc_generated_files/i2c_slave.c: 89:     I2C_SlaveSetSlaveAddr(21);
-  2509     0177  3015               	movlw	21
+  2508                           ;mcc_generated_files/i2c_slave.c: 89:     I2C_SlaveSetSlaveAddr(15);
+  2509     0177  300F               	movlw	15
   2510     0178  3182  2292  3181   	fcall	_I2C_SlaveSetSlaveAddr
   2511                           
   2512                           ;mcc_generated_files/i2c_slave.c: 90:     I2C_SlaveSetSlaveMask(127);
@@ -4888,7 +4888,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Tue Apr 04 12:09:47 2023
+Symbol Table                                                                                   Wed Apr 05 01:10:37 2023
 
                                       l94 0214                                        l97 0262  
                   __end_of_FVR_Initialize 02B3                                       l100 02AE  

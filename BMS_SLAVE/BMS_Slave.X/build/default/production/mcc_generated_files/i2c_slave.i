@@ -6214,7 +6214,7 @@ void I2C_Initialize()
 void I2C_Open()
 {
     I2C_SlaveOpen();
-    I2C_SlaveSetSlaveAddr(21);
+    I2C_SlaveSetSlaveAddr(15);
     I2C_SlaveSetSlaveMask(127);
     I2C_SlaveSetIsrHandler(I2C_Isr);
     I2C_SlaveSetBusColIntHandler(I2C_SlaveDefBusColInterruptHandler);

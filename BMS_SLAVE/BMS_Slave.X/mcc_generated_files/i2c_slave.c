@@ -2,7 +2,7 @@
 #include "i2c_slave.h"
 #include <xc.h>
 
-#define I2C_SLAVE_ADDRESS      21
+#define I2C_SLAVE_ADDRESS      15   
 #define I2C_SLAVE_MASK         127
 
 #define DATA_MASK 0x1F

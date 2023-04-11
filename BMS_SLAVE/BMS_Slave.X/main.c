@@ -4,6 +4,8 @@
 
 #include "mcc_generated_files/mcc.h"
 
+#define FILTER_POWER .85
+
 /*
                          Main application
  */
@@ -38,7 +40,7 @@ void main(void)
         Temp3ptr->value = (uint16_t) ADC_GetConversion(TSNS3);
         Temp4ptr->value = (uint16_t) ADC_GetConversion(TSNS4);
         Temp5ptr->value = (uint16_t) ADC_GetConversion(TSNS5);
-        Volt1ptr->value = (uint16_t) ADC_GetConversion(channel_FVR);
+        Volt1ptr->value = (uint16_t) ((double) Volt1ptr->value * (1-FILTER_POWER) + (double)ADC_GetConversion(channel_FVR) * FILTER_POWER);
         
     }
 }

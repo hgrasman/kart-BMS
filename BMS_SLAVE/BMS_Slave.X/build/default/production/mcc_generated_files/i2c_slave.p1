@@ -901,8 +901,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/i2c_slave.c: 88:     I2C_SlaveOpen();
 [e ( _I2C_SlaveOpen ..  ]
 "89
-[; ;mcc_generated_files/i2c_slave.c: 89:     I2C_SlaveSetSlaveAddr(21);
-[e ( _I2C_SlaveSetSlaveAddr (1 -> -> 21 `i `uc ]
+[; ;mcc_generated_files/i2c_slave.c: 89:     I2C_SlaveSetSlaveAddr(15);
+[e ( _I2C_SlaveSetSlaveAddr (1 -> -> 15 `i `uc ]
 "90
 [; ;mcc_generated_files/i2c_slave.c: 90:     I2C_SlaveSetSlaveMask(127);
 [e ( _I2C_SlaveSetSlaveMask (1 -> -> 127 `i `uc ]
