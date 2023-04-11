@@ -59,6 +59,7 @@ void setup() {
 #define CURRENT_MAX_ALLOWED 350 
 
 #define MINV 3.2
+#define MINV_LOADED 3.0
 #define MAXV 4.2
 #define MAXTEMP 60
 
@@ -193,10 +194,12 @@ void loop() {
   Serial.print("MAX TEMP: "); Serial.println(max_temp);
 
   //current sensing
-  current = ((((double)analogRead(SAM_CURR_PIN)*5)/1024 - LEM_CENTER_OFFSET)/(LEM_RANGE/2)) * CURRENTMAX; //Current
+  double lem_volts = ((double)analogRead(SAM_CURR_PIN)*5)/1024;
+  current = ((lem_volts - LEM_CENTER_OFFSET)/(LEM_RANGE/2)) * CURRENTMAX; //Current
   charge += current*(double)(lastRead-millis()) /1000; //charge count
   lastRead = millis();
-  Serial.print("Current: "); Serial.print(current); Serial.print(" Charge: "); Serial.println(charge);
+  Serial.print("LEM Volts: "); Serial.print(lem_volts); Serial.print("Current: "); Serial.print(current); Serial.print(" Charge: "); Serial.println(charge);
+
 
   //determine if relay should be closed/open
   if (chargeMode && relayClosed){ 
@@ -205,7 +208,7 @@ void loop() {
     Serial.println("RELAY OPEN: CHARGE READY");
   }
   if (!chargeMode && !relayClosed){ //need to discharge but relay is open
-    if (min_v > MINV){
+    if (min_v > MINV){ //close if above min cell voltage
       slowStartRelay(); //close relay
       relayClosed = true;
       Serial.println("RELAY CLOSED: DISCHARGE READY");
@@ -216,7 +219,7 @@ void loop() {
   if (chargeMode){
     if (max_v >= MAXV){stopRelay(); relayClosed = false; Serial.println("RELAY TRIP MAX V");} //too high disconnect charger
   }else{
-    if (min_v <= MINV){stopRelay(); relayClosed = false; Serial.println("RELAY TRIP MIN V");} //enforce minimum 
+    if (min_v <= MINV_LOADED){stopRelay(); relayClosed = false; Serial.println("RELAY TRIP MIN V");} //enforce minimum loaded
   }
   if (current > CURRENT_MAX_ALLOWED){
     stopRelay();
