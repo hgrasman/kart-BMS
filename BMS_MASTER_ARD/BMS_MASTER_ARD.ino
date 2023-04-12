@@ -1,7 +1,7 @@
 #include <Wire.h>
 
 #define SAM_VSENSE_PIN A5
-#define SAM_BAL_PIN 6
+#define SAM_BAL_PIN 5
 #define SAM_T1_PIN A3
 #define SAM_T2_PIN A4
 #define SAM_RELAY_PIN 8
