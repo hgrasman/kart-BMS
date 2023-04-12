@@ -195,7 +195,7 @@ void loop() {
 
   //current sensing
   double lem_volts = ((double)analogRead(SAM_CURR_PIN)*5)/1024;
-  current = ((lem_volts - LEM_CENTER_OFFSET)/(LEM_RANGE/2)) * CURRENTMAX; //Current
+  current = (1 * ((double) ((lem_volts - LEM_CENTER_OFFSET)/(LEM_RANGE/2)) * CURRENTMAX)) + ((double) (7 + 7 * (lem_volts-LEM_CENTER_OFFSET))); //Current
   charge += current*(double)(lastRead-millis()) /1000; //charge count
   lastRead = millis();
   Serial.print("LEM Volts: "); Serial.print(lem_volts); Serial.print("Current: "); Serial.print(current); Serial.print(" Charge: "); Serial.println(charge);
