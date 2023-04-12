@@ -21,7 +21,7 @@ void main(void)
     I2C_Open(); //enable SPI Hardware
     ADC_Initialize(); //enable ADC hardware
     FVR_Initialize();//enable FVR for voltage sense
-    
+    LATC = 0x01;
     while (1)
     {
         //react to balance flag
