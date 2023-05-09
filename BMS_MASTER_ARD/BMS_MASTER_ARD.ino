@@ -11,9 +11,9 @@
 
 inline void slowStartRelay(){ //  
   digitalWrite(SAM_SSTART_PIN, HIGH); //precharge for 4.5 seconds
-  delay(1500);
+  delay(900);
   digitalWrite(SAM_RELAY_PIN, HIGH); //close main relay
-  delay(500);
+  delay(100);
   digitalWrite(SAM_SSTART_PIN, LOW); //disconnect precharge relay after additional .5s
 }
 inline void stopRelay(){ // 
@@ -30,7 +30,7 @@ void setup() {
 
   // Setup I2C and uart
   Wire.begin();
-  Serial.begin(9600);
+  Serial.begin(115200);
   Wire.setWireTimeout(5000, true);
 
   //setup balance command 
@@ -54,12 +54,12 @@ void setup() {
 #define CONTROLVOLT 0x11
 #define ARRADDR addr-MINADDR
 #define NUMTEMPS 5
-#define BALANCETHRESH -.01
+#define BALANCETHRESH 0
 
 #define CURRENT_MAX_ALLOWED 350 
 
 #define MINV 3.2
-#define MINV_LOADED 3.0
+#define MINV_LOADED 2.8
 #define MAXV 4.2
 #define MAXTEMP 60
 
@@ -98,7 +98,7 @@ void loop() {
     Wire.beginTransmission(addr);
     Wire.write(CONTROLVOLT | balnce[ARRADDR]<<5);
     byte error = Wire.endTransmission(); // run transaction
-    delay(2);
+    delay(6);
 
     if (error){
       //Serial.println("NACK");
@@ -120,7 +120,7 @@ void loop() {
         Wire.beginTransmission(addr);
         Wire.write((uint8_t) i+1 | balnce[ARRADDR]<<5);
         byte error = Wire.endTransmission(); // run transaction
-        delay(2);
+        delay(6);
 
         if (error){
           //Serial.println("NACK");
@@ -134,7 +134,9 @@ void loop() {
         else{temps[ARRADDR][i] = (double)booling.mashed;} //lost contact, get value
         double temp_OHMS = -(100000*temps[ARRADDR][i]) / (temps[ARRADDR][i] - 1024);
         double temp_actual = 55.31 * exp((temp_OHMS/1000)*-0.07449) + 63.29*exp((temp_OHMS/1000)*-0.009305);
-        if (temp_actual>max_temp){max_temp = temp_actual;}
+        if (temp_actual < 500){
+          if (temp_actual>max_temp){max_temp = temp_actual;}
+        }
         Serial.print(" T"); Serial.print(i+1); Serial.print(": "); Serial.print(temp_actual);
         delay(3);
       }   
