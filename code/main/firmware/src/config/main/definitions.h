@@ -56,7 +56,10 @@
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/can/plib_can0.h"
 #include "peripheral/eic/plib_eic.h"
+#include "peripheral/tc/plib_tc1.h"
+#include "peripheral/tc/plib_tc0.h"
 #include "peripheral/dsu/plib_dsu.h"
+#include "driver/i2c/drv_i2c.h"
 #include "peripheral/tcc/plib_tcc0.h"
 #include "peripheral/adc/plib_adc0.h"
 #include "peripheral/adc/plib_adc1.h"
@@ -65,7 +68,11 @@
 #include "system/int/sys_int.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "app.h"
+#include "i2c.h"
+#include "can.h"
+#include "vt_sense.h"
+#include "average.h"
+#include "current.h"
 
 
 
@@ -190,7 +197,10 @@ Remarks:
 
 typedef struct
 {
-    char RESERVED;
+    /* I2C0 Driver Object */
+    SYS_MODULE_OBJ drvI2C0;
+
+
 } SYSTEM_OBJECTS;
 
 // *****************************************************************************

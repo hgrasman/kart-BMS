@@ -98,12 +98,23 @@ build/main/production/_ext/779799956/interrupts.o: \
  ../src/config/main/peripheral/can/plib_can0.h \
  ../src/config/main/peripheral/can/plib_can_common.h \
  ../src/config/main/peripheral/eic/plib_eic.h \
+ ../src/config/main/peripheral/tc/plib_tc1.h \
+ ../src/config/main/peripheral/tc/plib_tc_common.h \
+ ../src/config/main/peripheral/tc/plib_tc0.h \
  ../src/config/main/peripheral/dsu/plib_dsu.h \
- ../src/config/main/peripheral/tcc/plib_tcc0.h \
- ../src/config/main/peripheral/tcc/plib_tcc_common.h \
- ../src/config/main/peripheral/adc/plib_adc0.h \
- ../src/config/main/peripheral/adc/plib_adc_common.h \
- ../src/config/main/peripheral/adc/plib_adc1.h \
+ ../src/config/main/driver/i2c/drv_i2c.h \
+ ../src/config/main/driver/i2c/drv_i2c_definitions.h \
+ ../src/config/main/system/system_module.h \
+ ../src/config/main/system/system_common.h \
+ ../src/config/main/driver/driver.h \
+ ../src/config/main/driver/driver_common.h \
+ ../src/config/main/system/int/sys_int.h \
+ ../src/config/main/system/int/sys_int_mapping.h \
+ ../src/config/main/driver/i2c/src/drv_i2c_local.h \
+ ../src/config/main/driver/i2c/drv_i2c_definitions.h \
+ ../src/config/main/osal/osal.h ../src/config/main/configuration.h \
+ ../src/config/main/osal/osal_definitions.h \
+ ../src/config/main/osal/osal_freertos.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
  ../src/config/main/FreeRTOSConfig.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
@@ -111,22 +122,22 @@ build/main/production/_ext/779799956/interrupts.o: \
  ../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h \
  ../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
- ../src/config/main/system/int/sys_int.h \
- ../src/config/main/system/int/sys_int_mapping.h \
- ../src/config/main/osal/osal.h ../src/config/main/configuration.h \
- ../src/config/main/osal/osal_definitions.h \
- ../src/config/main/osal/osal_freertos.h \
- ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
- ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
  ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/config/main/peripheral/tcc/plib_tcc0.h \
+ ../src/config/main/peripheral/tcc/plib_tcc_common.h \
+ ../src/config/main/peripheral/adc/plib_adc0.h \
+ ../src/config/main/peripheral/adc/plib_adc_common.h \
+ ../src/config/main/peripheral/adc/plib_adc1.h \
+ ../src/config/main/system/int/sys_int.h ../src/config/main/osal/osal.h \
  ../src/config/main/system/debug/sys_debug.h \
  ../src/config/main/system/system.h \
- ../src/config/main/system/system_common.h \
- ../src/config/main/system/system_module.h \
- ../src/config/main/system/system_common.h ../src/app.h
+ ../src/config/main/system/system_common.h ../src/i2c.h ../src/can.h \
+ ../src/vt_sense.h ../src/average.h ../src/current.h
 
 ../src/config/main/configuration.h:
 
@@ -330,17 +341,41 @@ build/main/production/_ext/779799956/interrupts.o: \
 
 ../src/config/main/peripheral/eic/plib_eic.h:
 
+../src/config/main/peripheral/tc/plib_tc1.h:
+
+../src/config/main/peripheral/tc/plib_tc_common.h:
+
+../src/config/main/peripheral/tc/plib_tc0.h:
+
 ../src/config/main/peripheral/dsu/plib_dsu.h:
 
-../src/config/main/peripheral/tcc/plib_tcc0.h:
+../src/config/main/driver/i2c/drv_i2c.h:
 
-../src/config/main/peripheral/tcc/plib_tcc_common.h:
+../src/config/main/driver/i2c/drv_i2c_definitions.h:
 
-../src/config/main/peripheral/adc/plib_adc0.h:
+../src/config/main/system/system_module.h:
 
-../src/config/main/peripheral/adc/plib_adc_common.h:
+../src/config/main/system/system_common.h:
 
-../src/config/main/peripheral/adc/plib_adc1.h:
+../src/config/main/driver/driver.h:
+
+../src/config/main/driver/driver_common.h:
+
+../src/config/main/system/int/sys_int.h:
+
+../src/config/main/system/int/sys_int_mapping.h:
+
+../src/config/main/driver/i2c/src/drv_i2c_local.h:
+
+../src/config/main/driver/i2c/drv_i2c_definitions.h:
+
+../src/config/main/osal/osal.h:
+
+../src/config/main/configuration.h:
+
+../src/config/main/osal/osal_definitions.h:
+
+../src/config/main/osal/osal_freertos.h:
 
 ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h:
 
@@ -356,29 +391,31 @@ build/main/production/_ext/779799956/interrupts.o: \
 
 ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h:
 
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
 ../src/third_party/rtos/FreeRTOS/Source/include/task.h:
 
 ../src/third_party/rtos/FreeRTOS/Source/include/list.h:
 
-../src/config/main/system/int/sys_int.h:
-
-../src/config/main/system/int/sys_int_mapping.h:
-
-../src/config/main/osal/osal.h:
-
-../src/config/main/configuration.h:
-
-../src/config/main/osal/osal_definitions.h:
-
-../src/config/main/osal/osal_freertos.h:
+../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
 
 ../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
 
 ../src/third_party/rtos/FreeRTOS/Source/include/task.h:
 
-../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
+../src/config/main/peripheral/tcc/plib_tcc0.h:
 
-../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+../src/config/main/peripheral/tcc/plib_tcc_common.h:
+
+../src/config/main/peripheral/adc/plib_adc0.h:
+
+../src/config/main/peripheral/adc/plib_adc_common.h:
+
+../src/config/main/peripheral/adc/plib_adc1.h:
+
+../src/config/main/system/int/sys_int.h:
+
+../src/config/main/osal/osal.h:
 
 ../src/config/main/system/debug/sys_debug.h:
 
@@ -386,8 +423,12 @@ build/main/production/_ext/779799956/interrupts.o: \
 
 ../src/config/main/system/system_common.h:
 
-../src/config/main/system/system_module.h:
+../src/i2c.h:
 
-../src/config/main/system/system_common.h:
+../src/can.h:
 
-../src/app.h:
+../src/vt_sense.h:
+
+../src/average.h:
+
+../src/current.h:

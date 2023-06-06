@@ -13,10 +13,10 @@
 14,PA11,,Available,,,,,,NORMAL
 15,PA14,GPIO_PA14,GPIO,Digital,High Impedance,n/a,No,No,NORMAL
 16,PA15,,EIC_EXTINT15,Digital,High Impedance,n/a,No,No,NORMAL
-17,PA16,GPIO_PA16,GPIO,Digital,High Impedance,n/a,No,No,NORMAL
-18,PA17,GPIO_PA17,GPIO,Digital,High Impedance,n/a,No,No,NORMAL
-19,PA18,,Available,,,,,,NORMAL
-20,PA19,GPIO_PA19,GPIO,Digital,High Impedance,n/a,No,No,NORMAL
+17,PA16,BAL,GPIO,Digital,Out,Low,,,NORMAL
+18,PA17,MCR,GPIO,Digital,Out,Low,,,NORMAL
+19,PA18,LED,GPIO,Digital,Out,Low,,,NORMAL
+20,PA19,PCCR,GPIO,Digital,Out,Low,,,NORMAL
 21,PA22,,SERCOM3_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
 22,PA23,,SERCOM3_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
 23,PA24,,CAN0_TX,Digital,High Impedance,n/a,No,No,NORMAL

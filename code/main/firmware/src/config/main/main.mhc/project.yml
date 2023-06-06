@@ -6,13 +6,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: E4894B6355AF41AED546E4C6C20005C1
-- generatedChecksum: 3C13720844166A5D97CF4EAD9DDB9FE2
+- generatedChecksum: null
   logicalPath: ''
-  name: app.c
+  name: average.c
   physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 3C13720844166A5D97CF4EAD9DDB9FE2
+  userChecksum: null
+- generatedChecksum: null
+  logicalPath: ''
+  name: can.c
+  physicalPath: ../..
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: null
 - generatedChecksum: 4490B523D4D89767AF3FE31B825F7F6D
   logicalPath: FreeRTOS/Source
   name: croutine.c
@@ -20,6 +27,27 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4490B523D4D89767AF3FE31B825F7F6D
+- generatedChecksum: null
+  logicalPath: ''
+  name: current.c
+  physicalPath: ../..
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: null
+- generatedChecksum: AE64199B660AA4499B58FCA9D9AD5792
+  logicalPath: config/main/driver/i2c
+  name: drv_i2c.c
+  physicalPath: driver/i2c/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: AE64199B660AA4499B58FCA9D9AD5792
+- generatedChecksum: 37780F17759DED907A0F36E28BFB3136
+  logicalPath: config/main/driver/i2c
+  name: drv_i2c_local.h
+  physicalPath: driver/i2c/src
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 37780F17759DED907A0F36E28BFB3136
 - generatedChecksum: 0E0E8AECB67046FEA847B359ACE7A1F6
   logicalPath: FreeRTOS/Source
   name: event_groups.c
@@ -41,27 +69,34 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: CF89BE92AE72229779903C2E9A760455
-- generatedChecksum: 31CEE4650E24C72160696DF93B55B48D
+- generatedChecksum: 4FDCB89CAB87567FDE8E7117FDDB2BBE
   logicalPath: FreeRTOS/Source/portable/MemMang
-  name: heap_1.c
+  name: heap_4.c
   physicalPath: ../../third_party/rtos/FreeRTOS/Source/portable/MemMang
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 31CEE4650E24C72160696DF93B55B48D
-- generatedChecksum: 94E041A8D0961127CFB2C683D7B63CEF
+  userChecksum: 4FDCB89CAB87567FDE8E7117FDDB2BBE
+- generatedChecksum: null
+  logicalPath: ''
+  name: i2c.c
+  physicalPath: ../..
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: null
+- generatedChecksum: 3464D73A545C7C7A5E31C7F32CA57F7B
   logicalPath: config/main
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 94E041A8D0961127CFB2C683D7B63CEF
-- generatedChecksum: 440AE109FF6ACDA55BBF6ADD61A57BDB
+  userChecksum: 3464D73A545C7C7A5E31C7F32CA57F7B
+- generatedChecksum: 06C63C127F95F47D8B67A163B415CCE8
   logicalPath: config/main
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 440AE109FF6ACDA55BBF6ADD61A57BDB
+  userChecksum: 06C63C127F95F47D8B67A163B415CCE8
 - generatedChecksum: 2CDCA8CDF135BDEB85FDFC0A2A991C0B
   logicalPath: config/main
   name: libc_syscalls.c
@@ -97,13 +132,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: DBCD5D11D49FB87516948BE737A3A79F
-- generatedChecksum: DDDAF8406E0316947A55B1D975C259DC
+- generatedChecksum: 464372F00208A58A2B6EAFA5A2ABFF66
   logicalPath: config/main/peripheral/adc
   name: plib_adc1.c
   physicalPath: peripheral/adc
   security: NON_SECURE
   type: SOURCE
-  userChecksum: DDDAF8406E0316947A55B1D975C259DC
+  userChecksum: 464372F00208A58A2B6EAFA5A2ABFF66
 - generatedChecksum: 1B857E3C3EF733259E4D421C27DE7350
   logicalPath: config/main/peripheral/can
   name: plib_can0.c
@@ -111,13 +146,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 1B857E3C3EF733259E4D421C27DE7350
-- generatedChecksum: 42ED0DFF154CF8E26FC843293EC384A7
+- generatedChecksum: 6C1029525277CDD2766B5818A5EC9517
   logicalPath: config/main/peripheral/clock
   name: plib_clock.c
   physicalPath: peripheral/clock
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 42ED0DFF154CF8E26FC843293EC384A7
+  userChecksum: 6C1029525277CDD2766B5818A5EC9517
 - generatedChecksum: 611EE7EB087806C22DEFE7AA240640DA
   logicalPath: config/main/peripheral/dsu
   name: plib_dsu.c
@@ -139,13 +174,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C3ECDED3D6301DB0DE622293ED615D21
-- generatedChecksum: DCD0ECBC695C47C0511877E7A360F315
+- generatedChecksum: A6391D9E3D679D4AAFF552F05D13F553
   logicalPath: config/main/peripheral/nvic
   name: plib_nvic.c
   physicalPath: peripheral/nvic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: DCD0ECBC695C47C0511877E7A360F315
+  userChecksum: A6391D9E3D679D4AAFF552F05D13F553
 - generatedChecksum: D4D6E4E50E443F793BFED0A79B849B6A
   logicalPath: config/main/peripheral/nvmctrl
   name: plib_nvmctrl.c
@@ -153,13 +188,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: D4D6E4E50E443F793BFED0A79B849B6A
-- generatedChecksum: A9E4CCF518E317C45FB1178E99E121A5
+- generatedChecksum: 92BEFD6BF0AD835909A1708BC7E62D33
   logicalPath: config/main/peripheral/port
   name: plib_port.c
   physicalPath: peripheral/port
   security: NON_SECURE
   type: SOURCE
-  userChecksum: A9E4CCF518E317C45FB1178E99E121A5
+  userChecksum: 92BEFD6BF0AD835909A1708BC7E62D33
 - generatedChecksum: 62A400C827CCB787CB016FEF92034BE3
   logicalPath: config/main/peripheral/sercom/i2c_master
   name: plib_sercom3_i2c_master.c
@@ -167,6 +202,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 62A400C827CCB787CB016FEF92034BE3
+- generatedChecksum: 812F74B8497D5105B8E8B0E0F5A0B29F
+  logicalPath: config/main/peripheral/tc
+  name: plib_tc0.c
+  physicalPath: peripheral/tc
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: 812F74B8497D5105B8E8B0E0F5A0B29F
+- generatedChecksum: BF1FAD92FDEBF43EBC408C42DC87ACE2
+  logicalPath: config/main/peripheral/tc
+  name: plib_tc1.c
+  physicalPath: peripheral/tc
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: BF1FAD92FDEBF43EBC408C42DC87ACE2
 - generatedChecksum: 97F21155972A8F1BE28E6A8EE0D14D1F
   logicalPath: config/main/peripheral/tcc
   name: plib_tcc0.c
@@ -209,13 +258,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 02C3C1B519E59992810626BB6098CF56
-- generatedChecksum: 269A8B575FA2637D33328C40460BA69B
+- generatedChecksum: A732E27B7534166C4AD144BBC3351E15
   logicalPath: config/main
   name: tasks.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 269A8B575FA2637D33328C40460BA69B
+  userChecksum: A732E27B7534166C4AD144BBC3351E15
 - generatedChecksum: 2811D7C532CEFF995F8697FCED6A1C34
   logicalPath: FreeRTOS/Source
   name: timers.c
@@ -223,6 +272,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 2811D7C532CEFF995F8697FCED6A1C34
+- generatedChecksum: null
+  logicalPath: ''
+  name: vt_sense.c
+  physicalPath: ../..
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: null
 - generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/main/stdio
   name: xc32_monitor.c
@@ -237,13 +293,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 5E06C8C3B681B9398724569B7DC5AFB8
-- generatedChecksum: 97227E67CECBDD8C8602443A2A1EEF5A
+- generatedChecksum: 12132317CF627BBE4A871A3E432E5CAB
   logicalPath: config/main
   name: FreeRTOSConfig.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 97227E67CECBDD8C8602443A2A1EEF5A
+  userChecksum: 12132317CF627BBE4A871A3E432E5CAB
 - generatedChecksum: 305927D6521812860782C63A390BB538
   logicalPath: packs/ATSAMC21E18A_DFP/component
   name: ac.h
@@ -279,13 +335,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 842908B7C1868EC159BC1C847390315C
-- generatedChecksum: 452F7AB915EEA4B1529959D0FF80C3F7
+- generatedChecksum: null
   logicalPath: ''
-  name: app.h
+  name: average.h
   physicalPath: ../..
   security: NON_SECURE
   type: HEADER
-  userChecksum: 452F7AB915EEA4B1529959D0FF80C3F7
+  userChecksum: null
 - generatedChecksum: 14F1AD56D242EFD0AF76849C6ADFECC4
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: cachel1_armv7.h
@@ -300,6 +356,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 16300783BFEF371B30B252DD47ECE7F5
+- generatedChecksum: null
+  logicalPath: ''
+  name: can.h
+  physicalPath: ../..
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: null
 - generatedChecksum: A8ADB1BA501FF0380909013F2C86CADC
   logicalPath: packs/ATSAMC21E18A_DFP/instance
   name: can0.h
@@ -377,13 +440,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 52F91AC0727F2311EDA0E3BAA7719A9F
-- generatedChecksum: 7A852268CAA1F0FBB9E75D327532882A
+- generatedChecksum: F96E8E802317B1D276A166B69B21A427
   logicalPath: config/main
   name: configuration.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 7A852268CAA1F0FBB9E75D327532882A
+  userChecksum: F96E8E802317B1D276A166B69B21A427
 - generatedChecksum: CCBD23918BE14943EA128B0D552031C5
   logicalPath: packs/CMSIS/CMSIS/Core/Include
   name: core_cm0plus.h
@@ -398,6 +461,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 4B11D1A616E95BDD37123685C8434FCF
+- generatedChecksum: null
+  logicalPath: ''
+  name: current.h
+  physicalPath: ../..
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: null
 - generatedChecksum: F890BD3E50C188D45D4DD807C7F2A383
   logicalPath: packs/ATSAMC21E18A_DFP/component
   name: dac.h
@@ -412,13 +482,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 961EBA81B5199F24F730AF5EA5785287
-- generatedChecksum: A40F961B15AC6A3526009517AFAC0B80
+- generatedChecksum: 106269087363D16B01C3691013FE8344
   logicalPath: config/main
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: A40F961B15AC6A3526009517AFAC0B80
+  userChecksum: 106269087363D16B01C3691013FE8344
 - generatedChecksum: ACB7AD12FD525895ABA47C26F4F9A683
   logicalPath: FreeRTOS/Source/include
   name: deprecated_definitions.h
@@ -489,6 +559,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: CC7DFCC51CD25171A3E400E18969354F
+- generatedChecksum: B6AB8544AD4BE514E35118AEF97D6889
+  logicalPath: config/main/driver/i2c
+  name: drv_i2c.h
+  physicalPath: driver/i2c
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: B6AB8544AD4BE514E35118AEF97D6889
+- generatedChecksum: CF547E44C3B38B83586D3BAF44DAD439
+  logicalPath: config/main/driver/i2c
+  name: drv_i2c_definitions.h
+  physicalPath: driver/i2c
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: CF547E44C3B38B83586D3BAF44DAD439
 - generatedChecksum: 4C412B5DDE4F8010F068D188BB53D053
   logicalPath: packs/ATSAMC21E18A_DFP/component
   name: dsu.h
@@ -594,13 +678,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 45B251D7FA7944D72E439447A6317B6A
-- generatedChecksum: DFD4E4A189D3B8863F3B4F7EDF3093EA
+- generatedChecksum: null
+  logicalPath: ''
+  name: i2c.h
+  physicalPath: ../..
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: null
+- generatedChecksum: 5A82D880C2A20FE9C99BC5CCE2F3BBFD
   logicalPath: config/main
   name: interrupts.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: DFD4E4A189D3B8863F3B4F7EDF3093EA
+  userChecksum: 5A82D880C2A20FE9C99BC5CCE2F3BBFD
 - generatedChecksum: 58875A2FBF6B0502B6D3B8B5C47F3815
   logicalPath: FreeRTOS/Source/include
   name: list.h
@@ -818,13 +909,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 61E9143D5D7C5573DC567E0474B23452
-- generatedChecksum: BB918D73F63F0CB4C107DAF94063C366
+- generatedChecksum: D3A9242CEA869B13E5D98397D7848E45
   logicalPath: config/main/peripheral/port
   name: plib_port.h
   physicalPath: peripheral/port
   security: NON_SECURE
   type: HEADER
-  userChecksum: BB918D73F63F0CB4C107DAF94063C366
+  userChecksum: D3A9242CEA869B13E5D98397D7848E45
 - generatedChecksum: C4A67A380DE2FFA8B65049118018F468
   logicalPath: config/main/peripheral/sercom/i2c_master
   name: plib_sercom3_i2c_master.h
@@ -839,6 +930,27 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 555AC09B32F566FBFB0A0505CF73ABD6
+- generatedChecksum: B738FB9946B6C40E07E46AADFACA5F28
+  logicalPath: config/main/peripheral/tc
+  name: plib_tc0.h
+  physicalPath: peripheral/tc
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: B738FB9946B6C40E07E46AADFACA5F28
+- generatedChecksum: 8522652B5953BC7F904CB1EBC90A72F8
+  logicalPath: config/main/peripheral/tc
+  name: plib_tc1.h
+  physicalPath: peripheral/tc
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: 8522652B5953BC7F904CB1EBC90A72F8
+- generatedChecksum: C0A6E5B99D379FC08247B5FA465A54B3
+  logicalPath: config/main/peripheral/tc
+  name: plib_tc_common.h
+  physicalPath: peripheral/tc
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: C0A6E5B99D379FC08247B5FA465A54B3
 - generatedChecksum: 23B3F5ABDFFF4A9246C09C382F57B7D7
   logicalPath: config/main/peripheral/tcc
   name: plib_tcc0.h
@@ -1210,13 +1322,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: D9D79DF8B638C51D1932B2A0AFCEE355
-- generatedChecksum: 4B3C3EF8A318908A22B78500515C3288
+- generatedChecksum: null
   logicalPath: config/main
   name: user.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4B3C3EF8A318908A22B78500515C3288
+  userChecksum: null
+- generatedChecksum: null
+  logicalPath: ''
+  name: vt_sense.h
+  physicalPath: ../..
+  security: NON_SECURE
+  type: HEADER
+  userChecksum: null
 - generatedChecksum: 8EDCF59C5D702DFFF4BDBBD6CD89228B
   logicalPath: packs/ATSAMC21E18A_DFP/component
   name: wdt.h
@@ -1238,13 +1357,13 @@ files:
   security: NON_SECURE
   type: LINKER
   userChecksum: 46A218D72FBCFD4D8A17275245F060BB
-- generatedChecksum: B0A3F27A8342B7544ADAE67F62893B39
+- generatedChecksum: 19CF2B51305AFA3935C0D4946222E27E
   logicalPath: ''
   name: pin_configurations.csv
   physicalPath: ''
   security: NON_SECURE
   type: IMPORTANT
-  userChecksum: B0A3F27A8342B7544ADAE67F62893B39
+  userChecksum: 19CF2B51305AFA3935C0D4946222E27E
 format_version: v1.0
 libraries: []
 settings:

@@ -64,6 +64,8 @@ void xPortSysTickHandler (void);
 void EIC_InterruptHandler (void);
 void SERCOM3_I2C_InterruptHandler (void);
 void TCC0_InterruptHandler (void);
+void TC0_TimerInterruptHandler (void);
+void TC1_TimerInterruptHandler (void);
 void ADC1_InterruptHandler (void);
 
 

@@ -59,14 +59,54 @@
 // Section: RTOS "Tasks" Routine
 // *****************************************************************************
 // *****************************************************************************
-/* Handle for the APP_Tasks. */
-TaskHandle_t xAPP_Tasks;
+/* Handle for the I2C_Tasks. */
+TaskHandle_t xI2C_Tasks;
 
-void _APP_Tasks(  void *pvParameters  )
+void _I2C_Tasks(  void *pvParameters  )
 {   
     while(1)
     {
-        APP_Tasks();
+        I2C_Tasks();
+    }
+}
+/* Handle for the CAN_Tasks. */
+TaskHandle_t xCAN_Tasks;
+
+void _CAN_Tasks(  void *pvParameters  )
+{   
+    while(1)
+    {
+        CAN_Tasks();
+    }
+}
+/* Handle for the VT_SENSE_Tasks. */
+TaskHandle_t xVT_SENSE_Tasks;
+
+void _VT_SENSE_Tasks(  void *pvParameters  )
+{   
+    while(1)
+    {
+        VT_SENSE_Tasks();
+    }
+}
+/* Handle for the AVERAGE_Tasks. */
+TaskHandle_t xAVERAGE_Tasks;
+
+void _AVERAGE_Tasks(  void *pvParameters  )
+{   
+    while(1)
+    {
+        AVERAGE_Tasks();
+    }
+}
+/* Handle for the CURRENT_Tasks. */
+TaskHandle_t xCURRENT_Tasks;
+
+void _CURRENT_Tasks(  void *pvParameters  )
+{   
+    while(1)
+    {
+        CURRENT_Tasks();
     }
 }
 
@@ -98,13 +138,45 @@ void SYS_Tasks ( void )
     
 
     /* Maintain the application's state machine. */
-        /* Create OS Thread for APP_Tasks. */
-    xTaskCreate((TaskFunction_t) _APP_Tasks,
-                "APP_Tasks",
+        /* Create OS Thread for I2C_Tasks. */
+    xTaskCreate((TaskFunction_t) _I2C_Tasks,
+                "I2C_Tasks",
+                512,
+                NULL,
+                1,
+                &xI2C_Tasks);
+
+    /* Create OS Thread for CAN_Tasks. */
+    xTaskCreate((TaskFunction_t) _CAN_Tasks,
+                "CAN_Tasks",
                 128,
                 NULL,
                 1,
-                &xAPP_Tasks);
+                &xCAN_Tasks);
+
+    /* Create OS Thread for VT_SENSE_Tasks. */
+    xTaskCreate((TaskFunction_t) _VT_SENSE_Tasks,
+                "VT_SENSE_Tasks",
+                512,
+                NULL,
+                1,
+                &xVT_SENSE_Tasks);
+
+    /* Create OS Thread for AVERAGE_Tasks. */
+    xTaskCreate((TaskFunction_t) _AVERAGE_Tasks,
+                "AVERAGE_Tasks",
+                512,
+                NULL,
+                1,
+                &xAVERAGE_Tasks);
+
+    /* Create OS Thread for CURRENT_Tasks. */
+    xTaskCreate((TaskFunction_t) _CURRENT_Tasks,
+                "CURRENT_Tasks",
+                512,
+                NULL,
+                3,
+                &xCURRENT_Tasks);
 
 
 
