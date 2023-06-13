@@ -216,6 +216,8 @@ void SYS_Initialize ( void* data )
 
     CAN0_Initialize();
 
+    SUPC_Initialize();
+
     EIC_Initialize();
 
     TC1_TimerInitialize();
@@ -239,6 +241,7 @@ void SYS_Initialize ( void* data )
     VT_SENSE_Initialize();
     AVERAGE_Initialize();
     CURRENT_Initialize();
+    CHECKS_Initialize();
 
 
     NVIC_Initialize();

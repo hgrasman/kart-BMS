@@ -96,6 +96,7 @@ build/main/production/_ext/779799956/initialization.o: \
  ../src/config/main/peripheral/nvic/plib_nvic.h \
  ../src/config/main/peripheral/can/plib_can0.h \
  ../src/config/main/peripheral/can/plib_can_common.h \
+ ../src/config/main/peripheral/supc/plib_supc.h \
  ../src/config/main/peripheral/eic/plib_eic.h \
  ../src/config/main/peripheral/tc/plib_tc1.h \
  ../src/config/main/peripheral/tc/plib_tc_common.h \
@@ -136,7 +137,7 @@ build/main/production/_ext/779799956/initialization.o: \
  ../src/config/main/system/debug/sys_debug.h \
  ../src/config/main/system/system.h \
  ../src/config/main/system/system_common.h ../src/i2c.h ../src/can.h \
- ../src/vt_sense.h ../src/average.h ../src/current.h
+ ../src/vt_sense.h ../src/average.h ../src/current.h ../src/checks.h
 
 ../src/config/main/configuration.h:
 
@@ -334,6 +335,8 @@ build/main/production/_ext/779799956/initialization.o: \
 
 ../src/config/main/peripheral/can/plib_can_common.h:
 
+../src/config/main/peripheral/supc/plib_supc.h:
+
 ../src/config/main/peripheral/eic/plib_eic.h:
 
 ../src/config/main/peripheral/tc/plib_tc1.h:
@@ -427,3 +430,5 @@ build/main/production/_ext/779799956/initialization.o: \
 ../src/average.h:
 
 ../src/current.h:
+
+../src/checks.h:

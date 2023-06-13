@@ -79,12 +79,12 @@
 #define CAN0_RX_FIFO1_ELEMENT_SIZE       16U
 #define CAN0_RX_FIFO1_SIZE               16U
 #define CAN0_TX_FIFO_BUFFER_ELEMENT_SIZE 16U
-#define CAN0_TX_FIFO_BUFFER_SIZE         16U
-#define CAN0_TX_EVENT_FIFO_SIZE          8U
+#define CAN0_TX_FIFO_BUFFER_SIZE         32U
+#define CAN0_TX_EVENT_FIFO_SIZE          16U
 
 /* CAN0_MESSAGE_RAM_CONFIG_SIZE to be used by application or driver
    for allocating buffer from non-cached contiguous memory */
-#define CAN0_MESSAGE_RAM_CONFIG_SIZE     56U
+#define CAN0_MESSAGE_RAM_CONFIG_SIZE     80U
 
 // *****************************************************************************
 // *****************************************************************************
@@ -92,6 +92,7 @@
 // *****************************************************************************
 // *****************************************************************************
 void CAN0_Initialize(void);
+bool CAN0_MessageTransmit(uint8_t bufferNumber, CAN_TX_BUFFER *txBuffer);
 bool CAN0_MessageTransmitFifo(uint8_t numberOfMessage, CAN_TX_BUFFER *txBuffer);
 uint8_t CAN0_TxFifoFreeLevelGet(void);
 bool CAN0_TxBufferIsBusy(uint8_t bufferNumber);

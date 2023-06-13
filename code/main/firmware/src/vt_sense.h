@@ -169,6 +169,7 @@ void VT_SENSE_Initialize ( void );
  */
 
 void VT_SENSE_Tasks( void );
+void vt_sense_loop(void);
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus

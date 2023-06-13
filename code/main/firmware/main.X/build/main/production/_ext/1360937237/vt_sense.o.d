@@ -84,7 +84,60 @@ build/main/production/_ext/1360937237/vt_sense.o: ../src/vt_sense.c \
  ../src/packs/ATSAMC21E18A_DFP/pio/samc21e18a.h \
  ../src/config/main/device_cache.h \
  ../src/config/main/toolchain_specifics.h \
- ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h
+ ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h ../src/kart_def.h \
+ ../src/config/main/definitions.h \
+ ../src/config/main/peripheral/sercom/i2c_master/plib_sercom3_i2c_master.h \
+ ../src/config/main/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h \
+ ../src/config/main/device.h \
+ ../src/config/main/peripheral/nvmctrl/plib_nvmctrl.h \
+ ../src/config/main/peripheral/evsys/plib_evsys.h \
+ ../src/config/main/peripheral/port/plib_port.h \
+ ../src/config/main/peripheral/clock/plib_clock.h \
+ ../src/config/main/peripheral/nvic/plib_nvic.h \
+ ../src/config/main/peripheral/can/plib_can0.h \
+ ../src/config/main/peripheral/can/plib_can_common.h \
+ ../src/config/main/peripheral/supc/plib_supc.h \
+ ../src/config/main/peripheral/eic/plib_eic.h \
+ ../src/config/main/peripheral/tc/plib_tc1.h \
+ ../src/config/main/peripheral/tc/plib_tc_common.h \
+ ../src/config/main/peripheral/tc/plib_tc0.h \
+ ../src/config/main/peripheral/dsu/plib_dsu.h \
+ ../src/config/main/driver/i2c/drv_i2c.h \
+ ../src/config/main/driver/i2c/drv_i2c_definitions.h \
+ ../src/config/main/system/system_module.h \
+ ../src/config/main/system/system_common.h \
+ ../src/config/main/driver/driver.h \
+ ../src/config/main/driver/driver_common.h \
+ ../src/config/main/system/int/sys_int.h \
+ ../src/config/main/system/int/sys_int_mapping.h \
+ ../src/config/main/driver/i2c/src/drv_i2c_local.h \
+ ../src/config/main/driver/i2c/drv_i2c_definitions.h \
+ ../src/config/main/osal/osal.h \
+ ../src/config/main/osal/osal_definitions.h \
+ ../src/config/main/osal/osal_freertos.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h \
+ ../src/config/main/FreeRTOSConfig.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/portable.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h \
+ ../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/list.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/semphr.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/queue.h \
+ ../src/third_party/rtos/FreeRTOS/Source/include/task.h \
+ ../src/config/main/peripheral/tcc/plib_tcc0.h \
+ ../src/config/main/peripheral/tcc/plib_tcc_common.h \
+ ../src/config/main/peripheral/adc/plib_adc0.h \
+ ../src/config/main/peripheral/adc/plib_adc_common.h \
+ ../src/config/main/peripheral/adc/plib_adc1.h \
+ ../src/config/main/system/int/sys_int.h ../src/config/main/osal/osal.h \
+ ../src/config/main/system/debug/sys_debug.h \
+ ../src/config/main/system/system.h \
+ ../src/config/main/system/system_common.h ../src/i2c.h ../src/can.h \
+ ../src/vt_sense.h ../src/average.h ../src/current.h ../src/checks.h
 
 ../src/vt_sense.h:
 
@@ -261,3 +314,123 @@ build/main/production/_ext/1360937237/vt_sense.o: ../src/vt_sense.c \
 ../src/config/main/toolchain_specifics.h:
 
 ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
+
+../src/kart_def.h:
+
+../src/config/main/definitions.h:
+
+../src/config/main/peripheral/sercom/i2c_master/plib_sercom3_i2c_master.h:
+
+../src/config/main/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h:
+
+../src/config/main/device.h:
+
+../src/config/main/peripheral/nvmctrl/plib_nvmctrl.h:
+
+../src/config/main/peripheral/evsys/plib_evsys.h:
+
+../src/config/main/peripheral/port/plib_port.h:
+
+../src/config/main/peripheral/clock/plib_clock.h:
+
+../src/config/main/peripheral/nvic/plib_nvic.h:
+
+../src/config/main/peripheral/can/plib_can0.h:
+
+../src/config/main/peripheral/can/plib_can_common.h:
+
+../src/config/main/peripheral/supc/plib_supc.h:
+
+../src/config/main/peripheral/eic/plib_eic.h:
+
+../src/config/main/peripheral/tc/plib_tc1.h:
+
+../src/config/main/peripheral/tc/plib_tc_common.h:
+
+../src/config/main/peripheral/tc/plib_tc0.h:
+
+../src/config/main/peripheral/dsu/plib_dsu.h:
+
+../src/config/main/driver/i2c/drv_i2c.h:
+
+../src/config/main/driver/i2c/drv_i2c_definitions.h:
+
+../src/config/main/system/system_module.h:
+
+../src/config/main/system/system_common.h:
+
+../src/config/main/driver/driver.h:
+
+../src/config/main/driver/driver_common.h:
+
+../src/config/main/system/int/sys_int.h:
+
+../src/config/main/system/int/sys_int_mapping.h:
+
+../src/config/main/driver/i2c/src/drv_i2c_local.h:
+
+../src/config/main/driver/i2c/drv_i2c_definitions.h:
+
+../src/config/main/osal/osal.h:
+
+../src/config/main/osal/osal_definitions.h:
+
+../src/config/main/osal/osal_freertos.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h:
+
+../src/config/main/FreeRTOSConfig.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/portable.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h:
+
+../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/list.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/semphr.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/queue.h:
+
+../src/third_party/rtos/FreeRTOS/Source/include/task.h:
+
+../src/config/main/peripheral/tcc/plib_tcc0.h:
+
+../src/config/main/peripheral/tcc/plib_tcc_common.h:
+
+../src/config/main/peripheral/adc/plib_adc0.h:
+
+../src/config/main/peripheral/adc/plib_adc_common.h:
+
+../src/config/main/peripheral/adc/plib_adc1.h:
+
+../src/config/main/system/int/sys_int.h:
+
+../src/config/main/osal/osal.h:
+
+../src/config/main/system/debug/sys_debug.h:
+
+../src/config/main/system/system.h:
+
+../src/config/main/system/system_common.h:
+
+../src/i2c.h:
+
+../src/can.h:
+
+../src/vt_sense.h:
+
+../src/average.h:
+
+../src/current.h:
+
+../src/checks.h:

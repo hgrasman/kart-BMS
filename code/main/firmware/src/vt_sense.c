@@ -28,6 +28,7 @@
 // *****************************************************************************
 
 #include "vt_sense.h"
+#include "kart_def.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -51,7 +52,12 @@
 */
 
 VT_SENSE_DATA vt_senseData;
+extern bool balanceOn;
 
+struct dataOutSAMC{
+    uint16_t rawVoltage;
+    uint16_t rawTemps[THERM_COUNT];
+}vt;
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -129,7 +135,7 @@ void VT_SENSE_Tasks ( void )
 
         case VT_SENSE_STATE_SERVICE_TASKS:
         {
-
+            vt_sense_loop();
             break;
         }
 
@@ -145,6 +151,60 @@ void VT_SENSE_Tasks ( void )
     }
 }
 
+void vt_sense_loop(){
+    for(;;){
+        if(balanceOn){
+            BAL_Set();
+            vTaskDelay(pdMS_TO_TICKS(900));
+            BAL_Clear();
+            vTaskDelay(pdMS_TO_TICKS(90));
+        }//end if
+        /*
+         Will add in ADC sensing code here
+         */
+        ADC0_ChannelSelect(0, 24);
+        ADC0_ConversionStart();
+        while(ADC0_ConversionSequenceIsFinished() == false){}
+        vt.rawTemps[0] = ADC0_ConversionResultGet();
+        
+        
+        ADC0_ChannelSelect(1, 24);
+        ADC0_ConversionStart();
+        while(ADC0_ConversionSequenceIsFinished()  == false){}
+        vt.rawTemps[1] = ADC0_ConversionResultGet();
+        
+        
+        ADC0_ChannelSelect(4, 24);
+        vTaskDelay(pdMS_TO_TICKS(1));
+        ADC0_ConversionStart();
+        while(ADC0_ConversionSequenceIsFinished()  == false){}
+        vt.rawTemps[2] = ADC0_ConversionResultGet();  
+        
+        
+        ADC0_ChannelSelect(5, 24);
+        vTaskDelay(pdMS_TO_TICKS(1));
+        ADC0_ConversionStart();
+        while(ADC0_ConversionSequenceIsFinished()  == false){}
+        vt.rawTemps[3] = ADC0_ConversionResultGet();
+        
+        
+        ADC0_ChannelSelect(6, 24);
+        vTaskDelay(pdMS_TO_TICKS(1));
+        ADC0_ConversionStart();
+        while(ADC0_ConversionSequenceIsFinished()  == false){}
+        vt.rawTemps[4] = ADC0_ConversionResultGet();
+        
+        
+        ADC0_ChannelSelect(25, 24);
+        vTaskDelay(pdMS_TO_TICKS(1));
+        ADC0_ConversionStart();
+        while(ADC0_ConversionSequenceIsFinished()  == false){}
+        vt.rawVoltage = ADC0_ConversionResultGet();
+        //TODO - set code to send results in queue to averaging thread
+        
+        //TODO - wait for task notification from checks
+    }
+}
 
 /*******************************************************************************
  End of File

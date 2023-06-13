@@ -56,6 +56,9 @@
                 <itemPath>../src/config/main/peripheral/sercom/i2c_master/plib_sercom3_i2c_master.h</itemPath>
               </logicalFolder>
             </logicalFolder>
+            <logicalFolder name="f13" displayName="supc" projectFiles="true">
+              <itemPath>../src/config/main/peripheral/supc/plib_supc.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="f12" displayName="tc" projectFiles="true">
               <itemPath>../src/config/main/peripheral/tc/plib_tc_common.h</itemPath>
               <itemPath>../src/config/main/peripheral/tc/plib_tc1.h</itemPath>
@@ -230,8 +233,8 @@
       <itemPath>../src/vt_sense.h</itemPath>
       <itemPath>../src/average.h</itemPath>
       <itemPath>../src/current.h</itemPath>
-      <itemPath>../../../../../../../RECOVERY/startup.h</itemPath>
       <itemPath>../src/kart_def.h</itemPath>
+      <itemPath>../src/checks.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -290,6 +293,9 @@
                 <itemPath>../src/config/main/peripheral/sercom/i2c_master/plib_sercom3_i2c_master.c</itemPath>
               </logicalFolder>
             </logicalFolder>
+            <logicalFolder name="f13" displayName="supc" projectFiles="true">
+              <itemPath>../src/config/main/peripheral/supc/plib_supc.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="f12" displayName="tc" projectFiles="true">
               <itemPath>../src/config/main/peripheral/tc/plib_tc1.c</itemPath>
               <itemPath>../src/config/main/peripheral/tc/plib_tc0.c</itemPath>
@@ -342,7 +348,7 @@
       <itemPath>../src/vt_sense.c</itemPath>
       <itemPath>../src/average.c</itemPath>
       <itemPath>../src/current.c</itemPath>
-      <itemPath>../../../../../../../RECOVERY/startup.c</itemPath>
+      <itemPath>../src/checks.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -365,6 +371,7 @@
         <itemPath>../src/config/main/main.mhc/project.yml</itemPath>
         <itemPath>../src/config/main/main.mhc/sercom3.yml</itemPath>
         <itemPath>../src/config/main/main.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/main/main.mhc/supc.yml</itemPath>
         <itemPath>../src/config/main/main.mhc/tc0.yml</itemPath>
         <itemPath>../src/config/main/main.mhc/tc1.yml</itemPath>
         <itemPath>../src/config/main/main.mhc/tcc0.yml</itemPath>
@@ -373,6 +380,8 @@
       <itemPath>../src/config/main/pin_configurations.csv</itemPath>
       <itemPath>../src/config/main/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
+    <itemPath>../src/startup.c</itemPath>
+    <itemPath>../src/startup.h</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>../src</Elem>
@@ -392,8 +401,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
         <pack name="SAMC21_DFP" vendor="Microchip" version="3.8.119"/>
+        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -452,7 +461,7 @@
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
-        <property key="enable-unroll-loops" value="false"/>
+        <property key="enable-unroll-loops" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
                   value="../src;../src/config/main;../src/packs/ATSAMC21E18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0"/>
@@ -460,7 +469,7 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="true"/>
-        <property key="optimization-level" value=""/>
+        <property key="optimization-level" value="-O1"/>
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
@@ -1171,6 +1180,8 @@
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/main.X/debug/main/main_ptg"/>
         <property key="programmerToGoImageName" value="main_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -1199,8 +1210,7 @@
         <property key="reset.type" value="MCLR"/>
         <property key="toolpack.updateoptions"
                   value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions.packversion" value="1.14.1651"/>
         <property key="tracecontrol.include.timestamp" value="summarydataenabled"/>
         <property key="tracecontrol.select" value="0"/>
         <property key="tracecontrol.stallontracebufferfull" value="false"/>
@@ -1659,7 +1669,7 @@
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.simultaneous.debug" value="false"/>
-        <property key="debugoptions.useswbreakpoints" value="true"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
@@ -1703,8 +1713,7 @@
         <property key="ptgSendImage" value="true"/>
         <property key="toolpack.updateoptions"
                   value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions.packversion" value="1.14.1651"/>
         <property key="voltagevalue" value="5.0"/>
       </pk4hybrid>
     </conf>

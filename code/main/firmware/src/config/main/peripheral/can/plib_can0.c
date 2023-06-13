@@ -114,6 +114,43 @@ void CAN0_Initialize(void)
    (void) memset(&can0Obj.msgRAMConfig, 0x00, sizeof(CAN_MSG_RAM_CONFIG));
 }
 
+// *****************************************************************************
+/* Function:
+    bool CAN0_MessageTransmit(uint8_t bufferNumber, CAN_TX_BUFFER *txBuffer)
+
+   Summary:
+    Transmits a message into CAN bus from the specific Tx buffer.
+
+   Precondition:
+    CAN0_Initialize must have been called for the associated CAN instance.
+
+   Parameters:
+    bufferNumber - Tx buffer number.
+    txBuffer     - Pointer to Tx buffer
+
+   Returns:
+    Request status.
+    true  - Request was successful.
+    false - Request has failed.
+*/
+bool CAN0_MessageTransmit(uint8_t bufferNumber, CAN_TX_BUFFER *txBuffer)
+{
+    uint8_t *txBuf = NULL;
+    bool message_transmit_event = false;
+
+    if (!((bufferNumber >= 1U) || (txBuffer == NULL)))
+    {
+        txBuf = (uint8_t *)((uint8_t*)can0Obj.msgRAMConfig.txBuffersAddress + ((uint32_t)bufferNumber * CAN0_TX_FIFO_BUFFER_ELEMENT_SIZE));
+
+       (void) memcpy(txBuf, (uint8_t *)txBuffer, CAN0_TX_FIFO_BUFFER_ELEMENT_SIZE);
+
+        /* Set Transmission request */
+        CAN0_REGS->CAN_TXBAR = 1UL << bufferNumber;
+
+        message_transmit_event = true;
+    }
+    return message_transmit_event;
+}
 
 // *****************************************************************************
 /* Function:
@@ -157,9 +194,9 @@ bool CAN0_MessageTransmitFifo(uint8_t numberOfMessage, CAN_TX_BUFFER *txBuffer)
             txBuf += CAN0_TX_FIFO_BUFFER_ELEMENT_SIZE;
             bufferNumber |= (1UL << tfqpi);
             tfqpi++;
-            if (tfqpi == 1U)
+            if (tfqpi == (1U + 1U))
             {
-                tfqpi = 0U;
+                tfqpi = 1U;
             }
         }
 
@@ -257,7 +294,7 @@ bool CAN0_TxEventFifoRead(uint8_t numberOfTxEvent, CAN_TX_EVENT_FIFO *txEventFif
             }
             txEvtFifo += sizeof(CAN_TX_EVENT_FIFO);
             txefgi++;
-            if (txefgi == 1U)
+            if (txefgi == 2U)
             {
                 txefgi = 0U;
             }
@@ -568,7 +605,7 @@ void CAN0_MessageRAMConfigSet(uint8_t *msgRAMConfigBaseAddress)
     can0Obj.msgRAMConfig.txBuffersAddress = (can_txbe_registers_t *)(msgRAMConfigBaseAddr + offset);
     offset += CAN0_TX_FIFO_BUFFER_SIZE;
     /* Transmit Buffer/FIFO Configuration Register */
-    CAN0_REGS->CAN_TXBC = CAN_TXBC_TFQS(1UL) |
+    CAN0_REGS->CAN_TXBC = CAN_TXBC_TFQS(1UL) | CAN_TXBC_NDTB(1UL) |
             CAN_TXBC_TBSA((uint32_t)can0Obj.msgRAMConfig.txBuffersAddress);
 
     can0Obj.msgRAMConfig.txEventFIFOAddress =  (can_txefe_registers_t *)(msgRAMConfigBaseAddr + offset);

@@ -23,6 +23,8 @@ extern "C" {
 
 //include defs listed here:
 #include "definitions.h"
+#include "FreeRTOS.h"
+#include "queue.h"
 
 
 
@@ -33,6 +35,8 @@ extern "C" {
 #define MINV 3.2
 #define HIGHV 4.2
 #define HIGH_TEMP 60
+#define BALANCE_THRESH 0.0
+
 
 //basic telemetry info regarding thermistors
 #define THERM_COUNT 5
@@ -50,3 +54,6 @@ extern "C" {
 #define LV_CHECK(in) (in <= MINV_LOADED)
 #define LV_RESET(in) (in >= MINV)
 
+
+//balance check
+#define BAL_REQUIRED(in, average) (in >= (average+BALANCE_THRESH))

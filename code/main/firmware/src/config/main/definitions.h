@@ -55,6 +55,7 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/can/plib_can0.h"
+#include "peripheral/supc/plib_supc.h"
 #include "peripheral/eic/plib_eic.h"
 #include "peripheral/tc/plib_tc1.h"
 #include "peripheral/tc/plib_tc0.h"
@@ -73,6 +74,7 @@
 #include "vt_sense.h"
 #include "average.h"
 #include "current.h"
+#include "checks.h"
 
 
 

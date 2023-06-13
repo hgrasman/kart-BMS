@@ -15,7 +15,7 @@
     implements the logic of the application's state machine and it may call
     API routines of other MPLAB Harmony modules in the system, such as drivers,
     system services, and middleware.  However, it does not call any of the
-    system interfaces (such as the "Initialize" and "Tasks" functions) of any of
+    system interfaces (such as the "Initialize" and  "Tasks" functions) of any of
     the modules in the system or make any assumptions about when those functions
     are called.  That is the responsibility of the configuration-specific system
     files.
@@ -60,12 +60,10 @@
 CURRENT_DATA currentData;
 extern TaskHandle_t xCURRENT_Tasks;
 
-typedef struct currentStructure{
-    uint8_t ID;
+struct currentStructure{
     float result;
 }instantCurrent;
 
-instantCurrent values;
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -168,15 +166,19 @@ void Current_Sense_Loop(){
     float current;
     
     for(;;){
+        LED_Set();
         ADC1_ConversionStart();
         AoC = lastSample * PERIOD;
         while(!ADC1_ConversionSequenceIsFinished()){}
         currentSample = ((float)ADC1_ConversionResultGet())*REFERENCE/1024;
         coulombsPassed = PERIOD * (currentSample-lastSample);
         current = AoC + coulombsPassed;
-        values.result = current;
+        instantCurrent.result = current;
         lastSample = currentSample;
+        LED_Clear();
+        //TODO - place current results into struct, need to add in a queue overwrite later for CAN
         ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+        
     }
 }
 

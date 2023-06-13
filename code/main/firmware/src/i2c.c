@@ -58,14 +58,14 @@ union I2C_Recieve{
     uint16_t value;
 }handler;
 
-typedef struct I2C_Data{
+struct I2C_Data{
     uint8_t ID;
     uint16_t rawVolts[TOTAL_REMOTE];
     uint16_t rawTemps[TOTAL_REMOTE][THERM_COUNT];
-}toSend;
-toSend I2C_Results;
+} toSend;
 bool balance[TOTAL_REMOTE];
 
+QueueHandle_t i2cToAverage;
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -130,12 +130,13 @@ void I2C_Tasks ( void )
         /* Application's initial state. */
         case I2C_STATE_INIT:
         {
+            i2cToAverage = xQueueCreate(1, sizeof(toSend));
             I2C_Driver = DRV_I2C_Open(DRV_I2C_INDEX_0, (DRV_IO_INTENT_READWRITE | DRV_IO_INTENT_NONBLOCKING | DRV_IO_INTENT_EXCLUSIVE));
             if (I2C_Driver == DRV_HANDLE_INVALID){
                 //need to add in error correction here to get driver started
                 
             }
-            I2C_Results.ID = 1; // this is the raw remote voltage and temps data
+            toSend.ID = 1; // this is the raw remote voltage and temps data
             bool appInitialized = true;
 
 
@@ -149,7 +150,7 @@ void I2C_Tasks ( void )
 
         case I2C_STATE_SERVICE_TASKS:
         {
-
+            I2C_Loop();
             break;
         }
 
@@ -167,11 +168,11 @@ void I2C_Tasks ( void )
 
 void I2C_Loop(){
     
-    uint8_t toSend = 0x00;
+    uint8_t command = 0x00;
     DRV_I2C_TRANSFER_HANDLE transferHandle;
     for(int i=START_ADDRESS;i<=END_ADDRESS;i++){
-        toSend = (CONTROL_VOLT | balance[ARR_ADDR(i)]<<5);
-        DRV_I2C_WriteTransferAdd(I2C_Driver, i, &toSend, 1, &transferHandle);
+        command = (CONTROL_VOLT | balance[ARR_ADDR(i)]<<5);
+        DRV_I2C_WriteTransferAdd(I2C_Driver, i, &command, 1, &transferHandle);
         vTaskDelay(pdMS_TO_TICKS(6));
         if(DRV_I2C_ErrorGet(transferHandle) == DRV_I2C_ERROR_NACK){
             //error - need to correct
@@ -179,26 +180,26 @@ void I2C_Loop(){
         //safe to continue
         DRV_I2C_ReadTransferAdd(I2C_Driver, i, handler.raw, 2, &transferHandle);
         vTaskDelay(pdMS_TO_TICKS(6));
-        I2C_Results.rawVolts[ARR_ADDR(i)] = (I2C_Results.rawVolts[ARR_ADDR(i)] > 0) 
-                ?(uint16_t) (0.85*(float)(I2C_Results.rawVolts[ARR_ADDR(i)]) + 0.15*(float)(handler.value))
+        toSend.rawVolts[ARR_ADDR(i)] = (toSend.rawVolts[ARR_ADDR(i)] > 0) 
+                ?(uint16_t) (0.85*(float)(toSend.rawVolts[ARR_ADDR(i)]) + 0.15*(float)(handler.value))
                 :(uint16_t)handler.value;
         
        for(int j=0;j<THERM_COUNT;j++){
-           toSend = ((uint8_t) (j+1) | balance[ARR_ADDR(i)] >> 5);
-           DRV_I2C_WriteTransferAdd(I2C_Driver, i, &toSend, 1, &transferHandle);
+           command = ((uint8_t) (j+1) | balance[ARR_ADDR(i)] >> 5);
+           DRV_I2C_WriteTransferAdd(I2C_Driver, i, &command, 1, &transferHandle);
            vTaskDelay(pdMS_TO_TICKS(6));
            if(DRV_I2C_ErrorGet(transferHandle)==DRV_I2C_ERROR_NACK){
                //bus lost -- need error correcting here
            }
            DRV_I2C_ReadTransferAdd(I2C_Driver, i, handler.raw, 2, &transferHandle);
-           I2C_Results.rawTemps[ARR_ADDR(i)][j] = (I2C_Results.rawTemps[ARR_ADDR(i)][j] > 0) 
-                   ? (uint16_t) (0.85*(float)(I2C_Results.rawTemps[ARR_ADDR(i)][j]) + 0.15*(float)(handler.value))
+           toSend.rawTemps[ARR_ADDR(i)][j] = (toSend.rawTemps[ARR_ADDR(i)][j] > 0) 
+                   ? (uint16_t) (0.85*(float)(toSend.rawTemps[ARR_ADDR(i)][j]) + 0.15*(float)(handler.value))
                    :(uint16_t)handler.value;
            vTaskDelay(pdMS_TO_TICKS(3));
        }//end inner for
         vTaskDelay(pdMS_TO_TICKS(3));
     } // end outer for
-    
+    xQueueSendToBack(i2cToAverage, &(toSend), 0);
 }
 /*******************************************************************************
  End of File

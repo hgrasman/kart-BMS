@@ -4,25 +4,24 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/can.c</file>
-            <file>file:/C:/Users/pcguy/Desktop/RECOVERY/kart_defs.h</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/driver/i2c/drv_i2c.h</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/average.h</file>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/kart_def.h</file>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/main.c</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/adc/plib_adc_common.h</file>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/current.c</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/average.c</file>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/vt_sense.c</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/FreeRTOSConfig.h</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/initialization.c</file>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/third_party/rtos/FreeRTOS/Source/portable/GCC/ARM_CM0/port.c</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/tcc/plib_tcc0.h</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/port/plib_port.h</file>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/i2c.c</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/tc/plib_tc0.c</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/i2c.h</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/tasks.c</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/checks.c</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/clock/plib_clock.c</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/adc/plib_adc0.c</file>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/third_party/rtos/FreeRTOS/Source/include/task.h</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/exceptions.c</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/current.h</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/system/int/src/sys_int.c</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/adc/plib_adc0.h</file>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/adc/plib_adc1.h</file>
-            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/freertos_hooks.c</file>
+            <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/can/plib_can0.c</file>
             <file>file:/C:/Users/pcguy/Desktop/GitLab/BMS/bms/code/main/firmware/src/config/main/peripheral/adc/plib_adc1.c</file>
         </group>
     </open-files>

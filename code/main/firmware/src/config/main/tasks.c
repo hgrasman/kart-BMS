@@ -109,6 +109,16 @@ void _CURRENT_Tasks(  void *pvParameters  )
         CURRENT_Tasks();
     }
 }
+/* Handle for the CHECKS_Tasks. */
+TaskHandle_t xCHECKS_Tasks;
+
+void _CHECKS_Tasks(  void *pvParameters  )
+{   
+    while(1)
+    {
+        CHECKS_Tasks();
+    }
+}
 
 
 
@@ -177,6 +187,14 @@ void SYS_Tasks ( void )
                 NULL,
                 3,
                 &xCURRENT_Tasks);
+
+    /* Create OS Thread for CHECKS_Tasks. */
+    xTaskCreate((TaskFunction_t) _CHECKS_Tasks,
+                "CHECKS_Tasks",
+                512,
+                NULL,
+                1,
+                &xCHECKS_Tasks);
 
 
 
